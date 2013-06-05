@@ -8,6 +8,5 @@
 </head>
 <body>
 <?php include "assets/templates/header.php" ?>
-
 </body>
 </html>
