@@ -49,4 +49,116 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: 'Yanone Kaffeesatz', 'Arial', 'sans-serif'; }
+  font-family: 'Yanone Kaffeesatz', 'Arial', 'sans-serif';
+  background-color: #faf3fe; }
+
+.main_header {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  min-width: 1000px; }
+  .main_header .wrapper {
+    width: 1000px;
+    margin: 0 auto; }
+    .main_header .wrapper .header {
+      background-image: url("/frontend/assets/img/background.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      position: relative;
+      height: 412px; }
+      .main_header .wrapper .header #logo {
+        position: absolute;
+        left: 15%;
+        top: 20%; }
+      .main_header .wrapper .header .navigation {
+        position: relative;
+        left: 8%;
+        top: 53%;
+        width: 38%; }
+        .main_header .wrapper .header .navigation .principal ul {
+          background-color: #714179;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 221%;
+          height: 30px;
+          border-bottom: 3px groove #cbcbcb;
+          border-top: 3px groove #cbcbcb;
+          border-right: 3px groove #cbcbcb;
+          border-left: 3px groove #cbcbcb; }
+        .main_header .wrapper .header .navigation .principal li {
+          display: inline; }
+        .main_header .wrapper .header .navigation .principal a {
+          color: #FFFFFF;
+          position: relative;
+          top: 20%;
+          padding-left: 3%;
+          padding-right: 3%;
+          font-family: 'Yanone Kaffeesatz','Arial','sans-serif';
+          font-weight: 700; }
+          .main_header .wrapper .header .navigation .principal a:hover {
+            color: #77437f;
+            background-color: #cbcbcb;
+            -moz-box-shadow: inset 0 0 5px #000000;
+            -webkit-box-shadow: inset 0 0 5px #000000;
+            box-shadow: inset 0 0 5px #000000; }
+        .main_header .wrapper .header .navigation .iconitos {
+          position: relative;
+          left: 110%;
+          top: -19px; }
+        .main_header .wrapper .header .navigation .secondary-navigation {
+          float: left; }
+          .main_header .wrapper .header .navigation .secondary-navigation ul {
+            color: #77437f;
+            background-color: #ced4c7;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 370px;
+            border-radius: 15px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            -moz-box-shadow: inset 0 0 5px #000000;
+            -webkit-box-shadow: inset 0 0 5px #000000;
+            box-shadow: inset 0 0 5px #000000; }
+          .main_header .wrapper .header .navigation .secondary-navigation li {
+            display: inline; }
+            .main_header .wrapper .header .navigation .secondary-navigation li .vertical-line {
+              display: inline;
+              background-color: #000;
+              width: 1px;
+              height: 100%; }
+          .main_header .wrapper .header .navigation .secondary-navigation a {
+            color: #77437f;
+            position: relative;
+            top: 20%;
+            padding-left: 3%;
+            padding-right: 3%;
+            font-family: 'Yanone Kaffeesatz','Arial','sans-serif';
+            font-weight: 700; }
+            .main_header .wrapper .header .navigation .secondary-navigation a:hover {
+              color: #77437f;
+              position: relative;
+              top: 20%;
+              padding-left: 3%;
+              padding-right: 3%;
+              font-family: 'Yanone Kaffeesatz','Arial','sans-serif';
+              font-weight: 700; }
+    .main_header .wrapper .banners {
+      text-align: center; }
+
+.contenido {
+  position: relative;
+  top: -93px;
+  width: 1000px;
+  margin: 0 auto; }
+
+.portadas {
+  position: relative;
+  left: 2%; }
+  .portadas .portadascontainer {
+    width: 655px;
+    height: 500px;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc; }
