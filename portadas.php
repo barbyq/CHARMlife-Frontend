@@ -100,56 +100,135 @@ jQuery(document).ready(function($) {
 		    autoScaleSliderWidth: 655,     
 		    autoScaleSliderHeight: 500
 		 });
+
+		$('#portadasoflife2012').royalSlider({
+		    arrowsNav: false,
+		    fadeinLoadedSlide: true,
+		    controlNavigationSpacing: 0,
+		    controlNavigation: 'thumbnails',
+		    thumbs: {
+		      autoCenter: false,
+		      fitInViewport: true,
+		      orientation: 'vertical',
+		      spacing: 0,
+		      paddingBottom: 0
+		    },
+		    keyboardNavEnabled: true,
+		    imageScaleMode: 'fill',
+		    imageAlignCenter:true,
+		    slidesSpacing: 0,
+		    loop: false,
+		    loopRewind: true,
+		    numImagesToPreload: 3,
+		    video: {
+		      autoHideArrows:true,
+		      autoHideControlNav:false,
+		      autoHideBlocks: true
+		    }, 
+		    autoScaleSlider: true, 
+		    autoScaleSliderWidth: 655,     
+		    autoScaleSliderHeight: 500
+		 });
 });
 </script>
 <div class="contenido">
-	<div class="portadas">
-		<div class="2013">
-			<img src="assets/img/portadas/portadas-2013-header.png">
-			<section class="portadascontainer">
-				<div id="portadasoflife" class="royalSlide portadasoflife rxDefault">
-					<div class="rsContent">
-						<a href="#">
-							<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-						</a>
-						<div class="rsTmb">
-							<img src="assets/img/pruebas/prueba.jpg" alt="">
-							<h3>Portada Febrero
-								<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+	<div class="portadas-wrapper">
+		<div class="portadas">
+			<div class="2013">
+				<img src="assets/img/portadas/portadas-2013-header.png">
+				<section class="portadascontainer">
+					<div id="portadasoflife" class="royalSlide portadasoflife rxDefault">
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg" alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
+						</div>
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg" alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
+						</div>
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg"  alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
 						</div>
 					</div>
-							<div class="rsContent">
-						<a href="#">
-							<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-						</a>
-						<div class="rsTmb">
-							<img src="assets/img/pruebas/prueba.jpg" alt="">
-							<h3>Portada Febrero
-								<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+				</section>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<div class="portadas">
+			<div class="2012">
+				<img src="assets/img/portadas/portadas-2012-header.png" alt="">		
+				<section class="portadascontainer">
+					<div id="portadasoflife2012" class="royalSlide portadasoflife rxDefault">
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg" alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
+						</div>
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg" alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
+						</div>
+						<div class="rsContent">
+							<a href="#">
+								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
+							</a>
+							<div class="rsTmb">
+								<img src="assets/img/pruebas/prueba.jpg"  alt="">
+								<h3>Portada Febrero
+									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+							</div>
 						</div>
 					</div>
-							<div class="rsContent">
-						<a href="#">
-							<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-						</a>
-						<div class="rsTmb">
-							<img src="assets/img/pruebas/prueba.jpg"  alt="">
-							<h3>Portada Febrero
-								<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
-						</div>
-					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 	</div>
-	<br/>
-	<br/>
-	<br/>
-	<div class="portadas">
-		<div class="2012">
-			<img src="assets/img/portadas/portadas-2012-header.png" alt="">		
-		</div>
-	</div>
+	
+	<section class="lateral">
+		<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>
+		<br/>
+		<br/>
+		<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>
+	<!-- 	<section class="barraarticulos">
+		<ul class="tabsarticulos">
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</section> -->
+	</section>
 </div>
 
 </body>
