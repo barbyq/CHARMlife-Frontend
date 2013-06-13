@@ -24,8 +24,8 @@
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
-	background: white;
-	color: black;
+	background: #581064;
+	color: white;
 }
 #socialiteBarSlider.rsDefault .rsSlide{
 	background: white;

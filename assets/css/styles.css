@@ -171,27 +171,167 @@ body {
   position: relative;
   top: 35px; }
 
-.tabsarticulos {
-  list-style: none;
-  margin: 60px auto 0;
-  width: 660px; }
-  .tabsarticulos li {
-    float: left;
-    position: relative; }
-  .tabsarticulos a {
-    float: left;
-    padding: 10px 40px;
-    text-decoration: none;
-    color: black;
-    background: #ddc385;
-    -webkit-border-top-left-radius: 15px;
-    -webkit-border-top-right-radius: 15px;
-    -moz-border-radius-topleft: 15px;
-    -moz-border-radius-topright: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px; }
-  .tabsarticulos .active {
-    z-index: 3; }
-    .tabsarticulos .active a {
-      background: white;
-      color: black; }
+.tabs li {
+  /* Makes a horizontal row */
+  float: left;
+  /* So the psueudo elements can be
+     abs. positioned inside */
+  position: relative; }
+
+.tabs a {
+  /* Make them block level
+     and only as wide as they need */
+  float: left;
+  text-decoration: none;
+  /* Default colors */
+  color: white;
+  background: #6e6e6e;
+  /* Only round the top corners */
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 102px;
+  height: 28px; }
+
+.tabs .active {
+  /* Highest, active tab is on top */ }
+
+.tabs .active a {
+  /* Colors when tab is active */
+  background: #e2e0e8;
+  color: black; }
+
+.tabs li:before, .tabs li:after,
+.tabs li a:before, .tabs li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0; }
+
+/* Only the first, last, and active
+   tabs need pseudo elements at all */
+.tabs li:last-child:after, .tabs li:last-child a:after,
+.tabs li:first-child:before, .tabs li:first-child a:before,
+.tabs .active:after, .tabs .active:before,
+.tabs .active a:after, .tabs .active a:before {
+  content: ""; }
+
+.tabs .active:before, .tabs .active:after {
+  background: #fff7f7;
+  /* Squares below circles */ }
+
+/* Squares */
+.tabs li:before, .tabs li:after {
+  background: white;
+  width: 10px;
+  height: 10px; }
+
+.tabs li:before {
+  left: -10px; }
+
+.tabs li:after {
+  right: -10px; }
+
+/* Circles */
+.tabs li a:after, .tabs li a:before {
+  width: 20px;
+  height: 20px;
+  /* Circles are circular */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: white; }
+
+.tabs .active a:after, .tabs .active a:before {
+  background: #6f6f6f; }
+
+/* First and last tabs have different
+   outside color needs */
+.tabs li:first-child.active a:before,
+.tabs li:last-child.active a:after {
+  background: #fcf5f5; }
+
+.tabs li a:before {
+  left: -20px; }
+
+.tabs li a:after {
+  right: -20px; }
+
+.textinchidihaxor {
+  position: relative;
+  right: -22px;
+  text-align: center;
+  top: 5px; }
+
+.articulos {
+  background: #e2e0e8; }
+  .articulos ul {
+    position: relative;
+    left: 25px; }
+
+.footer {
+  background: url("/frontend/assets/img/footer/footerbackground2.png");
+  background-repeat: repeat-x;
+  background-position: left;
+  background-origin: content-box;
+  height: 350px;
+  min-width: 1000px; }
+  .footer .wrapper {
+    width: 1000px;
+    margin: 0 auto; }
+    .footer .wrapper div {
+      float: left;
+      padding-left: 15px; }
+    .footer .wrapper .upthings {
+      position: relative;
+      top: 125px; }
+      .footer .wrapper .upthings .imagenrevista img {
+        height: 185px; }
+      .footer .wrapper .upthings .suscribete {
+        color: #FFFFFF;
+        position: relative;
+        top: 30px;
+        border-right: 3px solid #FCF8FB;
+        padding-right: 10px; }
+        .footer .wrapper .upthings .suscribete h2 {
+          font-size: 140%;
+          font-weight: bold;
+          height: 6px; }
+        .footer .wrapper .upthings .suscribete h1 {
+          font-weight: bold;
+          font-size: 485%;
+          height: 79px; }
+      .footer .wrapper .upthings .contacto {
+        position: relative;
+        top: 30px;
+        color: #FFFFFF;
+        border-right: 3px solid #FCF8FB;
+        padding-right: 10px; }
+        .footer .wrapper .upthings .contacto h1 {
+          font-weight: bold;
+          font-size: 160%; }
+        .footer .wrapper .upthings .contacto p {
+          font-size: 115%; }
+      .footer .wrapper .upthings .sliderarticulos-wrapper {
+        height: 195px;
+        position: relative;
+        top: 25px;
+        background-color: #581064; }
+        .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos {
+          height: 108px;
+          width: 385px; }
+          .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos ul {
+            float: left;
+            position: relative;
+            top: 15px; }
+          .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos .padul {
+            position: relative;
+            padding-left: 147px; }
+          .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos a {
+            color: white; }
+        .footer .wrapper .upthings .sliderarticulos-wrapper p {
+          font-size: 125%;
+          color: white; }

@@ -19,9 +19,8 @@
 	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
-
 	<script src='assets/royalslider/jquery-1.8.3.min.js'></script>
-
+	<script src="assets/js/all.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<style type="text/css">
 	.portadasoflife .rsTmb {
@@ -221,15 +220,44 @@ jQuery(document).ready(function($) {
 		<br/>
 		<br/>
 		<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>
-	<!-- 	<section class="barraarticulos">
-		<ul class="tabsarticulos">
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-		</ul>
-	</section> -->
+		<br/>
+		<br/>
+		<br/>
+		<section class="barraarticulos">
+			<ul class="tabs group">
+				<li class="active"><a href="#"><span class="textinchidihaxor">Esta Semana</span></a></li>
+				<li><a href="#"><span class="textinchidihaxor">Este mes</span></a></li>
+				<li><a href="#"><span class="textinchidihaxor">Anteriores</span></a></li>
+			</ul>
+		</section>
+		<br/>
+		<section class="articulos">
+			<br/>
+			<ul>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+				<li type="disc"><a href="">Hola</a></li>
+			</ul>
+		</section>
+		<br/>
+		<br/>
+		<a href="#">
+			<img src="assets/img/portadas/banner3example.png" alt="">
+		</a>
+		<br/>
 	</section>
+	<br class="clear"/>
+	<br/>
 </div>
-
+	<?php include 'assets/templates/footer.php'; ?>
 </body>
 </html>
