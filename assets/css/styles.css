@@ -294,7 +294,7 @@ body {
       padding-left: 15px; }
     .footer .wrapper .upthings {
       position: relative;
-      top: 125px; }
+      top: 79px; }
       .footer .wrapper .upthings .imagenrevista img {
         height: 185px; }
       .footer .wrapper .upthings .suscribete {
@@ -309,7 +309,7 @@ body {
           height: 6px; }
         .footer .wrapper .upthings .suscribete h1 {
           font-weight: bold;
-          font-size: 485%;
+          font-size: 450%;
           height: 79px; }
       .footer .wrapper .upthings .contacto {
         position: relative;
@@ -325,11 +325,11 @@ body {
       .footer .wrapper .upthings .sliderarticulos-wrapper {
         height: 195px;
         position: relative;
-        top: 25px;
-        background-color: #581064; }
+        top: 25px; }
         .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos {
           height: 108px;
-          width: 385px; }
+          width: 385px;
+          background-color: #581064; }
           .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos ul {
             float: left;
             position: relative;
@@ -342,3 +342,12 @@ body {
         .footer .wrapper .upthings .sliderarticulos-wrapper p {
           font-size: 125%;
           color: white; }
+    .footer .wrapper .sociales {
+      position: relative;
+      top: 60px;
+      left: 57px;
+      font-size: 120%; }
+      .footer .wrapper .sociales a {
+        float: left;
+        color: #FFFFFF;
+        padding-left: 10px; }

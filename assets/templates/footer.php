@@ -50,8 +50,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="sociales"></div>
-			<div class="navigation"></div>
 		</div>
+		<br class="clear"/>
+		<div class="sociales">
+			<a href="#"><img src="/frontend/assets/img/facebook.png"/>/charmlifetorreon</a>
+			<a href="#"><img src="/frontend/assets/img/twitter.png"/>@charmtorreon</a>
+			<a href="#"><img src="/frontend/assets/img/path.png"/>@charmtorreon</a>
+			<a href="#"><img src="/frontend/assets/img/instagram.png"/>@charmtorreon</a>
+		</div>
+		<br class="clear"/>
+		<div class="navigation"></div>
 	</div>
 </div>

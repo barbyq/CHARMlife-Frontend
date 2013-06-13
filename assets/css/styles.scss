@@ -66,7 +66,6 @@ body{
   }
 }
 
-
 .main_header{
     color:white;
     font-size: 18px;
@@ -335,7 +334,7 @@ body{
     }
     .upthings{
       position: relative;
-      top: 125px;
+      top: 79px;
       .imagenrevista{
         img{
           height: 185px;
@@ -354,7 +353,7 @@ body{
           }
           h1{
             font-weight: bold;
-            font-size: 485%;
+            font-size: 450%;
             height: 79px;
           }
         }
@@ -376,10 +375,10 @@ body{
           height: 195px;
           position: relative;
           top: 25px;
-          background-color: #581064;
            #sliderarticulos{
             height: 108px;
             width: 385px;
+            background-color: #581064;
             ul{
               float: left;  
               position: relative;
@@ -398,6 +397,17 @@ body{
             color: white;
            }
         }
+    }
+    .sociales{
+      position: relative;
+      top: 60px;
+      left: 57px;
+      font-size: 120%;
+    a{
+      float: left;
+      color: #FFFFFF;
+      padding-left: 10px;
+      }
     }
   }
 }
