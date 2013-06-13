@@ -25,5 +25,25 @@
 		</nav>
 
 	</header>
+	<section class="wrapper home">
+		<section class="2cols">
+			<section class="col1">
+				<section class="featured">
+				</section><!-- featured -->
+			</section><!-- col1 -->
+			<section class="col2">
+				<h1>Lo+ Top</h1>
+				<article class="">
+
+				</article>
+
+			</section><!-- col2 -->
+			<section class="col3">
+
+			</section><!-- col3 -->
+		</section><!-- 2cols -->
+
+
+	</section><!-- wrapper home -->
 </body>
 </html>

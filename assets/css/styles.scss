@@ -53,6 +53,20 @@ body{
   background-color: #faf3fe;
 }
 
+//esto estaba como 2cols
+.cols{
+  .col1{
+    width: 440px;
+  }
+  .col2{
+    width: 250px;
+  }
+  .col3{
+    width: 310px;
+  }
+}
+
+
 .main_header{
     color:white;
     font-size: 18px;

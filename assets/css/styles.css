@@ -52,6 +52,13 @@ body {
   font-family: 'Yanone Kaffeesatz', 'Arial', 'sans-serif';
   background-color: #faf3fe; }
 
+.cols .col1 {
+  width: 440px; }
+.cols .col2 {
+  width: 250px; }
+.cols .col3 {
+  width: 310px; }
+
 .main_header {
   color: white;
   font-size: 18px;
