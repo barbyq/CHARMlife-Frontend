@@ -1,8 +1,8 @@
 <div class="main_header">
 	<header class="wrapper">
 		<div class="banners">
-			<img src="/frontend/assets/img/banner1.jpg">
-			<img src="/frontend/assets/img/banner2.png">		
+			<a href="#"><img src="/frontend/assets/img/banner1.jpg"></a>
+			<a href="#"><img src="/frontend/assets/img/banner2.png"></a>		
 		</div>
 		<div class="header">
 			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">
