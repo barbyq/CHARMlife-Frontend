@@ -11,10 +11,20 @@
 	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-		    $('.grid').masonry({
+		    /*$('.grid').masonry({
 		      itemSelector: '.box',
-		      columnWidth: 280
-		    });
+		      columnWidth: 220
+		    });*/
+
+		var $container = $('.grid');
+		$container.imagesLoaded( function(){
+		  $container.masonry({
+		    itemSelector : '.box',
+		    columnWidth: 282
+		  });
+		});
+
+
 		 });
 	</script>
 </head>
@@ -28,6 +38,13 @@
 			<img src="assets/img/prueba/3.jpg" class="box">
 			<img src="assets/img/prueba/4.jpg" class="box">
 			<img src="assets/img/prueba/4.jpg" class="box">
+			<img src="assets/img/prueba/3.jpg" class="box">
+			<img src="assets/img/prueba/1.jpg" class="box">
+			<img src="assets/img/prueba/3.jpg" class="box">
+			<img src="assets/img/prueba/4.jpg" class="box">
+			<img src="assets/img/prueba/3.jpg" class="box">
+			<img src="assets/img/prueba/1.jpg" class="box">
+			<img src="assets/img/prueba/3.jpg" class="box">
 		</section>
 		<section class="col3">
 			<p>Too</p>
