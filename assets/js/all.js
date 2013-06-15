@@ -5,7 +5,6 @@ jQuery(document).ready(function($) {
         imageScaleMode: 'none',
         controlNavigation: 'none',
         imageAlignCenter: true,
-        loop: true,
-        controlNavigation: 'bullets'
+        loop: true
     });
 });

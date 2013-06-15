@@ -50,8 +50,29 @@
 					</div>
 				</div>
 			</div>
-			<div class="sociales"></div>
-			<div class="navigation"></div>
+		</div>
+		<br class="clear"/>
+		<div class="sociales">
+			<a href="#"><img src="/frontend/assets/img/facebook.png"/><p>/charmlifetorreon</p></a>
+			<a href="#"><img src="/frontend/assets/img/twitter.png"/><p>@charmtorreon</p></a>
+			<a href="#"><img src="/frontend/assets/img/path.png"/><p>@charmtorreon</p></a>
+			<a href="#"><img src="/frontend/assets/img/instagram.png"/><p>@charmtorreon</p></a>
+			<a href="#" class="logoup"><img src="/frontend/assets/img/footer/charm.png" alt=""></a>
+			<a href="#" class="logoright"><img src="/frontend/assets/img/footer/grupoplayers.png" alt=""></a>
+		</div>
+		<br class="clear"/>
+		<div class="navigacion">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Sociales</a></li>
+				<li><a href="#">Personalidades</a></li>
+				<li><a href="#">+ CHARM</a></li>
+				<li><a href="#">Conócenos</a></li>
+				<li><a href="#">Anunciate</a></li>
+				<li><a href="#">Suscribete</a></li>
+				<li><a href="#">Regala Charm</a></li>
+				<li class="lastli"><a href="#">Revista en Línea</a></li>
+			</ul>
 		</div>
 	</div>
 </div>

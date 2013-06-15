@@ -66,7 +66,6 @@ body{
   }
 }
 
-
 .main_header{
     color:white;
     font-size: 18px;
@@ -329,13 +328,14 @@ body{
   .wrapper{
       width: 1000px;
       margin: 0 auto;
+      height: 100%;
     div{
       float: left;
       padding-left: 15px;
     }
     .upthings{
       position: relative;
-      top: 125px;
+      top: 79px;
       .imagenrevista{
         img{
           height: 185px;
@@ -354,7 +354,7 @@ body{
           }
           h1{
             font-weight: bold;
-            font-size: 485%;
+            font-size: 450%;
             height: 79px;
           }
         }
@@ -376,10 +376,10 @@ body{
           height: 195px;
           position: relative;
           top: 25px;
-          background-color: #581064;
            #sliderarticulos{
             height: 108px;
             width: 385px;
+            background-color: #581064;
             ul{
               float: left;  
               position: relative;
@@ -398,6 +398,58 @@ body{
             color: white;
            }
         }
+    }
+    .sociales{
+      position: relative;
+      top: 60px;
+      left: 30px;
+      font-size: 120%;
+    a{
+      float: left;
+      color: #FFFFFF;
+      padding-left: 45px;
+      }
+      p{
+        position:relative;
+        left: 38px;
+        bottom: 34px;
+      }
+      .logoup{
+        position:relative;
+        bottom: 5px;
+        left: 15px;
+      }
+      .logoright{
+        position:relative;
+        bottom: 20px;
+        right: 5px;
+      }
+    }
+    .navigacion{
+      position:relative;
+      top: 13%;
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #FCF8FB;
+      }
+      li{
+        display: inline;
+        padding-left: 20px;
+        border-right: 2.5px solid #FCF8FB;
+        padding-right: 20px;
+      }
+      a{
+        color: white;
+        font-size: 120%;
+      }
+      .lastli{
+        display: inline;
+        padding-left: 20px;
+        border-right: 0px solid #FCF8FB;
+        padding-right: 20px; 
+      }
     }
   }
 }
