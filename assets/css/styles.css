@@ -385,3 +385,99 @@ body {
         padding-left: 20px;
         border-right: 0px solid #FCF8FB;
         padding-right: 20px; }
+
+.conocenos .upper .left {
+  background: url("../img/content/conocenos/manchas/mancha3.png");
+  background-repeat: repeat-x;
+  height: 355px;
+  width: 95%;
+  position: relative;
+  left: 1.5%; }
+  .conocenos .upper .left .sliderNosotros-wrapper {
+    width: 51.2%;
+    height: 87%;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    float: left; }
+    .conocenos .upper .left .sliderNosotros-wrapper img {
+      width: 465px; }
+    .conocenos .upper .left .sliderNosotros-wrapper .nosotrosimg {
+      height: 293px;
+      width: 464px;
+      -webkit-box-shadow: 0 8px 22px -6px black;
+      -moz-box-shadow: 0 8px 22px -6px black;
+      box-shadow: 0 8px 22px -12px black; }
+  .conocenos .upper .left .perfil {
+    position: relative;
+    top: 10%;
+    background: #460c50;
+    float: right;
+    width: 48.7%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: 0 8px 22px -6px black;
+    -moz-box-shadow: 0 8px 22px -6px black;
+    box-shadow: 0 8px 22px -12px black; }
+    .conocenos .upper .left .perfil .texto {
+      padding: 7%;
+      color: white;
+      padding-left: 10%; }
+      .conocenos .upper .left .perfil .texto h1 {
+        text-align: left;
+        font-size: 200%; }
+      .conocenos .upper .left .perfil .texto p {
+        font-size: 110%; }
+.conocenos .middle {
+  background: url("../img/content/conocenos/manchas/mancha3.png");
+  background-repeat: no-repeat;
+  height: 400px; }
+  .conocenos .middle .quienesomos {
+    width: 42%;
+    background: #460c50;
+    position: relative;
+    left: 4.5%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: left; }
+    .conocenos .middle .quienesomos .texto {
+      color: white;
+      padding: 10%; }
+      .conocenos .middle .quienesomos .texto h1 {
+        font-size: 170%;
+        font-weight: bold; }
+      .conocenos .middle .quienesomos .texto p {
+        font-size: 110%; }
+  .conocenos .middle .filosofia {
+    width: 400px;
+    float: right;
+    position: relative;
+    right: 95px; }
+    .conocenos .middle .filosofia h1 {
+      font-weight: bold;
+      font-size: 250%; }
+    .conocenos .middle .filosofia p {
+      font-weight: bold;
+      font-size: 103%; }
+    .conocenos .middle .filosofia .imagenes {
+      position: relative;
+      top: 30%; }
+      .conocenos .middle .filosofia .imagenes .derecha {
+        float: left;
+        width: 330px; }
+      .conocenos .middle .filosofia .imagenes .izquierda {
+        float: right;
+        position: relative;
+        left: 20px; }
+.conocenos .videos {
+  position: relative;
+  top: 50px;
+  height: 460px;
+  background: url("../img/content/conocenos/manchas/manchas1.png"); }
+  .conocenos .videos .izquierda {
+    float: left; }
+  .conocenos .videos .derecha {
+    float: right; }
+  .conocenos .videos img {
+    position: relative;
+    top: 3px; }

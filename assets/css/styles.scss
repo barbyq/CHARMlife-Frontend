@@ -453,3 +453,127 @@ body{
     }
   }
 }
+
+.conocenos{
+ .upper{
+    .left{
+      background: url("../img/content/conocenos/manchas/mancha3.png");
+      background-repeat: repeat-x;
+      height: 355px;
+      width: 95%;
+      position: relative;
+      left: 1.5% ;
+        .sliderNosotros-wrapper{
+          width: 51.2%;
+          height: 87%;
+          -moz-box-shadow:    3px 3px 5px 6px #ccc;
+          -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow:         3px 3px 5px 6px #ccc;
+          float: left;
+            img{
+              width: 465px;
+            }
+            .nosotrosimg{
+              height: 293px;
+              width: 464px;
+              -webkit-box-shadow: 0 8px 22px -6px black;
+              -moz-box-shadow: 0 8px 22px -6px black;
+              box-shadow: 0 8px 22px -12px black;
+            }
+        }
+        .perfil{
+          position: relative;
+          top: 10%;
+          background: #460c50;
+          float: right;
+          width: 48.7%;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          -webkit-box-shadow: 0 8px 22px -6px black;
+          -moz-box-shadow: 0 8px 22px -6px black;
+          box-shadow: 0 8px 22px -12px black;
+          .texto{
+            padding: 7%;
+            color: white;
+            padding-left: 10%;
+            h1{
+              text-align: left;
+              font-size: 200%;
+            }
+            p{
+              font-size: 110%;
+            }
+          }
+        }
+    }
+ }
+
+ .middle{
+    background: url("../img/content/conocenos/manchas/mancha3.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    .quienesomos{
+      width: 42%;
+      background: #460c50;
+      position: relative;
+      left: 4.5%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      float: left;
+      .texto{
+        color: white;
+        padding: 10%;
+        h1{
+          font-size: 170%;
+          font-weight: bold;
+        }
+        p{
+          font-size: 110%;
+        }
+      }
+    }
+    .filosofia{
+      width: 400px;
+      float: right;
+      position: relative;
+      right: 95px;
+      h1{
+        font-weight: bold;
+        font-size: 250%;
+      }
+      p{
+        font-weight: bold;
+        font-size: 103%;
+      }
+      .imagenes{
+        position: relative;
+        top: 30%;
+        .derecha{
+          float: left;
+          width: 330px;
+        }
+        .izquierda{
+          float: right;
+          position: relative;
+          left: 20px;
+        }
+      }
+    }
+ }
+ .videos{
+  position: relative;
+  top: 50px;
+  height: 460px;
+  background: url("../img/content/conocenos/manchas/manchas1.png");
+  .izquierda{
+    float: left;
+  }
+  .derecha{
+    float: right;
+  }
+  img{
+      position: relative;
+      top: 3px;
+    }
+ }
+}
