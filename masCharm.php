@@ -1,4 +1,12 @@
-<?php $dir = '/frontend/assets/'; ?>
+<?php 
+	/*error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+	$dir = '../charmadmin/';
+	include $dir . 'dbc/dbconnect.php';
+	include $dir . 'dbc/portadasDAO.php';
+	include $dir . 'dbc/utilities.php';
+	$dbconnect = new dbconnect('charm_charmlifec536978');*/
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,7 +28,7 @@
 		$container.imagesLoaded( function(){
 		  $container.masonry({
 		    itemSelector : '.box',
-		    columnWidth: 282
+		    columnWidth: 220
 		  });
 		});
 
@@ -29,9 +37,8 @@
 	</script>
 </head>
 <body>
-	<header>
-	</header>
-	<section class="wrapper masCharm">
+	<?php include "assets/templates/header.php" ?>
+	<section class="wrapper masCharm contenido">
 		<section class="grid">
 			<img src="assets/img/prueba/1.jpg" class="box">
 			<img src="assets/img/prueba/4.jpg" class="box">
