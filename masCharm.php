@@ -28,7 +28,7 @@
 		$container.imagesLoaded( function(){
 		  $container.masonry({
 		    itemSelector : '.box',
-		    columnWidth: 220
+		    columnWidth: 320
 		  });
 		});
 
@@ -40,18 +40,42 @@
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper masCharm contenido">
 		<section class="grid">
-			<img src="assets/img/prueba/1.jpg" class="box">
-			<img src="assets/img/prueba/4.jpg" class="box">
-			<img src="assets/img/prueba/3.jpg" class="box">
-			<img src="assets/img/prueba/4.jpg" class="box">
-			<img src="assets/img/prueba/4.jpg" class="box">
-			<img src="assets/img/prueba/3.jpg" class="box">
-			<img src="assets/img/prueba/1.jpg" class="box">
-			<img src="assets/img/prueba/3.jpg" class="box">
-			<img src="assets/img/prueba/4.jpg" class="box">
-			<img src="assets/img/prueba/3.jpg" class="box">
-			<img src="assets/img/prueba/1.jpg" class="box">
-			<img src="assets/img/prueba/3.jpg" class="box">
+			<article class="box">
+				<img src="assets/img/prueba/1.jpg">
+				<h2>En Pareja</h2>
+				<p>Cuando inicia una relación de pareja, es común que ambos tengan una percepción idealizada del otro.</p>
+			</article>
+
+			<article class="box">
+				<img src="assets/img/prueba/4.jpg">
+				<h2>Tom Ford</h2>
+				<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
+			</article>
+			
+			<article class="box">
+				<img src="assets/img/prueba/3.jpg">
+				<h2>Tom Ford</h2>
+				<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
+			</article>
+
+			<article class="box">
+				<img src="assets/img/prueba/4.jpg">
+				<h2>Tom Ford</h2>
+				<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
+			</article>
+
+			<article class="box">
+				<img src="assets/img/prueba/3.jpg">
+				<h2>Tom Ford</h2>
+				<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
+			</article>
+
+			<article class="box">
+				<img src="assets/img/prueba/1.jpg">
+				<h2>En Pareja</h2>
+				<p>Cuando inicia una relación de pareja, es común que ambos tengan una percepción idealizada del otro.</p>
+			</article>
+			
 		</section>
 		<section class="col3">
 			<p>Too</p>
