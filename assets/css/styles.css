@@ -162,7 +162,8 @@ body {
 
 .portadas {
   position: relative;
-  left: 3%; }
+  left: 3%;
+  background: url("../img/portadas/manchasvideos1.png"); }
   .portadas .portadascontainer {
     width: 655px;
     height: 500px;
@@ -480,3 +481,6 @@ body {
   .conocenos .videos img {
     position: relative;
     top: 3px; }
+
+.colaboradores .colaboradores-wrapper .upper {
+  padding-left: 1%; }

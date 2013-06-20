@@ -12,12 +12,12 @@
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript">
 	$(function() {
-		 $("#nosotrosimagenes").royalSlider({
-            keyboardNavEnabled: true,
-            imageAlignCenter:true,
-            imageScaleMode: "fill",
-            controlNavigation: 'none'
-        }); 
+		$("#nosotrosimagenes").royalSlider({
+		            keyboardNavEnabled: true,
+		            imageAlignCenter:true,
+		            imageScaleMode: "fill",
+		            controlNavigation: 'none'
+	    	}); 
 	});
 	</script>
 </head>
