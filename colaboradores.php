@@ -27,33 +27,38 @@
 <div class="contenido">
 	<section class="colaboradores">
 		<div class="colaboradores-wrapper">
-		<div class="upper">
-			<img src="assets/img/content/colaboradores/colabsbanner.png" alt="">
-			<div id="colaboradores-slider" class="royalSlider rxDefault">
-				<?php 
-				$arreglo = $colaboradoresDAO->getColaboradores();
-				$tamano = sizeof($arreglo);
-				$numerodecuadros = $tamano/6;
-				$contador = 0; 
+			<div class="upper">
+				<img src="assets/img/content/colaboradores/colabsbanner.png" alt="">
+				<div id="colaboradores-slider" class="royalSlider rxDefault">
+					<?php 
+					$arreglo = $colaboradoresDAO->getColaboradores();
+					$tamano = sizeof($arreglo);
+					$numerodecuadros = $tamano/6;
+					$contador = 0; 
 
-				for ($i=0; $i < $numerodecuadros; $i++) { 	?>
-					<div class="cuadro">
-						<?php for ($p=0; $p < 2; $p++) { ?>
-							<div class="detres">
-								<?php ·for ($j=0; $j < 3; $j++) {  ?>
-									<?php 	$objecto = $arreglo[$contador]; ?>
+					 for ($i=0; $i < $numerodecuadros; $i++) { 	?>
+						<div class="cuadro">
+							<?php for ($p=0; $p < 2; $p++) { ?>
+								<div class="detres">
+									<?php for ($j=0; $j < 3; $j++) {  ?>
+										<?php $objecto = $arreglo[$contador] ?>
 										<p><?php echo $objecto->nombre; ?></p>
-									<? $contador++; ?>
-								<? }  ?>
-							</div>
-						<? } ?>
-					</div>
-				<? }  ?>
+										<?php 
+											if ($contador == $tamano-1) {
+												break 3;
+											}else{
+												$contador++; 
+											}?>									
+									<? }  ?>
+								</div>
+							<? } ?>
+						</div>
+					<? }  ?>
+				</div>
 			</div>
+			<div class="middle"></div>
+			<div class="down"></div>
 		</div>
-		<div class="middle"></div>
-		<div class="down"></div>
-	</div>
 	</section>
 </div>
 <?php include "assets/templates/footer.php" ?>	
