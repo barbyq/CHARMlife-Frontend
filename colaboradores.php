@@ -37,18 +37,17 @@
 					$contador = 0; 
 
 					 for ($i=0; $i < $numerodecuadros; $i++) { 	?>
-						<div class="cuadro">
+						<div class="colaboradores-group">
 							<?php for ($p=0; $p < 2; $p++) { ?>
-								<div class="detres">
+								<div class="colaboradores-fila">
 									<?php for ($j=0; $j < 3; $j++) {  ?>
-										<?php $objecto = $arreglo[$contador] ?>
-										<p><?php echo $objecto->nombre; ?></p>
-										<?php 
-											if ($contador == $tamano-1) {
-												break 3;
-											}else{
-												$contador++; 
-											}?>									
+										<div class="colaborador">
+											<?php $objecto = $arreglo[$contador] ?>
+											
+											<img src="../charmadmin/<?php echo $objecto->imagen; ?>" alt="">
+
+											<?php  if ($contador == $tamano-1) {	break 3;  } else { $contador++; }?>	
+										</div>
 									<? }  ?>
 								</div>
 							<? } ?>
@@ -56,8 +55,6 @@
 					<? }  ?>
 				</div>
 			</div>
-			<div class="middle"></div>
-			<div class="down"></div>
 		</div>
 	</section>
 </div>
