@@ -484,3 +484,50 @@ body {
 
 .colaboradores .colaboradores-wrapper .upper {
   padding-left: 1%; }
+  .colaboradores .colaboradores-wrapper .upper .colaborador {
+    float: left;
+    padding-left: 40px;
+    padding-top: 20px;
+    width: 280px; }
+    .colaboradores .colaboradores-wrapper .upper .colaborador img {
+      height: 135px;
+      width: 130px;
+      float: left; }
+    .colaboradores .colaboradores-wrapper .upper .colaborador .texto {
+      padding-top: 30%;
+      position: relative;
+      left: 3%; }
+      .colaboradores .colaboradores-wrapper .upper .colaborador .texto h1 {
+        font-size: 110%;
+        font-weight: bold; }
+  .colaboradores .colaboradores-wrapper .upper .colaboradores-contenido {
+    width: 975px;
+    height: 350px;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc; }
+
+.colaborador-contenido {
+  position: relative;
+  left: 1%;
+  top: 1px;
+  height: 270px;
+  width: 975px;
+  -moz-box-shadow: 1px 5px 5px 5px #ccc;
+  -webkit-box-shadow: 1px 5px 5px 5px #ccc;
+  box-shadow: 1px 5px 5px 5px #ccc; }
+  .colaborador-contenido .paddit {
+    padding: 3%; }
+    .colaborador-contenido .paddit img {
+      float: left; }
+    .colaborador-contenido .paddit .headercolab {
+      padding-left: 27%;
+      padding-top: 6%; }
+      .colaborador-contenido .paddit .headercolab h1 {
+        font-size: 200%;
+        font-weight: bold; }
+      .colaborador-contenido .paddit .headercolab h2 {
+        font-weight: bold;
+        font-size: 120%; }
+    .colaborador-contenido .paddit .descripcolab {
+      padding-left: 27%; }

@@ -580,12 +580,67 @@ body{
 
 .colaboradores{
   .colaboradores-wrapper{
-    .upper{
-      padding-left: 1%;
-    }
-    .middle{
-    }
-    .down{
+        .upper{
+          padding-left: 1%;
+         .colaborador{
+               float: left;
+               padding-left: 40px;
+               padding-top: 20px;
+               width:280px;
+              img{
+                    height: 135px;
+                    width: 130px;
+                    float: left;
+               }
+              .texto{
+                padding-top: 30%;
+                position: relative;
+                left: 3%;
+                    h1{
+                      font-size: 110%;
+                      font-weight: bold;
+                    }
+                }
+          }
+        .colaboradores-contenido{
+           width: 975px;
+           height: 350px;
+          -moz-box-shadow:    3px 3px 5px 6px #ccc;
+          -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow:         3px 3px 5px 6px #ccc;
+        }
     }
   }
 }
+
+ .colaborador-contenido{
+    position: relative;
+    left: 1%;
+    top: 1px;
+    height: 270px;
+    width: 975px;
+   -moz-box-shadow:   1px 5px 5px 5px #ccc;
+   -webkit-box-shadow: 1px 5px 5px 5px #ccc;
+   box-shadow:         1px 5px 5px 5px #ccc;
+    .paddit{
+          padding: 3%;
+          img {
+              float: left;
+          }
+          .headercolab{
+            padding-left: 27%;
+            padding-top: 6%;
+            h1{
+              font-size: 200%;
+              font-weight: bold;
+            }
+            h2{
+              font-weight: bold;
+              font-size: 120%;
+            }
+          }
+          .descripcolab{
+            padding-left: 27%;
+          }
+    }
+  }

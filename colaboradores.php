@@ -29,27 +29,32 @@
 		<div class="colaboradores-wrapper">
 			<div class="upper">
 				<img src="assets/img/content/colaboradores/colabsbanner.png" alt="">
-				<div id="colaboradores-slider" class="royalSlider rxDefault">
+				<div id="colaboradores-slider" class="royalSlider rxDefault colaboradores-contenido">
 					<?php 
 					$arreglo = $colaboradoresDAO->getColaboradores();
 					$tamano = sizeof($arreglo);
 					$numerodecuadros = $tamano/6;
 					$contador = 0; 
-
 					 for ($i=0; $i < $numerodecuadros; $i++) { 	?>
 						<div class="colaboradores-group">
 							<?php for ($p=0; $p < 2; $p++) { ?>
 								<div class="colaboradores-fila">
 									<?php for ($j=0; $j < 3; $j++) {  ?>
-										<div class="colaborador">
-											<?php $objecto = $arreglo[$contador] ?>
-											
-											<img src="../charmadmin/<?php echo $objecto->imagen; ?>" alt="">
-
+										<?php $objecto = $arreglo[$contador] ?>
+										<div class="colaborador" id="<?php echo $objecto->id; ?>">
+											<img src="<?php 
+											if ($objecto->imagen == "") {
+												echo "assets/img/content/colaboradores/colabunknow.png";
+											}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
+											<div class="texto">
+												<h1><?php echo $objecto->nombrec; ?></h1>
+												<p><?php echo $objecto->descripcion; ?></p>
+											</div>
 											<?php  if ($contador == $tamano-1) {	break 3;  } else { $contador++; }?>	
 										</div>
 									<? }  ?>
 								</div>
+								<br class="clear"/>
 							<? } ?>
 						</div>
 					<? }  ?>
@@ -57,6 +62,21 @@
 			</div>
 		</div>
 	</section>
+	<section class="colaborador-contenido">
+		<div class="paddit">
+			<?php $objecto = $arreglo[0] ?>
+			<img src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";	}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
+			<div class="headercolab">
+				<h1><?php echo $objecto->nombre; ?></h1>
+				<h2>Seccion:</h2>
+				<hr width="70%" align="left">
+			</div>
+			<div class="descripcolab">
+				<p><?php echo $objecto->descripcion; ?></p>
+			</div>
+		</div>
+	</section>
+	<br class="clear"/>
 </div>
 <?php include "assets/templates/footer.php" ?>	
 </body>
