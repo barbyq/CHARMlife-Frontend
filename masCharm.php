@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
+	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript">
 		$(function(){
 		    /*$('.grid').masonry({
