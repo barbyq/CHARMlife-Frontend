@@ -14,10 +14,10 @@
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css"> 
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
-	<script type="text/javascript" src="assets/js/all.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/all.js"></script> -->
 	<script type="text/javascript">
 		$(function(){
 		    /*$('.grid').masonry({
@@ -29,7 +29,7 @@
 		$container.imagesLoaded( function(){
 		  $container.masonry({
 		    itemSelector : '.box',
-		    columnWidth: 320
+		    columnWidth: 323
 		  });
 		});
 
@@ -80,6 +80,17 @@
 					<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
 				</article>
 
+				<article class="box">
+					<img src="assets/img/prueba/3.jpg">
+					<h2>Tom Ford</h2>
+					<p>Creativo, inteligente, espiritual, tenaz, romántico, exitoso.</p>
+				</article>
+
+				<article class="box">
+					<img src="assets/img/prueba/1.jpg">
+					<h2>En Pareja</h2>
+					<p>Cuando inicia una relación de pareja, es común que ambos tengan una percepción idealizada del otro.</p>
+				</article>
 				<article class="box">
 					<img src="assets/img/prueba/3.jpg">
 					<h2>Tom Ford</h2>

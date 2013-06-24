@@ -47,8 +47,10 @@
           -webkit-box-shadow: inset 0 0 5px #acacac;
           box-shadow: inset 0 0 5px #acacac; }
   .wrapper .col2 {
-    width: 649px;
+    width: 660px;
     float: left; }
+  .wrapper.masCharm .col2 {
+    width: 649px; }
   .wrapper .col3 {
     width: 310px;
     float: left; }
@@ -83,6 +85,59 @@
         padding-bottom: 8px; }
       .wrapper .grid .box img {
         text-align: center; }
+
+.box_feature {
+  width: 317px;
+  background-color: #e3e1e9;
+  float: left;
+  margin: 5px; }
+  .box_feature.amigos header {
+    background-color: #3260af; }
+  .box_feature.pasando header {
+    background-color: #570f63; }
+  .box_feature header {
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px; }
+  .box_feature table {
+    width: 317px;
+    text-align: center;
+    margin: 0 auto;
+    border-left: 1px solid #97959b;
+    border-right: 1px solid #97959b;
+    border-bottom: 1px solid #97959b;
+    -moz-box-shadow: inset 0 0 8px #000000;
+    -webkit-box-shadow: inset 0 0 8px #000000;
+    box-shadow: inset 0 0 8px #000000; }
+    .box_feature table th img {
+      position: relative;
+      top: 8px; }
+    .box_feature table tr {
+      height: 144px; }
+    .box_feature table tr:first-child {
+      height: auto; }
+  .box_feature article {
+    border-bottom: 1px solid black;
+    padding: 5px 10px; }
+  .box_feature .social h1 {
+    width: 150px;
+    float: left; }
+  .box_feature .social .texto {
+    width: 150px;
+    float: left;
+    padding-right: 3px; }
+  .box_feature .social img {
+    float: left; }
+  .box_feature a {
+    color: black; }
+  .box_feature a:hover {
+    color: #570f63; }
+  .box_feature .titulo {
+    font-weight: 500;
+    font-size: 17px; }
+  .box_feature .texto {
+    font-weight: 300; }
 
 .tabbed_info {
   width: 300px;

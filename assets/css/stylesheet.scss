@@ -50,9 +50,15 @@
 		
 	}
 	.col2{
-		width: 649px;
+		width: 660px;
 		float: left;
 	}
+	&.masCharm{
+		.col2{
+			width: 649px;
+		}	
+	}
+	
 	.col3{
 		width: 310px;
 		float: left;
@@ -95,6 +101,94 @@
 		}
 	}
 }//wrapper
+
+.box_feature{
+	width: 317px;
+	background-color: #e3e1e9;
+	float: left;
+	margin: 5px;
+	&.amigos{
+		header{
+			background-color: #3260af; //blue		
+		}
+		
+	}
+	&.pasando{
+		header{
+			background-color: #570f63;//purple	
+		}
+		
+	}
+
+	header{
+		color: white;
+		padding: 5px;
+		text-align: center;
+		font-size: 24px;
+	}
+
+	table{
+		width: 317px;
+		text-align: center;
+		margin: 0 auto;
+		border-left: 1px solid #97959b;
+		border-right: 1px solid #97959b;
+		border-bottom: 1px solid #97959b;
+		-moz-box-shadow:    inset 0 0 8px #000000;
+	   	-webkit-box-shadow: inset 0 0 8px #000000;
+	   	box-shadow:         inset 0 0 8px #000000;
+		th{
+			img{
+				position: relative;
+				top: 8px;
+			}
+		}
+		tr{
+			height:144px;
+		}
+		tr:first-child{
+			 height: auto;
+		}
+	}//table
+
+	article{
+		border-bottom: 1px solid black;
+		padding: 5px 10px;
+	}
+	.social{
+		h1{
+			width: 150px;
+			float: left;
+		}
+		
+		.texto{
+			width: 150px;
+			float: left;
+			padding-right: 3px;
+		}
+		img{
+			float: left;
+		}
+	}
+
+	a{
+		color: black;
+	}
+	a:hover{
+		color: #570f63;
+	}
+
+	.titulo{
+		font-weight: 500;
+		font-size: 17px;
+	}
+	.texto{
+		font-weight: 300;
+
+	}
+
+}//box_feature
+
 
 .tabbed_info{
 	width: 300px;

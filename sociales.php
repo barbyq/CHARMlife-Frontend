@@ -28,30 +28,49 @@
 		<section class="col2">
 			<p>The rest of the content goes here.</p>
 
-			<section class="box_feature">
+			<section class="box_feature amigos">
 				<header>
 					<h1>Amigos en las Redes</h1>
-					<table>
-						<tr>
-							<td><img src="assets/img/content/sociales/fb.png"></td>
-							<td><img src="assets/img/content/sociales/insta.png"></td>
-						</tr>
-						<tr>
-							<td><img src="assets/img/temp/imagen.png"></td>
-							<td><img src="assets/img/temp/imagen.png"></td>
-						</tr>
-						<tr>
-							<td><img src="assets/img/temp/imagen.png"></td>
-							<td><img src="assets/img/temp/imagen.png"></td>
-						</tr>
-						<tr>
-							<td><img src="assets/img/temp/imagen.png"></td>
-							<td><img src="assets/img/temp/imagen.png"></td>
-						</tr>
-					</table>
 				</header>
+				<table>
+					<tr>
+						<th><img src="assets/img/content/sociales/fb.png"></th>
+						<th><img src="assets/img/content/sociales/insta.png"></th>
+					</tr>
+					<tr>
+						<td><img src="assets/img/temp/imagen.png"></td>
+						<td><img src="assets/img/temp/imagen.png"></td>
+					</tr>
+					<tr>
+						<td><img src="assets/img/temp/imagen.png"></td>
+						<td><img src="assets/img/temp/imagen.png"></td>
+					</tr>
+					<tr>
+						<td><img src="assets/img/temp/imagen.png"></td>
+						<td><img src="assets/img/temp/imagen.png"></td>
+					</tr>
+				</table>
+			</section><!-- box_feature -->
 
-			</section>
+			<section class="box_feature pasando">
+				<header>
+					<h1>¿Qué está pasando?</h1>
+				</header>
+				<section class="content">
+					<article class="social">
+						<h1 class="titulo">Hello there</h1>
+						<p class="texto">
+							Para recibir oficialmente la religión católica Armando Valdés y Sofía Grageda llevaran hasta el altar al pequeño Armando.
+						</p>
+						<img src="assets/img/prueba/8.jpg" class="thumb">
+						<a href="#" class="link"><img src="assets/img/content/sociales/camara.png">&nbsp;&nbsp;VER + FOTOS</a>
+					</article><!-- social -->
+					<article class="foto"></article>
+					<article class="nota"></article>
+
+				</section>
+			</section><!-- box_feature -->
+
 		</section><!-- col2 -->
 		<section class="col3">
 			<br><br>
