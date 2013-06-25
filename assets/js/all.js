@@ -83,7 +83,6 @@ function ShowColabs () {
                                             $('#articulos-section').append($conjunto);
                                        };
                                        $('#articulos-section').attr("class","royalSlider rxDefault");
-                                       setTimeout(function  () {
                                            $("#articulos-section").royalSlider({
                                                     imageScaleMode: 'none',
                                                     controlNavigation: 'none',
@@ -92,7 +91,7 @@ function ShowColabs () {
                                                     navigateByCenterClick: false,
                                                     navigateByClick:false
                                             });
-                                       }, 1000);
+                                       
                                 },'json');  
                      },'json');
 	});
