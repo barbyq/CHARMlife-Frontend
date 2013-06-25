@@ -613,7 +613,7 @@ body{
   }
 }
 
- .colaborador-contenido{
+.colaborador-contenido{
     position: relative;
     left: 1%;
     top: 1px;
@@ -626,21 +626,119 @@ body{
           padding: 3%;
           img {
               float: left;
+              height: 225px;
+              width: 225px;
           }
-          .headercolab{
-            padding-left: 27%;
-            padding-top: 6%;
-            h1{
-              font-size: 200%;
-              font-weight: bold;
+          .texto{
+            width: 500px;
+            height: 226px;
+            border-right:solid 1px black;
+            float: left;
+               .headercolab{
+                  padding-left: 5%;
+                  padding-top: 6%;
+                h1{
+                  font-size: 200%;
+                  font-weight: bold;
+                }
+                h2{
+                  font-weight: bold;
+                  font-size: 120%;
+                  float: left;
+                }
+                p{
+                  position: relative;
+                  left: 5px;
+                  font-size: 19;
+                }
+              }
+              .descripcolab{
+                padding-left: 5%;
+                p{
+                  font-size: 20;
+                }
+              }
+          }
+          .contacto{
+            float: right;
+             width: 190px;
+             .texto-padd{
+                 width: 155px;
+                 padding-left: 10px;
+                 h1{
+                  font-size: 200%;
+                  font-weight: bold;
+                }
+                .img{
+                    height: 30px;
+                    width: 35px;
+                }
+                h2{
+                  font-weight: bold;
+                  font-size: 110%;  
+                }
             }
-            h2{
-              font-weight: bold;
-              font-size: 120%;
+          }
+          .tipocolaborador{
+            float: right;
+            .texto-tipocolaborador{
+                width: 180px;
+                h1{
+                  font-weight: bold;
+                  font-size: 160%;
+                }
+                p{
+                  font-size: 120%;
+                }
             }
           }
-          .descripcolab{
-            padding-left: 27%;
-          }
+    }
+  }
+
+  .articulos-colaborador{
+    position: relative;
+    left: 1%;
+    top: 1px;
+    width: 975px;
+    height: 150px;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    .escritorpor{
+      float: left;
+      width: 170px;
+      padding: 2%;
+      h1{
+        font-size: 210%;
+        font-weight: bold;
+      }
+      p{
+        font-size: 110%;  
+      }
+    }
+    #articulos-section{
+      float: right;
+      height: 100px;
+      width: 765px;
+      position: relative;
+      top: 21%;
+      .articulin {
+        height: 90px;
+        width: 170px;
+        float: left;
+        padding-left: 1%;
+        img{
+          height: 90px;
+          width: 90px;
+          float: left;
+        }
+        h1{
+          font-weight: bold;
+        }
+        .texto{
+          position: relative;
+          left: 4%;
+        }
+      }
     }
   }

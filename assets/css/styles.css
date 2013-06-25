@@ -519,15 +519,92 @@ body {
   .colaborador-contenido .paddit {
     padding: 3%; }
     .colaborador-contenido .paddit img {
+      float: left;
+      height: 225px;
+      width: 225px; }
+    .colaborador-contenido .paddit .texto {
+      width: 500px;
+      height: 226px;
+      border-right: solid 1px black;
       float: left; }
-    .colaborador-contenido .paddit .headercolab {
-      padding-left: 27%;
-      padding-top: 6%; }
-      .colaborador-contenido .paddit .headercolab h1 {
-        font-size: 200%;
+      .colaborador-contenido .paddit .texto .headercolab {
+        padding-left: 5%;
+        padding-top: 6%; }
+        .colaborador-contenido .paddit .texto .headercolab h1 {
+          font-size: 200%;
+          font-weight: bold; }
+        .colaborador-contenido .paddit .texto .headercolab h2 {
+          font-weight: bold;
+          font-size: 120%;
+          float: left; }
+        .colaborador-contenido .paddit .texto .headercolab p {
+          position: relative;
+          left: 5px;
+          font-size: 19; }
+      .colaborador-contenido .paddit .texto .descripcolab {
+        padding-left: 5%; }
+        .colaborador-contenido .paddit .texto .descripcolab p {
+          font-size: 20; }
+    .colaborador-contenido .paddit .contacto {
+      float: right;
+      width: 190px; }
+      .colaborador-contenido .paddit .contacto .texto-padd {
+        width: 155px;
+        padding-left: 10px; }
+        .colaborador-contenido .paddit .contacto .texto-padd h1 {
+          font-size: 200%;
+          font-weight: bold; }
+        .colaborador-contenido .paddit .contacto .texto-padd .img {
+          height: 30px;
+          width: 35px; }
+        .colaborador-contenido .paddit .contacto .texto-padd h2 {
+          font-weight: bold;
+          font-size: 110%; }
+    .colaborador-contenido .paddit .tipocolaborador {
+      float: right; }
+      .colaborador-contenido .paddit .tipocolaborador .texto-tipocolaborador {
+        width: 180px; }
+        .colaborador-contenido .paddit .tipocolaborador .texto-tipocolaborador h1 {
+          font-weight: bold;
+          font-size: 160%; }
+        .colaborador-contenido .paddit .tipocolaborador .texto-tipocolaborador p {
+          font-size: 120%; }
+
+.articulos-colaborador {
+  position: relative;
+  left: 1%;
+  top: 1px;
+  width: 975px;
+  height: 150px;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc; }
+  .articulos-colaborador .escritorpor {
+    float: left;
+    width: 170px;
+    padding: 2%; }
+    .articulos-colaborador .escritorpor h1 {
+      font-size: 210%;
+      font-weight: bold; }
+    .articulos-colaborador .escritorpor p {
+      font-size: 110%; }
+  .articulos-colaborador #articulos-section {
+    float: right;
+    height: 100px;
+    width: 765px;
+    position: relative;
+    top: 21%; }
+    .articulos-colaborador #articulos-section .articulin {
+      height: 90px;
+      width: 170px;
+      float: left;
+      padding-left: 1%; }
+      .articulos-colaborador #articulos-section .articulin img {
+        height: 90px;
+        width: 90px;
+        float: left; }
+      .articulos-colaborador #articulos-section .articulin h1 {
         font-weight: bold; }
-      .colaborador-contenido .paddit .headercolab h2 {
-        font-weight: bold;
-        font-size: 120%; }
-    .colaborador-contenido .paddit .descripcolab {
-      padding-left: 27%; }
+      .articulos-colaborador #articulos-section .articulin .texto {
+        position: relative;
+        left: 4%; }

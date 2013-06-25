@@ -3,11 +3,14 @@
 	ini_set('display_errors', '1');
 
 	include '../charmadmin/dbc/colaboradoresDAO.php';
+	include '../charmadmin/dbc/articulosDAO.php';
 	include '../charmadmin/dbc/dbconnect.php';
+	include '../charmadmin/controllers/utilities.php';
 
 	$dbconnect = new dbconnect("charm_charmlifec536978");
 	$dbc = $dbconnect->getConnection();
 	$colaboradoresDAO = new colaboradoresDAO($dbc);
+	$articulosDAO = new articulosDAO($dbc);
   ?>
 <html lang="es">
 <head>
@@ -65,15 +68,80 @@
 	<section class="colaborador-contenido">
 		<div class="paddit">
 			<?php $objecto = $arreglo[0] ?>
-			<img src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";	}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
-			<div class="headercolab">
-				<h1><?php echo $objecto->nombre; ?></h1>
-				<h2>Seccion:</h2>
-				<hr width="70%" align="left">
+			<?php $secciones = $colaboradoresDAO->getSeccionesColaborador($objecto->id); ?>
+			<img id="fotocolab" src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";	}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
+			<div class="texto">
+				<div class="headercolab">
+					<h1 id="nombrecolaborador"><?php echo $objecto->nombrec; ?></h1>
+					<h2>Seccion:</h2>
+					<p id="secciones">
+						<?php $seccionesinsercion = ""; ?>
+						<?php foreach ($secciones as $seccion) { ?>
+							<?php if ($seccionesinsercion == "") {
+								$seccionesinsercion = $seccion->seccion; 
+							} else{
+								$seccionesinsercion = $seccionesinsercion." , ".$seccion->seccion;
+							}?>
+						<?}?>
+						<?php echo $seccionesinsercion; ?>
+					</p>
+					<hr width="95%" align="left">
+				</div>
+				<div class="descripcolab">
+					<p id="descripcion"><?php echo $objecto->descripcion; ?></p>
+				</div>
 			</div>
-			<div class="descripcolab">
-				<p><?php echo $objecto->descripcion; ?></p>
+			<div class="contacto">
+				<div class="texto-padd">
+					<h1>Contacto</h1>
+					<a href="mailto:contacto@charmlife.com.mx"><img class="img" src="assets/img/content/colaboradores/correotodohaxor.png" alt=""></a>
+					<br class="clear"/>
+					<h2>contacto@charmlife.com.mx</h2>
+				</div>
+				<hr width="95%" align="right"/>
 			</div>
+			<div class="tipocolaborador">
+				<div class="texto-tipocolaborador">
+					<h1>Tipo de Colaborador</h1>
+					<?php if ($objecto->medio == 0) {?>
+						<img style="height:45px;width:45px;float:left;" src="assets/img/content/colaboradores/revista.png" alt="">
+						<p>Digital</p>
+					<? } ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="articulos-colaborador">
+		<div class="escritorpor">
+			<h1>Articulos Escritos Por: </h1>
+			<p id="articulos-nombre"><?php echo $objecto->nombrec; ?></p>
+		</div>
+		<div id="articulos-section" class="royalSlider rxDefault">
+			<?php $arrei = $articulosDAO->getArticulosMinByColaborador($objecto->id); ?>
+			<?php $seiz = sizeof($arrei); ?>
+			<?php $cuadrosaiz = $seiz/4; ?>
+			<?php $counter = 0; ?>
+			<?php for ($i=0; $i < $cuadrosaiz; $i++) { ?>
+			<div class="conjunto">
+				<?php for ($j=0; $j < 4; $j++) {  ?>
+					<div class="articulin">
+						<?php $prineter = $arrei[$counter] ;?>
+						<?php if (is_dir("../charmadmin/Thumbnails/".$prineter->articulo_id)) {
+							$archivos = scandir("../charmadmin/Thumbnails/".$prineter->articulo_id);
+						?>
+							<img src="<?php echo '../charmadmin/Thumbnails/'.$prineter->articulo_id.'/'.$archivos[2]; ?>" alt="">
+						<? } else{?>
+							<img src="assets/img/content/colaboradores/colabunknow.png" alt="">
+						<?}?>
+						<div class="texto">
+							<h1><?php echo $prineter->titulo; ?></h1>
+							<p><?php echo $prineter->subtitulo; ?></p>
+						</div>
+					</div>
+					<?php  if ($counter == $seiz-1) { break 2;  } else { $counter++; }?>	
+				<? } ?>
+			</div>
+			<?} ?>
 		</div>
 	</section>
 	<br class="clear"/>
