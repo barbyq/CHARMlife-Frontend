@@ -10,12 +10,12 @@
 				<div class="principal">
 					<ul>
 						<li><a href="#home">HOME</a></li>
-						<li><a href="#sociales">SOCIALES</a></li>
+						<li><a href="sociales.php">SOCIALES</a></li>
 						<li><a href="#personalidades">PERSONALIDADES</a></li>
 						<li><a href="#charm">+CHARM</a></li>
-						<li><a href="#portadas">PORTADAS</a></li>
-						<li><a href="#colaboradores">COLABORADORES</a></li>
-						<li><a href="#conocenos">CONÒCENOS</a></li>
+						<li><a href="portadas.php">PORTADAS</a></li>
+						<li><a href="colaboradores.php">COLABORADORES</a></li>
+						<li><a href="conocenos.php">CONÒCENOS</a></li>
 					</ul>
 				</div>
 					<div>
@@ -33,7 +33,6 @@
 						<a href="#"><img src="/frontend/assets/img/path.png"></a>
 						<a href="#"><img src="/frontend/assets/img/instagram.png"></a>
 					</div>
-
 					</div>
 			</div>
 		</div>

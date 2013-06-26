@@ -774,3 +774,28 @@ body{
       }
     }
   }
+
+  .Articulo{
+    width: 1000px;
+    .articulo-content{ 
+      width: 65%;
+      float: left;
+      .articulo-wrapper{
+        padding-left: 3%;
+        h1{
+          font-weight: bold;
+          font-size:  350%;
+        }
+        h2{
+          font-size: 150%;
+        }
+        img{
+          width: 100%;
+          height: 360px;
+          -moz-box-shadow:    3px 3px 5px 6px #ccc;
+          -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow:         3px 3px 5px 6px #ccc;
+        }
+      }
+    }
+  }

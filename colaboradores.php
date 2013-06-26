@@ -43,21 +43,19 @@
 					$tamano = sizeof($arreglo);
 					$numerodecuadros = $tamano/6;
 					$contador = 0; 
-					 for ($i=0; $i < $numerodecuadros; $i++) { 	?>
+					for ($i=0; $i < $numerodecuadros; $i++) { ?>
 						<div class="colaboradores-group">
 							<?php for ($p=0; $p < 2; $p++) { ?>
 								<div class="colaboradores-fila">
 									<?php for ($j=0; $j < 3; $j++) {  ?>
 										<?php $objecto = $arreglo[$contador]; ?>
 										<div class="colaborador" id="<?php echo $objecto->id; ?>">
-											<img src="<?php if ($objecto->imagen == "") {
-												echo "assets/img/content/colaboradores/colabunknow.png";
-											}else{	echo "../charmadmin/".$objecto->imagen; } ?>" alt="">
+											<img src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";}else{echo "../charmadmin/".$objecto->imagen; } ?>" alt="">
 											<div class="texto">
 												<h1><?php echo $objecto->nombrec; ?></h1>
 												<p><?php echo $objecto->descripcion; ?></p>
 											</div>
-											<?php  if ($contador == $tamano-1) {	break 3;  } else { $contador++; }?>	
+											<?php  if ($contador == $tamano-1) {break 3; } else { $contador++; }?>	
 										</div>
 									<?  }  ?>
 								</div>

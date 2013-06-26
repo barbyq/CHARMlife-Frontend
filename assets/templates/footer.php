@@ -64,10 +64,10 @@
 		<div class="navigacion">
 			<ul>
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Sociales</a></li>
+				<li><a href="sociales.php">Sociales</a></li>
 				<li><a href="#">Personalidades</a></li>
 				<li><a href="#">+ CHARM</a></li>
-				<li><a href="#">Conócenos</a></li>
+				<li><a href="conocenos.php">Conócenos</a></li>
 				<li><a href="#">Anunciate</a></li>
 				<li><a href="#">Suscribete</a></li>
 				<li><a href="#">Regala Charm</a></li>
