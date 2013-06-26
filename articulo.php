@@ -12,7 +12,21 @@
  ?>
 <html lang="es">
 <head>
-	<title>CHARM life - <?php echo "Articulo Title"; ?></title>
+	<?php if (!isset($_GET['id'])) { ?>
+		<title>CHARM life - No Encontrado</title>	
+	<? } else { ?>	
+			<?php $articulo = $articulosDAO->getArticuloForReal($_GET['id']); ?>
+				<?php if (!isset($articulo->articulo_id)) {?>
+					<title>CHARM life - No Encontrado</title>
+				<?}else{?>
+					<?php if ($articulo->status != '0') { ?>
+						<title>CHARM life - No Encontrado></title>
+					<? }else{ ?>
+						<title>CHARM life - <?php echo $articulo->titulo ?></title>
+					<?} ?>
+				<? } ?>
+
+		<?php } ?>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/styles.css">
