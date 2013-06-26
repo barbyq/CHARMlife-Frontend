@@ -700,7 +700,7 @@ body{
     left: 1%;
     top: 1px;
     width: 975px;
-    height: 150px;
+    height: 270px;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow:         3px 3px 5px 6px #ccc;
@@ -718,26 +718,58 @@ body{
     }
     #articulos-section{
       float: right;
-      height: 100px;
+      height: 185px;
       width: 765px;
       position: relative;
-      top: 21%;
-      .articulin {
-        height: 90px;
-        width: 170px;
-        float: left;
-        padding-left: 1%;
-        img{
-          height: 90px;
-          width: 90px;
-          float: left;
-        }
-        h1{
-          font-weight: bold;
-        }
-        .texto{
-          position: relative;
-          left: 4%;
+      .conjunto-primeravera{
+        padding-top: 13%;
+       .articulin {
+            cursor: pointer;
+            height: 90px;
+            width: 170px;
+            float: left;
+            padding-left: 1%;
+            img{
+              height: 90px;
+              width: 90px;
+              float: left;
+            }
+            h1{
+              color: black;
+              font-weight: bold;
+            }
+            .texto{
+              position: relative;
+              left: 4%;
+            }
+          }
+      }
+      .conjunto{
+          padding-top: 5%;
+         .articulin {
+            height: 90px;
+            width: 170px;
+            float: left;
+            padding-left: 1%;
+            img{
+              height: 90px;
+              width: 90px;
+              float: left;
+            }
+            h1{
+              color: black;
+              font-weight: bold;
+            }
+            .texto{
+              position: relative;
+              left: 4%;
+            }
+          }  
+      }
+      .controls{
+        position: relative;
+        a{
+          padding-left: 1.5%;
         }
       }
     }

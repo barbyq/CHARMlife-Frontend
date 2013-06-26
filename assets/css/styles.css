@@ -575,7 +575,7 @@ body {
   left: 1%;
   top: 1px;
   width: 975px;
-  height: 150px;
+  height: 270px;
   -moz-box-shadow: 3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow: 3px 3px 5px 6px #ccc; }
@@ -590,21 +590,45 @@ body {
       font-size: 110%; }
   .articulos-colaborador #articulos-section {
     float: right;
-    height: 100px;
+    height: 185px;
     width: 765px;
-    position: relative;
-    top: 21%; }
-    .articulos-colaborador #articulos-section .articulin {
-      height: 90px;
-      width: 170px;
-      float: left;
-      padding-left: 1%; }
-      .articulos-colaborador #articulos-section .articulin img {
+    position: relative; }
+    .articulos-colaborador #articulos-section .conjunto-primeravera {
+      padding-top: 13%; }
+      .articulos-colaborador #articulos-section .conjunto-primeravera .articulin {
+        cursor: pointer;
         height: 90px;
-        width: 90px;
-        float: left; }
-      .articulos-colaborador #articulos-section .articulin h1 {
-        font-weight: bold; }
-      .articulos-colaborador #articulos-section .articulin .texto {
-        position: relative;
-        left: 4%; }
+        width: 170px;
+        float: left;
+        padding-left: 1%; }
+        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin img {
+          height: 90px;
+          width: 90px;
+          float: left; }
+        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin h1 {
+          color: black;
+          font-weight: bold; }
+        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin .texto {
+          position: relative;
+          left: 4%; }
+    .articulos-colaborador #articulos-section .conjunto {
+      padding-top: 5%; }
+      .articulos-colaborador #articulos-section .conjunto .articulin {
+        height: 90px;
+        width: 170px;
+        float: left;
+        padding-left: 1%; }
+        .articulos-colaborador #articulos-section .conjunto .articulin img {
+          height: 90px;
+          width: 90px;
+          float: left; }
+        .articulos-colaborador #articulos-section .conjunto .articulin h1 {
+          color: black;
+          font-weight: bold; }
+        .articulos-colaborador #articulos-section .conjunto .articulin .texto {
+          position: relative;
+          left: 4%; }
+    .articulos-colaborador #articulos-section .controls {
+      position: relative; }
+      .articulos-colaborador #articulos-section .controls a {
+        padding-left: 1.5%; }

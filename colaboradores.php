@@ -23,9 +23,14 @@
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
 	<script src='assets/royalslider/jquery-1.8.3.min.js'></script>
 	<script src="assets/js/all.js"></script>
+	<script src="assets/js/paginadoyies.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 </head>
 <body>
+	<script>
+	<?php $arreiglu = $colaboradoresDAO->getColaboradores(); ?>
+	var colaboreitor = <?php $hola = $arreiglu[0]; echo $hola->id;  ?>;
+	</script>
 <?php include "assets/templates/header.php" ?>
 <div class="contenido">
 	<section class="colaboradores">
@@ -43,19 +48,18 @@
 							<?php for ($p=0; $p < 2; $p++) { ?>
 								<div class="colaboradores-fila">
 									<?php for ($j=0; $j < 3; $j++) {  ?>
-										<?php $objecto = $arreglo[$contador] ?>
+										<?php $objecto = $arreglo[$contador]; ?>
 										<div class="colaborador" id="<?php echo $objecto->id; ?>">
-											<img src="<?php 
-											if ($objecto->imagen == "") {
+											<img src="<?php if ($objecto->imagen == "") {
 												echo "assets/img/content/colaboradores/colabunknow.png";
-											}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
+											}else{	echo "../charmadmin/".$objecto->imagen; } ?>" alt="">
 											<div class="texto">
 												<h1><?php echo $objecto->nombrec; ?></h1>
 												<p><?php echo $objecto->descripcion; ?></p>
 											</div>
 											<?php  if ($contador == $tamano-1) {	break 3;  } else { $contador++; }?>	
 										</div>
-									<? }  ?>
+									<?  }  ?>
 								</div>
 								<br class="clear"/>
 							<? } ?>
@@ -69,7 +73,7 @@
 		<div class="paddit">
 			<?php $objecto = $arreglo[0] ?>
 			<?php $secciones = $colaboradoresDAO->getSeccionesColaborador($objecto->id); ?>
-			<img id="fotocolab" src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";	}else{	echo "../charmadmin/".$objecto->imagen; }	?>" alt="">
+			<img id="fotocolab" src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";}else{echo "../charmadmin/".$objecto->imagen; }?>" alt="">
 			<div class="texto">
 				<div class="headercolab">
 					<h1 id="nombrecolaborador"><?php echo $objecto->nombrec; ?></h1>
@@ -116,32 +120,14 @@
 			<h1>Articulos Escritos Por: </h1>
 			<p id="articulos-nombre"><?php echo $objecto->nombrec; ?></p>
 		</div>
-		<div id="articulos-section" class="royalSlider rxDefault">
-			<?php $arrei = $articulosDAO->getArticulosMinByColaborador($objecto->id); ?>
-			<?php $seiz = sizeof($arrei); ?>
-			<?php $cuadrosaiz = $seiz/4; ?>
-			<?php $counter = 0; ?>
-			<?php for ($i=0; $i < $cuadrosaiz; $i++) { ?>
-			<div class="conjunto">
-				<?php for ($j=0; $j < 4; $j++) {  ?>
-					<div class="articulin">
-						<?php $prineter = $arrei[$counter] ;?>
-						<?php if (is_dir("../charmadmin/Thumbnails/".$prineter->articulo_id)) {
-							$archivos = scandir("../charmadmin/Thumbnails/".$prineter->articulo_id);
-						?>
-							<img src="<?php echo '../charmadmin/Thumbnails/'.$prineter->articulo_id.'/'.$archivos[2]; ?>" alt="">
-						<? } else{?>
-							<img src="assets/img/content/colaboradores/colabunknow.png" alt="">
-						<?}?>
-						<div class="texto">
-							<h1><?php echo $prineter->titulo; ?></h1>
-							<p><?php echo $prineter->subtitulo; ?></p>
-						</div>
-					</div>
-					<?php  if ($counter == $seiz-1) { break 2;  } else { $counter++; }?>	
-				<? } ?>
-			</div>
-			<?} ?>
+		<div id="articulos-section">
+		</div>
+		<br class="clear"/>
+		<br class="clear"/>
+		<br/>
+		<br/>
+		<div class="controls">
+			<div align="center" id="anchor-wrapper"></div>
 		</div>
 	</section>
 	<br class="clear"/>
