@@ -29,7 +29,14 @@
 <body>
 	<script>
 	<?php $arreiglu = $colaboradoresDAO->getColaboradores(); ?>
-	var colaboreitor = <?php $hola = $arreiglu[0]; echo $hola->id;  ?>;
+	<?php $hola = $arreiglu[0]; ?>
+	<?php if (isset($_GET['id'])) {
+		$test = $colaboradoresDAO->getColaborador($_GET['id']);
+		if ($test->id != "") {
+			$hola = $test;
+		};
+	}; ?>
+	var colaboreitor = <?php echo $hola->id; ?>;
 	</script>
 <?php include "assets/templates/header.php" ?>
 <div class="contenido">
@@ -69,7 +76,7 @@
 	</section>
 	<section class="colaborador-contenido">
 		<div class="paddit">
-			<?php $objecto = $arreglo[0] ?>
+			<?php $objecto = $hola ?>
 			<?php $secciones = $colaboradoresDAO->getSeccionesColaborador($objecto->id); ?>
 			<img id="fotocolab" src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";}else{echo "../charmadmin/".$objecto->imagen; }?>" alt="">
 			<div class="texto">

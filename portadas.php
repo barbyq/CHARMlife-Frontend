@@ -148,7 +148,7 @@ jQuery(document).ready(function($) {
 								</a>
 								<div class="rsTmb">
 									<img src="../charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img_thumb; ?>" alt="">
-									<h3>Portada <?php echo $portada->meso ?><span><?php echo "Generic"; ?></span></h3>
+									<h3>Portada <?php echo $portada->meso ?></h3>
 								</div>
 							</div>
 						<? } ?>
@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
 								</a>
 								<div class="rsTmb">
 									<img src="../charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img_thumb; ?>" alt="">
-									<h3>Portada <?php echo $portadaotra->meso ?><span><?php echo "Generic"; ?></span></h3>
+									<h3>Portada <?php echo $portadaotra->meso ?></h3>
 								</div>
 							</div>
 						<? } ?>

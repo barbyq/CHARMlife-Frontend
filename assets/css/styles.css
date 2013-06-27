@@ -112,7 +112,8 @@ body {
         .main_header .wrapper .header .navigation .iconitos {
           position: relative;
           left: 110%;
-          top: -19px; }
+          width: 150px;
+          bottom: 20px; }
         .main_header .wrapper .header .navigation .secondary-navigation {
           float: left; }
           .main_header .wrapper .header .navigation .secondary-navigation ul {
@@ -121,7 +122,7 @@ body {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 370px;
+            width: 240px;
             border-radius: 15px;
             border-top-right-radius: 0px;
             border-top-left-radius: 0px;

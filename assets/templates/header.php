@@ -24,7 +24,6 @@
 								<li><a href="#home">Anunciate</a><div class="vertical-line"></div></li>
 								<li><a href="#sociales">Suscribete</a><div class="vertical-line"></div></li>
 								<li><a href="#personalidades">Regala Charm</a><div class="vertical-line"></div></li>
-								<li><a href="#charm">Revista en linea</a></li>
 							</ul>
 					</div>
 					<div class="iconitos">
