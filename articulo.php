@@ -23,9 +23,13 @@
 						<title>CHARM life - No Encontrado></title>
 					<? }else{ ?>
 						<title>CHARM life - <?php echo $articulo->titulo ?></title>
-					<?} ?>
+						<?php if (is_dir("../charmadmin/Imagenes/".$articulo->articulo_id)) { ?>
+							<?php $archivos = scandir("../charmadmin/Imagenes/".$articulo->articulo_id); ?>
+								<link rel="image_src" type="image/jpeg" href="../charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
+								<meta property="og:image" content="../charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
+						<? } ?>
+					<? } ?>
 				<? } ?>
-
 		<?php } ?>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
@@ -33,6 +37,7 @@
 	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
+	<link rel="image_src" type="image/jpeg" href="http://www.domain.com/path/icon-facebook.gif" />
 	<script src='assets/royalslider/jquery-1.8.3.min.js'></script>
 	<script src="assets/js/all.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
@@ -91,10 +96,10 @@
 									</div>
 									<br class="clear">
 									<br/>
-									<div class="shares">
+									<div class="shares" align="right">
 										<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
 										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-										
+										<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
 									</div>
 								</div>
 							<?}?>

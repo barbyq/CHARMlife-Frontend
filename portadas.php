@@ -32,10 +32,13 @@
 			color: black;
 			font-weight: 700;
 			line-height: 14px;
+			width: 80px;
+			float: right;
 		}
 		.portadasoflife .rsTmb span {
 			color: black;
 			font-weight: 300;
+			float: left;
 		}
 
 		.portadasoflife .rsTmb img{
@@ -137,36 +140,18 @@ jQuery(document).ready(function($) {
 				<img src="assets/img/portadas/portadas-2013-header.png">
 				<section class="portadascontainer">
 					<div id="portadasoflife" class="royalSlide portadasoflife rxDefault">
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg" alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+						<?php $portadas = $portadasDAO->PortadasByYear(2013); ?>	
+						<?php foreach ($portadas as $portada) {?>
+							<div class="rsContent">
+								<a href="#">
+									<img src="../charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img; ?>" height="500px" alt="">
+								</a>
+								<div class="rsTmb">
+									<img src="../charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img_thumb; ?>" alt="">
+									<h3>Portada <?php echo $portada->meso ?><span><?php echo "Generic"; ?></span></h3>
+								</div>
 							</div>
-						</div>
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg" alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
-							</div>
-						</div>
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg"  alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
-							</div>
-						</div>
+						<? } ?>
 					</div>
 				</section>
 			</div>
@@ -179,42 +164,24 @@ jQuery(document).ready(function($) {
 				<img src="assets/img/portadas/portadas-2012-header.png" alt="">		
 				<section class="portadascontainer">
 					<div id="portadasoflife2012" class="royalSlide portadasoflife rxDefault">
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg" alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
+						<?php $portadasotras = $portadasDAO->PortadasByYear(2012); ?>
+						<?php foreach ($portadasotras as $portadaotra) {?>
+							<div class="rsContent">
+								<a href="#">
+									<img src="../charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img; ?>" height="500px" alt="">
+								</a>
+								<div class="rsTmb">
+									<img src="../charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img_thumb; ?>" alt="">
+									<h3>Portada <?php echo $portadaotra->meso ?><span><?php echo "Generic"; ?></span></h3>
+								</div>
 							</div>
-						</div>
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg" alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
-							</div>
-						</div>
-						<div class="rsContent">
-							<a href="#">
-								<img src="assets/img/pruebas/pruebota.jpg" height="500px" alt="">
-							</a>
-							<div class="rsTmb">
-								<img src="assets/img/pruebas/prueba.jpg"  alt="">
-								<h3>Portada Febrero
-									<span>Valeria Córdoba & Rodrigo Murra Historia de Amor</span></h3>
-							</div>
-						</div>
+						<? } ?>
 					</div>
 				</section>
 			</div>
 		</div>
 	</div>
-	
+
 	<section class="lateral">
 		<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>
 		<br/>
