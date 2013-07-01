@@ -4,10 +4,7 @@ $(function() {
 		var cantidaddepaginas = Math.ceil(response.length/8);
 		var sais = response.length/4;
 		var contador = 0;
- 		for (var i = 0; i < 2; i++) {
- 			if (contador == response.length-1) {
-				 break;
-			};
+ 		for (var i = 0; i < sais; i++) {
  			var $conjunto = $("");
  			if (i == 0) {
  				$conjunto = $("<div class='conjunto'></div>");
@@ -21,7 +18,7 @@ $(function() {
         	                }else{
 	                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
                                 }
-                                $eichtieme.append("<div class='texto'><a href='#'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
                                $conjunto.append($eichtieme);
                                if (contador == response.length-1) { break segundoloop; }else{ contador++};
                         };
@@ -58,7 +55,7 @@ $(function() {
 				        	                }else{
 					                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
 				                                }
-				                                $eichtieme.append("<div class='texto'><a href='#'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+				                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
 				                               $conjunto.append($eichtieme);
 				                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
 				                        };
@@ -104,10 +101,7 @@ function ShowColabArticles (colabid) {
 		var sais = response.length/4;
 		var contador = 0;
 		$('#articulos-section').empty();
- 		for (var i = 0; i < 2; i++) {
- 			if (contador == response.length-1) {
-				 break;
-			};
+ 		for (var i = 0; i < sais; i++) {
  			var $conjunto = $("");
  			if (i == 0) {
  				$conjunto = $("<div class='conjunto'></div>");
@@ -121,7 +115,7 @@ function ShowColabArticles (colabid) {
         	                }else{
 	                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
                                 }
-                                $eichtieme.append("<div class='texto'><a href='#'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
                                $conjunto.append($eichtieme);
                                if (contador == response.length-1) { break segundoloop; }else{ contador++};
                         };
@@ -159,7 +153,7 @@ function ShowColabArticles (colabid) {
 				        	                }else{
 					                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
 				                                }
-				                                $eichtieme.append("<div class='texto'><a href='#'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+				                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
 				                               $conjunto.append($eichtieme);
 				                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
 				                        };

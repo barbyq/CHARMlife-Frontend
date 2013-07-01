@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
 <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
-<script>
-	
+<script>	
 function validaSuscribete(forma) {
 	var estado = true;
 	var nombre = forma["nombre"].value;
@@ -73,12 +72,16 @@ $(document).ready(function() {
 	});
 });
 </script>
-<div class="main_header">
+<?php $scaneo = scandir("../charmadmin/Banner/");
+$banner = $scaneo[2];
+ ?>
+<div class="main_header" >
 	<header class="wrapper">
 		<div class="banners">
 			<a href="#"><img src="/frontend/assets/img/banner1.jpg"></a>
 			<a href="#"><img src="/frontend/assets/img/banner2.png"></a>		
 		</div>
+		<!---  style="background-image:url(<? echo "../charmadmin/Banner/".$banner;?>);"-->
 		<div class="header">
 			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">
 			<div class="navigation">

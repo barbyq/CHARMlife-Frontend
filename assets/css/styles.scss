@@ -127,8 +127,11 @@ body{
             position: relative;
             left: 110%;
             width: 150px;
-            bottom: 20px;
-          }
+            a{
+              position: relative;
+              bottom: 20px;
+            }
+           }
           .secondary-navigation{
               float: left;
              ul{
@@ -136,8 +139,8 @@ body{
               background-color: #ced4c7;
               list-style-type: none;
               margin: 0;
-              padding: 0;
-              width: 240px;
+              padding: 5px;
+              width: 235px;
               border-radius:15px;
               border-top-right-radius: 0px;
               border-top-left-radius: 0px;
@@ -317,6 +320,7 @@ body{
   ul{
     position:relative;
     left: 25px;
+    height: 219px;
   }
 }
 
