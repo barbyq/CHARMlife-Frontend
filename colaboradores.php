@@ -1,7 +1,4 @@
 <?php
-	error_reporting(E_ALL);
-	ini_set('display_errors', '1');
-
 	include '../charmadmin/dbc/colaboradoresDAO.php';
 	include '../charmadmin/dbc/articulosDAO.php';
 	include '../charmadmin/dbc/dbconnect.php';
@@ -27,7 +24,6 @@
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 </head>
 <body>
-	<script>
 	<?php $arreiglu = $colaboradoresDAO->getColaboradores(); ?>
 	<?php $hola = $arreiglu[0]; ?>
 	<?php if (isset($_GET['id'])) {
@@ -36,7 +32,8 @@
 			$hola = $test;
 		};
 	}; ?>
-	var colaboreitor = <?php echo $hola->id; ?>;
+	<script>
+		var colaboreitor = <?php echo $hola->id; ?>;
 	</script>
 <?php include "assets/templates/header.php" ?>
 <div class="contenido">

@@ -652,3 +652,85 @@ body {
         -moz-box-shadow: 3px 3px 5px 6px #ccc;
         -webkit-box-shadow: 3px 3px 5px 6px #ccc;
         box-shadow: 3px 3px 5px 6px #ccc; }
+
+.formasuscribete {
+  padding-left: 4%;
+  width: 670px; }
+  .formasuscribete .izquierda {
+    float: left; }
+    .formasuscribete .izquierda .nominput {
+      position: relative;
+      right: -16%; }
+    .formasuscribete .izquierda .cdinput {
+      position: relative;
+      right: -28%; }
+    .formasuscribete .izquierda .telinput {
+      position: relative;
+      right: -14%; }
+    .formasuscribete .izquierda .corrinput {
+      position: relative;
+      right: -26%; }
+  .formasuscribete .derecha {
+    float: right;
+    padding-right: 10%; }
+    .formasuscribete .derecha .colinput {
+      position: relative;
+      right: -25%; }
+    .formasuscribete .derecha .seleinput {
+      position: relative;
+      right: -26%; }
+  .formasuscribete p {
+    float: left; }
+  .formasuscribete #error {
+    border: 1px solid red; }
+
+.todaesacosa {
+  width: 750px; }
+  .todaesacosa .formaregala {
+    padding-left: 4%;
+    width: 710px; }
+    .todaesacosa .formaregala .izquierda {
+      float: left; }
+      .todaesacosa .formaregala .izquierda .nominput {
+        position: relative;
+        right: -16%; }
+      .todaesacosa .formaregala .izquierda .cdinput {
+        position: relative;
+        right: -28%; }
+      .todaesacosa .formaregala .izquierda .telinput {
+        position: relative;
+        right: -14%; }
+      .todaesacosa .formaregala .izquierda .corrinput {
+        position: relative;
+        right: -22%; }
+      .todaesacosa .formaregala .izquierda .abajonominput {
+        position: relative;
+        left: 2%; }
+      .todaesacosa .formaregala .izquierda .abajocorrinput {
+        position: relative;
+        left: 13%; }
+    .todaesacosa .formaregala .derecha {
+      float: right;
+      padding-right: 10%; }
+      .todaesacosa .formaregala .derecha .colinput {
+        position: relative;
+        right: -25%; }
+      .todaesacosa .formaregala .derecha .seleinput {
+        position: relative;
+        right: -26%; }
+    .todaesacosa .formaregala p {
+      float: left; }
+    .todaesacosa .formaregala .datos {
+      position: relative;
+      right: 3%; }
+    .todaesacosa .formaregala #error {
+      border: 1px solid red; }
+
+.botonpaypal {
+  background-image: url(/frontend/assets/img/regalacharm/paypal.png);
+  height: 38px;
+  width: 300px;
+  display: block;
+  text-indent: -9999px;
+  position: relative;
+  right: -4%; }
