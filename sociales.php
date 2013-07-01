@@ -11,24 +11,44 @@
 
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
-	<script type="text/javascript" src="assets/js/all.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/all.js"></script> -->
 	<script type="text/javascript" src="assets/js/assets.js"></script>
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper sociales contenido">
-		<div class="margin">
-			<div id="bigSlider" class="royalSlider rsDefault">
+		<div class="sliderSociales">
+			<div id="bigSlider" class="royalSlider rxDefault">
 				<div class="rsContent">
 					<img src="assets/img/prueba/slider_sociales.jpg">
-					<section class="rsAbsoluteEl"><h2>Pilar González & Alejandro Rios</h2></section>
+					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
+					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
 				</div>
 				<div class="rsContent">
 					<img src="assets/img/prueba/mara.jpg">
-					<section class="rsAbsoluteEl"><h2>Mara Fájer & Angel Ávila</h2></section>
+					<section class="rsABlock"><h2>Mara Fájer & Angel Ávila</h2></section>
+					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
+				</div>
+				<div class="rsContent">
+					<img src="assets/img/prueba/slider_sociales.jpg">
+					<section class="rsABlock"><h2>Mara Fájer & Angel Ávila</h2></section>
+					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
+				</div>
+				<div class="rsContent">
+					<img src="assets/img/prueba/slider_sociales.jpg">
+					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
+					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
+				</div>
+				<div class="rsContent">
+					<img src="assets/img/prueba/slider_sociales.jpg">
+					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
+					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
 				</div>
 			</div>
+			<div class="mancha_slider"></div>
 		</div><!-- margin -->
+
+
 		<section class="col2">
 			<section class="mini_features">
 				<header>

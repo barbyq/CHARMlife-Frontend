@@ -1,59 +1,108 @@
 .wrapper {
   width: 1000px;
   margin: 0 auto; }
-  .wrapper.masCharm {
-    width: 960px; }
-    .wrapper.masCharm nav {
-      width: 649px; }
-      .wrapper.masCharm nav header {
-        /*GRADIENT*/
-        background: #f6f6f6;
-        /* Old browsers */
-        background: -moz-linear-gradient(top, #f6f6f6 0%, gray 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, gray));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #f6f6f6 0%, gray 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #f6f6f6 0%, gray 100%);
-        /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #f6f6f6 0%, gray 100%);
-        /* IE10+ */
-        background: linear-gradient(to bottom, #f6f6f6 0%, gray 100%);
-        /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#808080',GradientType=0 );
-        /* IE6-9 */ }
-        .wrapper.masCharm nav header h2 {
-          color: #575757;
-          font-size: 21px;
-          text-align: center;
-          padding-top: 8px;
-          padding-bottom: 8px; }
-      .wrapper.masCharm nav .interests {
-        background-color: #dcdcdc; }
-        .wrapper.masCharm nav .interests li {
-          display: inline-block;
-          color: #424242;
-          padding: 3px 10px;
-          font-size: 18px;
-          margin-left: 4px;
-          margin-right: 4px;
-          margin-top: 8px;
-          margin-bottom: 8px; }
-        .wrapper.masCharm nav .interests .selected {
-          border: 1px solid #acacac;
-          color: #591265;
-          -moz-box-shadow: inset 0 0 5px #acacac;
-          -webkit-box-shadow: inset 0 0 5px #acacac;
-          box-shadow: inset 0 0 5px #acacac; }
+  .wrapper.masCharm nav {
+    width: 649px; }
+    .wrapper.masCharm nav header {
+      /*GRADIENT*/
+      background: #f6f6f6;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #f6f6f6 0%, gray 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, gray));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #f6f6f6 0%, gray 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #f6f6f6 0%, gray 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #f6f6f6 0%, gray 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #f6f6f6 0%, gray 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#808080',GradientType=0 );
+      /* IE6-9 */ }
+      .wrapper.masCharm nav header h2 {
+        color: #575757;
+        font-size: 21px;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px; }
+    .wrapper.masCharm nav .interests {
+      background-color: #dcdcdc; }
+      .wrapper.masCharm nav .interests li {
+        display: inline-block;
+        color: #424242;
+        padding: 3px 10px;
+        font-size: 18px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 8px;
+        margin-bottom: 8px; }
+      .wrapper.masCharm nav .interests .selected {
+        border: 1px solid #acacac;
+        color: #591265;
+        -moz-box-shadow: inset 0 0 5px #acacac;
+        -webkit-box-shadow: inset 0 0 5px #acacac;
+        box-shadow: inset 0 0 5px #acacac; }
+  .wrapper.personalidades .main {
+    -moz-box-shadow: 2px 2px 2px 1px #ccc;
+    -webkit-box-shadow: 2px 2px 2px 1px #ccc;
+    box-shadow: 2px 2px 2px 1px #ccc;
+    width: 656px;
+    height: 498px; }
+    .wrapper.personalidades .main a {
+      float: left;
+      opacity: .7;
+      color: black; }
+      .wrapper.personalidades .main a:hover {
+        opacity: 1; }
+      .wrapper.personalidades .main a h3 {
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        position: relative;
+        box-sizing: border-box;
+        padding: 5px;
+        font-weight: 700;
+        top: -95px; }
+        .wrapper.personalidades .main a h3 span {
+          font-weight: 500;
+          font-size: 17px; }
   .wrapper .col2 {
     width: 660px;
-    float: left; }
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px; }
+    .wrapper .col2 .col_big {
+      width: 430px;
+      float: left; }
+    .wrapper .col2 .lomastop {
+      width: 200px;
+      float: left;
+      background-image: url("../img/content/index/splatter_lomastop.png"); }
+      .wrapper .col2 .lomastop h1 {
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px; }
+      .wrapper .col2 .lomastop article {
+        margin-top: 17px;
+        margin-bottom: 17px; }
+        .wrapper .col2 .lomastop article h2 {
+          color: black;
+          font-size: 20px;
+          text-align: center; }
+        .wrapper .col2 .lomastop article img {
+          width: 190px;
+          border: 5px solid black; }
   .wrapper.masCharm .col2 {
     width: 649px; }
+  .wrapper.sociales .col2 {
+    margin-top: 30px; }
   .wrapper .col3 {
     width: 310px;
-    float: left; }
+    float: left;
+    text-align: center; }
     .wrapper .col3 .ad {
       text-align: center;
       margin: 0 auto;
@@ -202,13 +251,50 @@
     border-bottom: 1px solid #bdb6bf;
     background-color: #dfdbe5;
     padding: 10px 15px;
-    height: 340px; }
+    height: 340px;
+    text-align: left; }
 
 .mini_features {
   width: 643px;
   position: relative;
   left: 5px;
   margin-bottom: 15px; }
+  .mini_features.expanded {
+    width: 960px; }
+    .mini_features.expanded header {
+      width: 911px; }
+    .mini_features.expanded .body article {
+      padding-left: 14px;
+      padding-right: 14px; }
+    .mini_features.expanded .body_ {
+      border-left: 1px solid #bdb6bf;
+      border-right: 1px solid #bdb6bf;
+      border-bottom: 1px solid #bdb6bf;
+      -moz-box-shadow: 1px 1px 1px 1px #ccc;
+      -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+      box-shadow: 1px 1px 1px 1px #ccc; }
+      .mini_features.expanded .body_ article {
+        width: 300px;
+        float: left;
+        margin: 9px; }
+        .mini_features.expanded .body_ article img {
+          float: left;
+          width: 127px; }
+        .mini_features.expanded .body_ article .info {
+          float: left;
+          width: 173px;
+          box-sizing: border-box;
+          padding: 8px;
+          font-weight: 700; }
+          .mini_features.expanded .body_ article .info h3 {
+            font-size: 19px; }
+          .mini_features.expanded .body_ article .info .section {
+            text-transform: uppercase; }
+          .mini_features.expanded .body_ article .info .fecha {
+            font-weight: 300;
+            font-size: 14px; }
+          .mini_features.expanded .body_ article .info h4 {
+            font-weight: 500; }
   .mini_features header {
     background-image: url("../img/content/para_bg.png");
     background-repeat: no-repeat;
@@ -249,6 +335,25 @@
         .mini_features .body article h3 span {
           opacity: 1; }
 
+.outfit header {
+  background-image: url("../img/content/para_bg_small.png");
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 16px;
+  border-bottom: 5px solid black;
+  position: relative;
+  left: 5px; }
+  .outfit header h1 {
+    width: 115px;
+    font-weight: 500;
+    color: white;
+    font-size: 16px; }
+.outfit img {
+  width: 300px;
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc; }
+
 .comparte_noticia {
   font-size: 20px;
   color: black;
@@ -259,28 +364,32 @@
     top: -4px;
     left: 4px; }
 
-.margin {
-  background-color: #eae8ec;
-  height: 589px;
-  width: 950px;
+.sliderSociales {
+  width: 920px;
   margin: 0 auto;
-  margin-bottom: 23px;
-  -moz-box-shadow: 1px 1px 1px 1px #ccc;
-  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-  box-shadow: 1px 1px 1px 1px #ccc; }
-
-#bigSlider {
-  width: 930px;
-  height: 565px;
-  margin: 0 auto;
-  padding-top: 15px;
-  padding-left: 8px; }
-  #bigSlider .infoBlock {
+  position: relative; }
+  .sliderSociales #bigSlider {
+    width: 100%;
+    height: 650px; }
+  .sliderSociales .rsABlock {
     background-color: white;
     opacity: .7;
     padding: 10px;
-    position: absolute; }
-    #bigSlider .infoBlock h2 {
+    width: 100%;
+    top: 450px; }
+    .sliderSociales .rsABlock h2 {
       opacity: 1;
       color: black;
       font-size: 30px; }
+  .sliderSociales .rxDefault .rsThumb {
+    width: 200px;
+    height: 130px; }
+  .sliderSociales .rxDefault .rsNav {
+    margin-top: 40px; }
+  .sliderSociales .mancha_slider {
+    background-image: url("../img/content/sociales/mancha_slider.png");
+    background-repeat: no-repeat;
+    height: 223px;
+    width: 925px;
+    position: absolute;
+    bottom: -85px; }
