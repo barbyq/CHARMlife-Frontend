@@ -3,47 +3,82 @@
 <head>
 	<title>CHARMlife</title>
 	<meta charset="utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
+
+	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
+	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
+	<script type="text/javascript" src="assets/js/all.js"></script>
+	<script type="text/javascript" src="assets/js/assets.js"></script>
 </head>
 <body>
-	<header>
-		<img src="/assets/img/header/logo.png">
-		<nav>
-			<ul>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">SOCIALES</a></li>
-				<li><a href="#">PERSONALIDADES</a></li>
-				<li><a href="#">+CHARM</a></li>
-				<li><a href="#">PORTADAS</a></li>
-				<li><a href="#">COLABORADORES</a></li>
-				<li><a href="#">CONÓCENOS</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Anunciate</a></li>
-				<li><a href="#">Suscríbete</a></li>
-			</ul>
-		</nav>
+	<?php include "assets/templates/header.php" ?>
 
-	</header>
-	<section class="wrapper home">
-		<section class="2cols">
-			<section class="col1">
-				<section class="featured">
-				</section><!-- featured -->
-			</section><!-- col1 -->
-			<section class="col2">
-				<h1>Lo+ Top</h1>
-				<article class="">
+	<section class="wrapper contenido index">
+		<section class="col2">
+			<section class="col_big">
+				<h1>hey</h1>
+			</section>
+			<section class="lomastop">
+				<h1>Lo+ TOP</h1>
+				<section class="body">
+					<article>
+						<a href="#">
+							<img src="assets/img/prueba/pilar.png">
+							<h2>Pilar González & Alejandro Ríos</h2>
+						</a>
+					</article>
 
-				</article>
+					<article>
+						<a href="#">
+							<img src="assets/img/prueba/pilar.png">
+							<h2>Pilar González & Alejandro Ríos</h2>
+						</a>
+					</article>
 
-			</section><!-- col2 -->
-			<section class="col3">
+					<article>
+						<a href="#">
+							<img src="assets/img/prueba/pilar.png">
+							<h2>Pilar González & Alejandro Ríos</h2>
+						</a>
+					</article>
 
-			</section><!-- col3 -->
-		</section><!-- 2cols -->
+					<article>
+						<a href="#">
+							<img src="assets/img/prueba/pilar.png">
+							<h2>Pilar González & Alejandro Ríos</h2>
+						</a>
+					</article>
+
+					<article>
+						<a href="#">
+							<img src="assets/img/prueba/pilar.png">
+							<h2>Pilar González & Alejandro Ríos</h2>
+						</a>
+					</article>
 
 
-	</section><!-- wrapper home -->
+
+				</section><!-- body -->
+			</section><!-- col_small -->
+		</section>
+		<section class="col3">
+			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
+			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+
+			<section class="outfit">
+				<header>
+					<h1>Outfit de la Semana</h1>
+				</header>
+				<img src="assets/img/prueba/outfit.jpg">
+			</section>
+		</section>
+	</section>
+	<br class="clear">
+
+	<?php include "assets/templates/footer.php" ?>
 </body>
 </html>

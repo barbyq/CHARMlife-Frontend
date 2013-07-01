@@ -1,6 +1,7 @@
 $(function(){
 	
 	$('#bigSlider').royalSlider({
-		keyboardNavEnabled: true
+		keyboardNavEnabled: true,
+		controlNavigation: 'thumbnails'
 	});
 });

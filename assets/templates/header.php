@@ -9,10 +9,10 @@
 			<div class="navigation">
 				<div class="principal">
 					<ul>
-						<li><a href="#home">HOME</a></li>
+						<li><a href="index.php">HOME</a></li>
 						<li><a href="sociales.php">SOCIALES</a></li>
-						<li><a href="#personalidades">PERSONALIDADES</a></li>
-						<li><a href="#charm">+CHARM</a></li>
+						<li><a href="personalidades.php">PERSONALIDADES</a></li>
+						<li><a href="masCharm.php">+CHARM</a></li>
 						<li><a href="portadas.php">PORTADAS</a></li>
 						<li><a href="colaboradores.php">COLABORADORES</a></li>
 						<li><a href="conocenos.php">CONÒCENOS</a></li>
