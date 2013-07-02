@@ -5,16 +5,13 @@
 	include $dir .'charmadmin/dbc/dbconnect.php';
 
 	include $dir .'charmadmin/dbc/socialesDAO.php';
-
+	include $dir . 'charmadmin/dbc/chismesDAO.php';
+	
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dbc = $dbconnect->getConnection();
 	$socialesDAO = new socialesDAO($dbc);
-	
-	
+	$chismesDAO = new chismesDAO($dbc);
 
-
-	
-	
 
 ?>
 <!DOCTYPE html>
@@ -130,40 +127,28 @@
 					<h1>¿Qué está pasando?</h1>
 				</header>
 				<section class="content">
-					<article class="social">
-						<h1 class="titulo">Hello there</h1>
-						<h2 class="fecha">28/12/2012</h2>
-						<p class="texto">
-							Para recibir oficialmente la religión católica Armando Valdés y Sofía Grageda llevaran hasta el altar al pequeño Armando.
-						</p>
-						<img src="assets/img/prueba/8.jpg" class="thumb">
-						<a href="#" class="link"><img src="assets/img/content/sociales/camara.png">&nbsp;&nbsp;VER + FOTOS</a>
-					<br class="clear">
-					</article><!-- social -->
-					<article class="foto">
-						<h1 class="header">En este momento:</h1>
-						<h2 class="fecha">28/12/2012</h2>
-						<img src="assets/img/prueba/9.png">
-						<h1 class="titulo">Hello there</h1>
-						<br class="clear">
-					</article>
-					<article class="nota">
-						<h1 class="titulo">Hello there</h1>
-						<h2 class="fecha">28/12/2012</h2>
-						<br class="clear">
-						<p class="texto">
-							Para recibir oficialmente la religión católica Armando Valdés y Sofía Grageda llevaran hasta el altar al pequeño Armando.
-						</p>
-						<br class="clear">
-					</article>
-					<article class="foto">
-						<h1 class="header">En este momento:</h1>
-						<h2 class="fecha">28/12/2012</h2>
-						<img src="assets/img/prueba/9.png">
-						<h1 class="titulo">Hello there</h1>
-						<br class="clear">
-					</article>
+					<?php  $chismes = $chismesDAO->getQueEstaPasando();
+							foreach ($chismes as $item) { ?>
+								<article>
+									<h1 class="header"><?=  $item->titulo ?></h1>
+									
+									<h2 class="fecha"><?=  $item->fecha ?></h2>
+									<?php if(!empty($item->texto)){ ?>
+										<h1 class="texto"><?= $item->texto ?></h1>
+									<?php } ?>
 
+									<?php if(!empty($item->foto)){
+											$imgs = scandir($dir. 'charmadmin/Chismes/' . $item->id . '/'); ?>
+									 		<img src="<?=  $dir. 'charmadmin/Chismes/' .  $item->id .'/'. $imgs[2] ?>">
+									<?php } ?>
+									
+									
+									<?php if(!empty($item->link)){ ?>
+										<br><a href="<?= $item->link ?>" class="link"><img src="assets/img/content/sociales/camara.png">&nbsp;&nbsp;VER + FOTOS</a>
+									<?php }  ?>
+									<br class="clear">
+								</article>
+					<?php	} ?>
 				</section>
 			</section><!-- box_feature -->
 			<div style="text-align:right;">
