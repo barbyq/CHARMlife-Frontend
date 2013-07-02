@@ -1,11 +1,14 @@
 <?php 
-	/*error_reporting(E_ALL);
+	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-	$dir = '../charmadmin/';
-	include $dir . 'dbc/dbconnect.php';
-	include $dir . 'dbc/portadasDAO.php';
-	include $dir . 'dbc/utilities.php';
-	$dbconnect = new dbconnect('charm_charmlifec536978');*/
+	include 'assets/templates/pwd.php';
+	include $dir . 'charmadmin/dbc/dbconnect.php';
+	include $dir . 'charmadmin/dbc/articulosDAO.php';
+
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dbc = $dbconnect->getConnection();
+	$articulosDAO = new articulosDAO($dbc);
+
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -56,11 +59,17 @@
 				</ul>
 			</nav>
 			<section class="grid">
-				<article class="box">
-					<img src="assets/img/prueba/1.jpg">
-					<h2>En Pareja</h2>
-					<p>Cuando inicia una relación de pareja, es común que ambos tengan una percepción idealizada del otro.</p>
-				</article>
+				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);
+						foreach ($articulos as $item) { 
+						$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/'); ?>
+						<article class="box">
+							<img src="<?= $dir .'charmadmin/MasCharm/'.$item->articulo_id . '/' . $imgs[2] ?>">
+							<h2><?= $item->titulo ?></h2>
+							<p><?= $item->subtitulo ?></p>
+						</article>
+				<?php }
+				 ?>
+				
 
 				<article class="box">
 					<img src="assets/img/prueba/4.jpg">
