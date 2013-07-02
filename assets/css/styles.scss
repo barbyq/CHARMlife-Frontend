@@ -127,8 +127,11 @@ body{
             position: relative;
             left: 110%;
             width: 150px;
-            bottom: 20px;
-          }
+            a{
+              position: relative;
+              bottom: 20px;
+            }
+           }
           .secondary-navigation{
               float: left;
              ul{
@@ -136,8 +139,8 @@ body{
               background-color: #ced4c7;
               list-style-type: none;
               margin: 0;
-              padding: 0;
-              width: 240px;
+              padding: 5px;
+              width: 235px;
               border-radius:15px;
               border-top-right-radius: 0px;
               border-top-left-radius: 0px;
@@ -317,6 +320,7 @@ body{
   ul{
     position:relative;
     left: 25px;
+    height: 219px;
   }
 }
 
@@ -800,3 +804,113 @@ body{
       }
     }
   }
+
+
+.formasuscribete{
+  padding-left: 4%;
+  width: 670px;
+  .izquierda{
+    float: left;
+    .nominput{
+      position: relative;
+      right:-16%;
+    }
+    .cdinput{
+      position: relative;
+      right: -28%;
+    }
+    .telinput{
+      position: relative;
+      right: -14%;
+    } 
+    .corrinput{
+      position: relative;
+      right: -26%;
+    }
+  }
+  .derecha{
+    float: right;
+    padding-right: 10%;
+    .colinput{
+      position: relative;
+      right: -25%;
+    }
+    .seleinput{
+      position: relative;
+      right: -26%;
+    }
+  }
+  p{
+    float: left;
+  }
+  #error{
+        border: 1px solid red;
+  }
+}
+
+.todaesacosa{
+  width: 750px;
+  .formaregala{
+  padding-left: 4%;
+  width: 710px;
+    .izquierda{
+      float: left;
+      .nominput{
+        position: relative;
+        right:-16%;
+      }
+      .cdinput{
+        position: relative;
+        right: -28%;
+      }
+      .telinput{
+        position: relative;
+        right: -14%;
+      }
+      .corrinput{
+        position: relative;
+        right: -22%;
+      }
+      .abajonominput{
+        position: relative;
+        left: 2%;
+      }
+      .abajocorrinput{
+        position: relative;
+        left: 13%;
+      }
+    }
+    .derecha{
+      float: right;
+      padding-right: 10%;
+      .colinput{
+        position: relative;
+        right: -25%;
+      }
+      .seleinput{
+        position: relative;
+        right: -26%;
+      }
+    }
+    p{
+      float: left;
+    }
+    .datos{
+      position: relative;
+      right: 3%;
+    }  
+    #error{
+          border: 1px solid red;
+    }
+  }
+}
+
+.botonpaypal{
+   background-image:url(/frontend/assets/img/regalacharm/paypal.png);
+   height:38px;
+   width:300px;
+   display:block;
+   text-indent:-9999px; 
+   position: relative;
+   right: -4%;
+}

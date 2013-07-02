@@ -125,18 +125,10 @@
 			<section class="articulos">
 				<br/>
 				<ul>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
-					<li type="disc"><a href="">Hola</a></li>
+				<?php $articulos = $articulosDAO->getLastArticulos(); ?>
+				<?php foreach ($articulos as $articulo) { ?>
+					<li type="disc"><a href="articulo.php?id=<?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
+				<?} ?>
 				</ul>
 			</section>
 			<br/>

@@ -3,11 +3,13 @@
 	ini_set('display_errors', '1');
 	include '../charmadmin/dbc/dbconnect.php';
 	include '../charmadmin/dbc/portadasDAO.php';
+	include '../charmadmin/dbc/articulosDAO.php';
 	include '../charmadmin/dbc/utilities.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
+ 	$articlesDAO = new articulosDAO($dibo);
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -201,18 +203,10 @@ jQuery(document).ready(function($) {
 		<section class="articulos">
 			<br/>
 			<ul>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
-				<li type="disc"><a href="">Hola</a></li>
+				<?php $articulos = $articlesDAO->getLastArticulos(); ?>
+				<?php foreach ($articulos as $articulo) { ?>
+					<li type="disc"><a href="articulo.php?id=<?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
+				<?} ?>
 			</ul>
 		</section>
 		<br/>
