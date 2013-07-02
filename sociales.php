@@ -1,3 +1,22 @@
+<?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1'); 
+	include 'assets/templates/pwd.php';
+	include $dir .'charmadmin/dbc/dbconnect.php';
+
+	include $dir .'charmadmin/dbc/socialesDAO.php';
+
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dbc = $dbconnect->getConnection();
+	$socialesDAO = new socialesDAO($dbc);
+	
+	
+
+
+	
+	
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,32 +37,22 @@
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper sociales contenido">
 		<div class="sliderSociales">
+			
 			<div id="bigSlider" class="royalSlider rxDefault">
-				<div class="rsContent">
-					<img src="assets/img/prueba/slider_sociales.jpg">
-					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
-					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
-				</div>
-				<div class="rsContent">
-					<img src="assets/img/prueba/mara.jpg">
-					<section class="rsABlock"><h2>Mara Fájer & Angel Ávila</h2></section>
-					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
-				</div>
-				<div class="rsContent">
-					<img src="assets/img/prueba/slider_sociales.jpg">
-					<section class="rsABlock"><h2>Mara Fájer & Angel Ávila</h2></section>
-					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
-				</div>
-				<div class="rsContent">
-					<img src="assets/img/prueba/slider_sociales.jpg">
-					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
-					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
-				</div>
-				<div class="rsContent">
-					<img src="assets/img/prueba/slider_sociales.jpg">
-					<section class="rsABlock"><h2>Pilar González & Alejandro Rios</h2></section>
-					<div class="rsTmb"><img src="assets/img/prueba/pilar.png"></div>
-				</div>
+				<?php 
+					$sociales = $socialesDAO->getLoMasNuevo(8);
+					foreach ($sociales as $item) { 
+							$thumb = scandir($dir .'charmadmin/SocThumb/'.$item->sociales_id);
+							$main = scandir($dir .'charmadmin/SocPrincipal/'.$item->sociales_id);
+
+						?>	
+						
+						<div class="rsContent">
+							<a href="social.php?id=<?= $item->sociales_id ?>"><img src="<?= $dir ?>charmadmin/SocPrincipal/<?= $item->sociales_id . '/' . $main[2] ?>">
+							<section class="rsABlock"><h2><?= $item->titulo ?></h2></section></a>
+							<div class="rsTmb"><img src="<?= $dir ?>charmadmin/SocThumb/<?= $item->sociales_id . '/' .  $thumb[2] ?>"></div>
+						</div>
+				<?php } ?>
 			</div>
 			<div class="mancha_slider"></div>
 		</div><!-- margin -->
@@ -55,30 +64,19 @@
 					<h1>+ Visto este mes</h1>
 				</header>
 				<section class="body">
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
+					<?php 
+						$sociales = $socialesDAO->getLoMasVistoEsteMes(6);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
+					
 					<br class="clear">
 				</section><!-- body -->
 			</section><!-- mini_features -->
@@ -88,30 +86,18 @@
 					<h1>Lo + recomendado</h1>
 				</header>
 				<section class="body">
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
+					<?php 
+						$sociales = $socialesDAO->getLoMasRecomendado(6);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
 					<br class="clear">
 				</section><!-- body -->
 			</section><!-- mini_features -->
@@ -125,18 +111,17 @@
 						<th><img src="assets/img/content/sociales/fb.png"></th>
 						<th><img src="assets/img/content/sociales/insta.png"></th>
 					</tr>
-					<tr>
-						<td><img src="assets/img/temp/imagen.png"></td>
-						<td><img src="assets/img/temp/imagen.png"></td>
-					</tr>
-					<tr>
-						<td><img src="assets/img/temp/imagen.png"></td>
-						<td><img src="assets/img/temp/imagen.png"></td>
-					</tr>
-					<tr>
-						<td><img src="assets/img/temp/imagen.png"></td>
-						<td><img src="assets/img/temp/imagen.png"></td>
-					</tr>
+					<?php 
+					$index = 2;
+					$imgs = scandir($dir. 'charmadmin/Amigos/'); 
+					for($i = 0; $i < 3; $i++){ ?>
+						<tr>
+							<td><img src="<?= $dir. 'charmadmin/Amigos/' .$imgs[$index] . '?' .strtotime("now") ?>"></td>
+							<?php  $index++;  ?>
+							<td><img src="<?= $dir. 'charmadmin/Amigos/' .$imgs[$index] . '?' .strtotime("now") ?>"></td>
+							<?php  $index++;  ?>
+						</tr>
+					<?php } ?>
 				</table>
 			</section><!-- box_feature -->
 

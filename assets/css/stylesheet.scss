@@ -187,6 +187,12 @@
 		header{
 			background-color: #3260af; //blue		
 		}
+		td{
+			img{
+				width: 139px;
+				height: 129px;
+			}
+		}
 		
 	}
 	&.pasando{
@@ -359,6 +365,7 @@
 			article{
 				padding-left: 14px;
 				padding-right: 14px;
+
 			}
 		}
 		.body_{
@@ -451,6 +458,13 @@
 					opacity: 1;
 				}//span
 			}//h3
+			img{
+				width: 200px;
+				height: 130px;
+			}
+			a{
+				color: black;
+			}
 		}//article
 	}//body
 }//mini_features

@@ -142,6 +142,9 @@
   margin: 5px; }
   .box_feature.amigos header {
     background-color: #3260af; }
+  .box_feature.amigos td img {
+    width: 139px;
+    height: 129px; }
   .box_feature.pasando header {
     background-color: #570f63; }
   .box_feature header {
@@ -334,6 +337,11 @@
         bottom: 17px; }
         .mini_features .body article h3 span {
           opacity: 1; }
+      .mini_features .body article img {
+        width: 200px;
+        height: 130px; }
+      .mini_features .body article a {
+        color: black; }
 
 .outfit header {
   background-image: url("../img/content/para_bg_small.png");
