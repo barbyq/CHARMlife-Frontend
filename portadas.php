@@ -133,6 +133,57 @@ jQuery(document).ready(function($) {
 		    autoScaleSliderWidth: 655,     
 		    autoScaleSliderHeight: 500
 		 });
+
+		$('.selector').click(function  (e) {
+			e.preventDefault();
+			var cosa = $(this).attr("tiempo");
+			$('.active').attr("class","selector");
+			$(this).attr("class","selector active");
+				if (cosa == "mes") {
+					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelmes"},function(response) {
+						console.log(response);
+						$('#article-list').html("");
+						for (var i = 0; i < response.length; i++) {
+							var id = response[i]['articulo_id'];
+							var nombrearti = response[i]['titulo'];
+							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							$('#article-list').append(contenido);
+						};
+					},'json').fail(function  (e) {
+						console.log(e);				
+					});
+				}
+
+				if (cosa == "semana") {
+					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelasemana"},function(response) {
+						console.log(response);
+						$('#article-list').html("");
+						for (var i = 0; i < response.length; i++) {
+							var id = response[i]['articulo_id'];
+							var nombrearti = response[i]['titulo'];
+							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							$('#article-list').append(contenido);
+						};
+					},'json').fail(function  (e) {
+						console.log(e);				
+					});
+				}
+
+				if (cosa == "anterior") {
+					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelaprevios"},function(response) {
+						console.log(response);
+						$('#article-list').html("");
+						for (var i = 0; i < response.length; i++) {
+							var id = response[i]['articulo_id'];
+							var nombrearti = response[i]['titulo'];
+							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							$('#article-list').append(contenido);
+						};
+					},'json').fail(function  (e) {
+						console.log(e);				
+					});
+				};
+		});
 });
 </script>
 <div class="contenido">
@@ -194,16 +245,16 @@ jQuery(document).ready(function($) {
 		<br/>
 		<section class="barraarticulos">
 			<ul class="tabs group">
-				<li class="active"><a href="#"><span class="textinchidihaxor">Esta Semana</span></a></li>
-				<li><a href="#"><span class="textinchidihaxor">Este mes</span></a></li>
-				<li><a href="#"><span class="textinchidihaxor">Anteriores</span></a></li>
+				<li tiempo="semana"  class="selector active"><a href="#"><span tiempo="semana" class="textinchidihaxor">Esta Semana</span></a></li>
+				<li tiempo="mes" class="selector" ><a href="#"><span tiempo="mes" class="textinchidihaxor">Este mes</span></a></li>
+				<li tiempo="anterior" class="selector" ><a href="#"><span tiempo="anterior" class="textinchidihaxor">Anteriores</span></a></li>
 			</ul>
 		</section>
 		<br/>
 		<section class="articulos">
 			<br/>
-			<ul>
-				<?php $articulos = $articlesDAO->getLastArticulos(); ?>
+			<ul id="article-list">
+				<?php $articulos = $articlesDAO->getRandomOftheSemaine(); ?>
 				<?php foreach ($articulos as $articulo) { ?>
 					<li type="disc"><a href="articulo.php?id=<?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
 				<?} ?>
