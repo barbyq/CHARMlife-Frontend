@@ -1,3 +1,14 @@
+<?php
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1'); 
+	include 'assets/templates/pwd.php';
+	include $dir .'charmadmin/dbc/dbconnect.php';
+	include $dir .'charmadmin/dbc/articulosDAO.php';
+
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dbc = $dbconnect->getConnection();
+	$articulosDAO = new articulosDAO($dbc);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,25 +25,17 @@
 	<section class="wrapper contenido personalidades">
 		<section class="col2">
 			<section class="main">
-				<a href="#">
-					<img src="assets/img/prueba/personalidades1.jpg">
-					<h3>Isabel Sesma <br>	
-						<span>La historia de una hermosa mujer</span>
-					</h3>
-
-				</a>
-				<a href="#">
-					<img src="assets/img/prueba/personalidades2.jpg">
-					<h3>Estefania Berlanga <br>	
-						<span>Un flashback a una epoca gloriosa</span>
-					</h3>
-				</a>
-				<a href="#">
-					<img src="assets/img/prueba/personalidades1.jpg">
-					<h3>Isabel Sesma <br>	
-						<span>La historia de una hermosa mujer</span>
-					</h3>
-				</a>
+				<?php $personalidades = $articulosDAO->getArticulosByArea('Personalidades', 3); 
+					foreach ($personalidades as $item) { 
+						$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/');
+						?>
+					<a href="articulo.php?id=<?= $item->articulo_id ?>">
+						<img src="<?= $dir .'charmadmin/MasCharm/'.$item->articulo_id .'/' . $imgs[2] ?>">
+						<h3><?= $item->titulo ?><br>	
+							<span><?= $item->subtitulo ?></span>
+						</h3>
+					</a>		
+				<?php } ?>
 			</section>
 			<br class="clear">
 			<section class="mini_features expanded">
@@ -40,22 +43,17 @@
 					<h1>Videos</h1>
 				</header>
 				<section class="body">
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
-					<article>
-						<h3><span>Pilar González & Alejandro Ríos</span></h3>
-						<img src="assets/img/prueba/pilar.png">
-					</article>
+					<?php  $videos = $articulosDAO->getVideosByArea( 'Personalidades', 4);
+					 	foreach ($videos as $item) { 
+					 		$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
+					 	?>
+						<article>
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
+						</article> 		
+					 <?php	}
+					 ?>
+				
 					<br class="clear">
 				</section><!-- body -->
 			</section><!-- mini_features -->
