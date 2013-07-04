@@ -1,15 +1,18 @@
 <?php 
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-	include '../charmadmin/dbc/dbconnect.php';
+	include 'assets/templates/pwd.php';
+	include $dir .'charmadmin/dbc/dbconnect.php';
 	include '../charmadmin/dbc/portadasDAO.php';
 	include '../charmadmin/dbc/articulosDAO.php';
 	include '../charmadmin/dbc/utilities.php';
+	include $dir .'charmadmin/dbc/socialesDAO.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
  	$articlesDAO = new articulosDAO($dibo);
+	$socialesDAO = new socialesDAO($dibo);
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,39 +39,18 @@
 			<section class="lomastop">
 				<h1>Lo+ TOP</h1>
 				<section class="body">
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
 
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
+					<?php $sociales = $socialesDAO->getLoMasRecomendado(5);
+						foreach ($sociales as $item) {
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id); ?>
+							<article>
+								<a href="<?= 'social.php?id=' . $item->sociales_id ?>">
+									<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+									<h2><?= $item->titulo ?></h2>
+								</a>
+							</article>		
+					<?php	} ?>
+			
 				</section><!-- body -->
 			</section><!-- col_small -->
 		</section>
@@ -110,46 +92,20 @@
 			<div class="right">
 				<div class="lomasnuevo">
 					<img src="assets/img/content/index/lomas.png" alt="">
-					<article>
-						<a href="#">
-						<img src="assets/img/content/index/imagenprueba.png" alt="">
-						<div class="texto clear">
-							<h1>Zermat Presenta</h1>
-							<h2>oasidjaosd</h2>
-							<p>zermtar ad ad oaisdjoaisd coaisdasd oicasda barbs</p>
-						</div>
-						</a>
-					</article>
-					<article>
-						<a href="#">
-						<img src="assets/img/content/index/imagenprueba.png" alt="">
-						<div class="texto clear">
-							<a href=""><h1>Zermat Presenta</h1></a>
-							<h2>osijut</h2>
-							<p>barbs es bien chidi haxor porque pone espacios en los p</p>
-						</div>
-						</a>
-					</article>
-					<article>
-						<a href="#">
-						<img src="assets/img/content/index/imagenprueba.png" alt="">
-						<div class="texto clear">
-							<a href=""><h1>Zermat Presenta</h1></a>
-							<h2>osijut</h2>
-							<p>barbs es bien chidi haxor porque pone espacios en los p</p>
-						</div>
-						</a>
-					</article>
-					<article>
-						<a href="#">
-						<img src="assets/img/content/index/imagenprueba.png" alt="">
-						<div class="texto clear">
-							<a href=""><h1>Zermat Presenta</h1></a>
-							<h2>osijut</h2>
-							<p>barbs es bien chidi haxor porque pone espacios en los p</p>
-						</div>
-						</a>
-					</article>
+					<?php $sociales = $socialesDAO->getLoMasNuevo(4); 
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id); ?>
+							<article>
+								<a href="social.php?id=<?= $item->sociales_id ?>">
+									<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+									<div class="texto clear">
+										<h1><?= $item->titulo ?></h1>
+										<h2><?= $item->subtitulo ?></h2>
+										<p>Texto adum sirondurum blimbum barbarum haxorum</p>
+									</div>
+								</a>
+							</article>		
+					<?php	} ?>
 				</div>
 				<br>
 				<br>

@@ -929,15 +929,15 @@ body{
         width: 298px;
         height: 140px;
         border-bottom-style:dashed;
+        text-align: center;
         img{
-          float: left;
-          padding: 3%;
+          margin: 0 auto;
         }
         a{
           color: black;
         }
         .texto{
-          width: 142px;
+          /*width: 142px;
           float: right;
           padding-top: 3%;
           padding-right: 5%;
@@ -947,7 +947,7 @@ body{
           }
           p{
             font-size: 115%;
-          }
+          }*/
         }
         hr{
             border-top: 1px dotted black;

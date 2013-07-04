@@ -747,22 +747,24 @@ body {
     .lower .right .lomasnuevo article {
       width: 298px;
       height: 140px;
-      border-bottom-style: dashed; }
+      border-bottom-style: dashed;
+      text-align: center; }
       .lower .right .lomasnuevo article img {
-        float: left;
-        padding: 3%; }
+        margin: 0 auto; }
       .lower .right .lomasnuevo article a {
         color: black; }
       .lower .right .lomasnuevo article .texto {
-        width: 142px;
+        /*width: 142px;
         float: right;
         padding-top: 3%;
-        padding-right: 5%; }
-        .lower .right .lomasnuevo article .texto h1 {
+        padding-right: 5%;
+        h1{
           font-weight: bold;
-          font-size: 160%; }
-        .lower .right .lomasnuevo article .texto p {
-          font-size: 115%; }
+          font-size: 160%;
+        }
+        p{
+          font-size: 115%;
+        }*/ }
       .lower .right .lomasnuevo article hr {
         border-top: 1px dotted black;
         color: black;
