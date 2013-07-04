@@ -905,6 +905,52 @@ body{
   }
 }
 
+.lower{
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+    .lomasnuevo{
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+      article{
+        width: 298px;
+        height: 140px;
+        border-bottom-style:dashed;
+        text-align: center;
+        img{
+          margin: 0 auto;
+        }
+        a{
+          color: black;
+        }
+        .texto{
+          /*width: 142px;
+          float: right;
+          padding-top: 3%;
+          padding-right: 5%;
+          h1{
+            font-weight: bold;
+            font-size: 160%;
+          }
+          p{
+            font-size: 115%;
+          }*/
+        }
+        hr{
+            border-top: 1px dotted black;
+            color: black;
+            background-color: #fff;
+            height: 1px;
+            width:50%;
+          }
+      }
+    }
+  }
+}
+
 .botonpaypal{
    background-image:url(/frontend/assets/img/regalacharm/paypal.png);
    height:38px;

@@ -729,6 +729,42 @@ body {
     .todaesacosa .formaregala #error {
       border: 1px solid red; }
 
+.lower .left {
+  float: left; }
+.lower .right {
+  float: right; }
+  .lower .right .lomasnuevo {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc; }
+    .lower .right .lomasnuevo article {
+      width: 298px;
+      height: 140px;
+      border-bottom-style: dashed;
+      text-align: center; }
+      .lower .right .lomasnuevo article img {
+        margin: 0 auto; }
+      .lower .right .lomasnuevo article a {
+        color: black; }
+      .lower .right .lomasnuevo article .texto {
+        /*width: 142px;
+        float: right;
+        padding-top: 3%;
+        padding-right: 5%;
+        h1{
+          font-weight: bold;
+          font-size: 160%;
+        }
+        p{
+          font-size: 115%;
+        }*/ }
+      .lower .right .lomasnuevo article hr {
+        border-top: 1px dotted black;
+        color: black;
+        background-color: #fff;
+        height: 1px;
+        width: 50%; }
+
 .botonpaypal {
   background-image: url(/frontend/assets/img/regalacharm/paypal.png);
   height: 38px;

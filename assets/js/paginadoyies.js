@@ -4,7 +4,7 @@ $(function() {
 		var cantidaddepaginas = Math.ceil(response.length/8);
 		var sais = response.length/4;
 		var contador = 0;
- 		for (var i = 0; i < sais; i++) {
+ 		for (var i = 0; i < 2; i++) {
  			var $conjunto = $("");
  			if (i == 0) {
  				$conjunto = $("<div class='conjunto'></div>");
@@ -101,7 +101,7 @@ function ShowColabArticles (colabid) {
 		var sais = response.length/4;
 		var contador = 0;
 		$('#articulos-section').empty();
- 		for (var i = 0; i < sais; i++) {
+ 		for (var i = 0; i < 2; i++) {
  			var $conjunto = $("");
  			if (i == 0) {
  				$conjunto = $("<div class='conjunto'></div>");

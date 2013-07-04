@@ -20,7 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
-
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
@@ -28,7 +27,6 @@
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
-
 	<section class="wrapper contenido index">
 		<section class="col2">
 			<section class="col_big">
@@ -37,6 +35,7 @@
 			<section class="lomastop">
 				<h1>Lo+ TOP</h1>
 				<section class="body">
+
 					<?php $sociales = $socialesDAO->getLoMasRecomendado(5);
 						foreach ($sociales as $item) {
 							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id); ?>
@@ -48,26 +47,64 @@
 							</article>		
 					<?php	} ?>
 			
-
-
-
 				</section><!-- body -->
 			</section><!-- col_small -->
 		</section>
 		<section class="col3">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
-
 			<section class="outfit">
 				<header>
 					<h1>Outfit de la Semana</h1>
 				</header>
 				<img src="assets/img/prueba/outfit.jpg">
+				<div class="texto">
+				</div>
 			</section>
+		</section>
+		<br class="clear"/>
+		<br/>
+		<section class="banners">
+			<a href="#">
+				<img src="assets/img/banner1.jpg" alt="">
+			</a>
+			<a href="#">
+				<img src="assets/img/banner2.png" alt="">
+			</a>
+		</section>
+		<br class="clear"/>
+		<section class="lower">
+			<div class="left">
+				<div class="showsections">
+					<p>Hola</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="lomasnuevo">
+					<img src="assets/img/content/index/lomas.png" alt="">
+					<?php $sociales = $socialesDAO->getLoMasNuevo(4); 
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id); ?>
+							<article>
+								<a href="social.php?id=<?= $item->sociales_id ?>">
+								<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+								<div class="texto clear">
+									<h1><?= $item->titulo ?></h1>
+									<h2><?= $item->subtitulo ?></h2>
+								</div>
+								</a>
+							</article>		
+					<?php	} ?>
+				</div>
+				<br>
+				<br>
+				<a href="#">
+					<img src="assets/img/portadas/banner2example.png" alt="">
+				</a>
+			</div>
 		</section>
 	</section>
 	<br class="clear">
-
 	<?php include "assets/templates/footer.php" ?>
 </body>
 </html>
