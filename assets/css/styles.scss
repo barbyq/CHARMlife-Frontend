@@ -908,6 +908,16 @@ body{
 .lower{
   .left{
     float: left;
+    width: 69%;
+    .portada{
+      img{
+        position: relative;
+        left: 20%;
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+        -moz-box-shadow: 3px 3px 5px 6px #ccc;
+        box-shadow: 3px 3px 5px 6px #ccc;
+      }
+    }
   }
   .right{
     float: right;

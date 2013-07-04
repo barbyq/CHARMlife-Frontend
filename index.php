@@ -1,3 +1,16 @@
+<?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+	include '../charmadmin/dbc/dbconnect.php';
+	include '../charmadmin/dbc/portadasDAO.php';
+	include '../charmadmin/dbc/articulosDAO.php';
+	include '../charmadmin/dbc/utilities.php';
+
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dibo = $dbconnect->getConnection();
+	$portadasDAO = new portadasDAO($dibo);
+ 	$articlesDAO = new articulosDAO($dibo);
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -84,8 +97,14 @@
 		<br class="clear"/>
 		<section class="lower">
 			<div class="left">
+				<div class="portada">
+					<img src="assets/img/content/index/portadainteractiva.png" alt="">
+					<div class="port">
+						<?php $portadaultimate = $portadasDAO->getUltimaPortada(); ?>
+						<img style="position:relative;left:20%;width:460px;"src="/charmadmin/upload/portadas/<?php echo $portadaultimate->portadas_id; ?>/<?php echo $portadaultimate->img; ?>" alt="">
+					</div>
+				</div>
 				<div class="showsections">
-					<p>Hola</p>
 				</div>
 			</div>
 			<div class="right">
