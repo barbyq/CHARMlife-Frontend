@@ -4,10 +4,13 @@
 	include 'assets/templates/pwd.php';
 	include $dir . 'charmadmin/dbc/dbconnect.php';
 	include $dir . 'charmadmin/dbc/articulosDAO.php';
+	include $dir . 'charmadmin/dbc/tagsDAO.php';
 
+	
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);
+	$tagsDAO = new tagsDAO($dbc);
 
  ?>
 <!DOCTYPE html>
@@ -126,6 +129,16 @@
 		        $(this).hide();
 		    });
 
+		 $('.interests').hide();
+		 $('header').click(function(e){
+		 	$('.interests').slideToggle('medium', function() {
+  				});
+		 });
+
+		 $('.interests li').click(function(e){
+		 	$(this).toggleClass( 'selected' );
+		 });
+
 	});
 	</script>
 </head>
@@ -138,13 +151,10 @@
 					<h2>Selecciona tus intereses</h2>
 				</header>
 				<ul class="interests">
-					
-					<li class="selected">Arte</li>
-					<li>Belleza</li>
-					<li>Cine</li>
-					<li>Decoración</li>
-					<li>Drinks</li>
-					<li>Ecología</li>
+					<?php $tags = $tagsDAO->getTags();
+						foreach ($tags as $tag) { ?>
+							<li data-id="<?= $tag->tag_id ?>"><?= $tag->nombre; ?></li>
+					<?php } ?>
 				</ul>
 			</nav>
 			<section class="grid">

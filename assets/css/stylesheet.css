@@ -20,7 +20,8 @@
       background: linear-gradient(to bottom, #f6f6f6 0%, gray 100%);
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#808080',GradientType=0 );
-      /* IE6-9 */ }
+      /* IE6-9 */
+      cursor: pointer; }
       .wrapper.masCharm nav header h2 {
         color: #575757;
         font-size: 21px;
@@ -37,7 +38,8 @@
         margin-left: 4px;
         margin-right: 4px;
         margin-top: 8px;
-        margin-bottom: 8px; }
+        margin-bottom: 8px;
+        cursor: pointer; }
       .wrapper.masCharm nav .interests .selected {
         border: 1px solid #acacac;
         color: #591265;
@@ -420,6 +422,33 @@
     position: relative;
     top: -4px;
     left: 4px; }
+
+#socialiteSlider {
+  width: 100%;
+  /* width: 665px;
+   height: 374px;*/ }
+  #socialiteSlider.rsDefault, #socialiteSlider.rsDefault .rsOverflow, #socialiteSlider.rsDefault .rsSlide, #socialiteSlider.rsDefault .rsVideoFrameHolder, #socialiteSlider.rsDefault .rsThumbs {
+    background: none;
+    color: black; }
+  #socialiteSlider.rsDefault .rsThumb {
+    float: left;
+    overflow: hidden;
+    /*height: 42px;*/
+    background-color: #83003a; }
+    #socialiteSlider.rsDefault .rsThumb img {
+      width: 120px; }
+
+.social .info {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center; }
+  .social .info h1 {
+    font-size: 30px;
+    font-weight: 700; }
+  .social .info h2 {
+    font-size: 24px; }
+  .social .info p {
+    font-size: 18px; }
 
 .sliderSociales {
   width: 920px;
