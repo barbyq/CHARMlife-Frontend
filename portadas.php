@@ -187,13 +187,14 @@ jQuery(document).ready(function($) {
 });
 </script>
 <div class="contenido">
+							
 	<div class="portadas-wrapper">
 		<div class="portadas">
 			<div class="2013">
 				<img src="assets/img/portadas/portadas-2013-header.png">
 				<section class="portadascontainer">
 					<div id="portadasoflife" class="royalSlide portadasoflife rxDefault">
-						<?php $portadas = $portadasDAO->PortadasByYear(2013); ?>	
+						<?php $portadas = $portadasDAO->PortadasByYear(2013); ?>
 						<?php foreach ($portadas as $portada) {?>
 							<div class="rsContent">
 								<a href="#">

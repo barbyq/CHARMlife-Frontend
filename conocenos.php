@@ -23,7 +23,7 @@
 </head>
 <body>
 <?php include "assets/templates/header.php" ?>
-<div class="contenido">	
+<div class="contenido" style="height:1100px;">	
 	<section class="conocenos">
 		<section class="upper">
 			<section class="left">
