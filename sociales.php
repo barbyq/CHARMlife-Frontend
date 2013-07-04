@@ -139,7 +139,7 @@
 
 									<?php if(!empty($item->foto)){
 											$imgs = scandir($dir. 'charmadmin/Chismes/' . $item->id . '/'); ?>
-									 		<img src="<?=  $dir. 'charmadmin/Chismes/' .  $item->id .'/'. $imgs[2] ?>">
+									 		<img class="thumb" src="<?=  $dir. 'charmadmin/Chismes/' .  $item->id .'/'. $imgs[2] ?>">
 									<?php } ?>
 									
 									

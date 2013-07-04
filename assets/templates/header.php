@@ -80,7 +80,6 @@ $(document).ready(function() {
 			<a href="#"><img src="/frontend/assets/img/banner1.jpg"></a>
 			<a href="#"><img src="/frontend/assets/img/banner2.png"></a>		
 		</div>
-
 		<div class="header" style="background-image:url(<? echo "../charmadmin/Banner/".$banner;?>);">
 			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">
 			<div class="navigation">

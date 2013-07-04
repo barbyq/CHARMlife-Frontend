@@ -59,7 +59,7 @@
 			</section><!-- mini_features -->
 
 
-			<section class="mini_features expanded">
+			<!--<section class="mini_features expanded">
 				<header style="width:944px;">
 					<h1 style="left:15px; font-size:31px;">Personalidades Anteriores</h1>
 				</header>
@@ -133,7 +133,7 @@
 
 					<br class="clear">
 				</section><!-- body_ -->
-			</section><!-- mini_features -->
+			<!-- </section> <!-- mini_features -->
 		</section>
 		<section class="col3">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
