@@ -37,6 +37,9 @@
 <body>
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper social contenido">
+		<?php  if(isset($social->sociales_id)){ ?>
+
+		
 		<section class="top_social">
 			<div style="width:700px; margin:0 auto;">
 				<div id="socialiteSlider" class="royalSlider rxDefault">
@@ -61,7 +64,11 @@
 		</section>
 
 		</section><!-- top_social -->
+		<?php } ?>
 		<section class="col2">
+			<?php  if(isset($social->sociales_id)){ ?>
+
+			
 			<div id="disqus_thread"></div>
 		    <script type="text/javascript">
 		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -76,7 +83,7 @@
 		    </script>
 		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    		
+    		<?php } ?>
 
     		<section class="mini_features">
 				<header>
@@ -98,7 +105,7 @@
 					<br class="clear">
 				</section><!-- body -->
 			</section><!-- mini_features -->
-			
+
 		</section><!-- col2 -->
 		<section class="col3">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">

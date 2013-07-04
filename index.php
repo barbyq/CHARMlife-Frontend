@@ -1,3 +1,15 @@
+<?php
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1'); 
+	include 'assets/templates/pwd.php';
+	include $dir .'charmadmin/dbc/dbconnect.php';
+
+	include $dir .'charmadmin/dbc/socialesDAO.php';
+	
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dbc = $dbconnect->getConnection();
+	$socialesDAO = new socialesDAO($dbc);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,40 +37,17 @@
 			<section class="lomastop">
 				<h1>Lo+ TOP</h1>
 				<section class="body">
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
-
-					<article>
-						<a href="#">
-							<img src="assets/img/prueba/pilar.png">
-							<h2>Pilar González & Alejandro Ríos</h2>
-						</a>
-					</article>
+					<?php $sociales = $socialesDAO->getLoMasRecomendado(5);
+						foreach ($sociales as $item) {
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id); ?>
+							<article>
+								<a href="<?= 'social.php?id=' . $item->sociales_id ?>">
+									<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+									<h2><?= $item->titulo ?></h2>
+								</a>
+							</article>		
+					<?php	} ?>
+			
 
 
 
