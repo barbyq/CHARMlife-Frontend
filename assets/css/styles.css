@@ -832,6 +832,28 @@ body {
   position: relative;
   right: -4%; }
 
+.slidersoc {
+  width: 325px;
+  height: 200px;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc; }
+  .slidersoc a {
+    color: black; }
+  .slidersoc .rsABlock {
+    background-color: white;
+    opacity: 0.70;
+    padding: 10px;
+    width: 100%;
+    top: 150px; }
+
+#tematicamensual .rsABlock {
+  background-color: white;
+  opacity: 0.70;
+  padding: 10px;
+  width: 100%;
+  top: 120px; }
+
 .agradecimiento h2 {
   font-family: aria;
   font-size: 150%; }

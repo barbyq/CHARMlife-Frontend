@@ -15,7 +15,6 @@ $(function(){
         imageAlignCenter:false,
         arrowsNav: true,
         navigateByClick: false
-
     });
 
     $('.social .img_vote').click(function(e){

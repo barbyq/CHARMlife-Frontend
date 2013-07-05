@@ -50,14 +50,35 @@
 	}	
 	function dameimagen($id)
 	{
-		$escaneo = scandir("../charmadmin/Thumbnails/".$id);
+		$escaneo = scandir("../charmadmin/Imagenes/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "../charmadmin/Thumbnails/".$id."/".$imagen;
+		$ruta = "../charmadmin/Imagenes/".$id."/".$imagen;
 		return $ruta;
-	} ?>
+	} 
+	function dameimagensocial($id)
+	{
+		$escaneo = scandir("../charmadmin/SocPrincipal/".$id);
+		$imagen = $escaneo[2];
+		$ruta = "../charmadmin/SocPrincipal/".$id."/".$imagen;
+		return $ruta;
+	}
+	?>
 	<section class="wrapper contenido index">
 		<section class="col2">
 			<section class="col_big">
+				<?php $socialesnuevos = $socialesDAO->getSocialesNuevos(); ?>
+				<section id="sliderSociales" style="width:325px;height:200px;" class="royalSlider rxDefault slidersoc">			
+						<?php foreach ($socialesnuevos as $soci) { ?>
+							<div>
+								<a href="social.php?id=<?php echo $soci->sociales_id;?>">
+									<img class="rsImg" src="<?php echo dameimagensocial($soci->sociales_id); ?>" alt="">
+									<div class="rsABlock">
+										<h2><?= $soci->titulo; ?></h2>
+									</div>
+								</a>
+							</div>
+						<? } ?>
+				</section>
 				<section class="fotos_feat">
 					<?php $foto = $socialesDAO->getFotoMasCharm(); ?>
 					<div>
@@ -75,7 +96,24 @@
 						</a>
 					</div>
 					<br class="clear">
-
+				</section>
+				<section id="tematicamensual" style="width:325px;height:240px;" class="royalSlider rxDefault">
+					<?php $tem = $articulosDAO->getArticulosTematicaMensual(); ?>
+					<?php foreach ($tem as $ti) { ?>
+						<div class="rsContent">
+						<center>
+							<a href="<?php echo dametipo($ti->tipo).$ti->articulo_id; ?>">
+								<img src="<?php echo dameimagen($ti->articulo_id); ?>" alt="">
+							</a>
+							<div class="rsABlock">
+								<h2><?php echo $ti->titulo; ?></h2>
+							</div>
+						</center>
+						<div class="rsTmb">
+							<img src="<?php echo dameimagen($ti->articulo_id); ?>" alt="">
+						</div>
+					</div>
+					<? } ?>
 				</section>
 			</section>
 			<section class="lomastop">

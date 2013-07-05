@@ -20,7 +20,30 @@ $("#colaboradores-slider").royalSlider({
         navigateByCenterClick: false,
         navigateByClick:false
     });
+
+$("#sliderSociales").royalSlider({
+        // options go here
+        // as an example, enable keyboard arrows nav
+        imageScaleMode: 'fill',
+        controlNavigation: 'none',
+        imageAlignCenter: true,
+        loop: true,
+        navigateByCenterClick: false,
+        navigateByClick:false
+    });
+
+    $("#tematicamensual").royalSlider({
+        // options go here
+        // as an example, enable keyboard arrows nav
+        imageScaleMode: 'fill',
+        controlNavigation: 'thumbnails',
+        imageAlignCenter: true,
+        loop: true,
+        navigateByCenterClick: false,
+        navigateByClick:false
+    });
 	
+
     ShowColabs();
 
 });
