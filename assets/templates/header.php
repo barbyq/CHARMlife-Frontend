@@ -204,7 +204,7 @@ $(document).ready(function() {
 					<div>
 					<div class="secondary-navigation">
 							<ul>
-								<li><a href="#home">Anúnciate</a><div class="vertical-line"></div></li>
+								<li><a href="/mediakit" target="_blank">Anúnciate</a><div class="vertical-line"></div></li>
 								<li><a href="#suscribebox" id="suscribete">Suscríbete</a><div class="vertical-line"></div></li>
 								<li><a href="#regalabox" id="regalacharm">Regala Charm</a><div class="vertical-line"></div></li>
 							</ul>
