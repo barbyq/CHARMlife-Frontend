@@ -50,7 +50,7 @@ $(function() {
 				 				$conjunto = $("<div class='conjunto-primeravera'></div>");
 				 			}
 				                        segundoloop: for (var j = 0; j < 4; j++) {
-				                                var $eichtieme = $("<div class='articulin'></div>");
+				                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
 				                                if (response[contador]["thumbnail"] != "" ) {
 				                                        $eichtieme.append("<img src='../charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
 				        	                }else{
@@ -112,7 +112,7 @@ function ShowColabArticles (colabid) {
  				$conjunto = $("<div class='conjunto-primeravera'></div>");
  			}
                         segundoloop: for (var j = 0; j < 4; j++) {
-                                var $eichtieme = $("<div class='articulin'></div>");
+                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
                                 if (response[contador]["thumbnail"] != "" ) {
                                         $eichtieme.append("<img src='../charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
         	                }else{
@@ -151,7 +151,7 @@ function ShowColabArticles (colabid) {
 				 				$conjunto = $("<div class='conjunto-primeravera'></div>");
 				 			}
 				                        segundoloop: for (var j = 0; j < 4; j++) {
-				                                var $eichtieme = $("<div class='articulin'></div>");
+				                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
 				                                if (response[contador]["thumbnail"] != "" ) {
 				                                        $eichtieme.append("<img src='../charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
 				        	                }else{
