@@ -3,7 +3,7 @@
 		<div class="upthings">
 			<div class="imagenrevista">
 			<a href="#">
-				<img src="/frontend/assets/img/footer/revistaprueba.png" alt="">
+				<img src="/frontend/assets/img/footer/revista.png" alt="">
 			</a>
 			</div>
 			<div class="suscribete">
@@ -15,7 +15,7 @@
 				<h1>Contacto</h1>
 				<p>Tel.192.34.34 y 192.47.67</p>
 				<p>contacto@charmlife.com.mx</p>
-				<p>ventas@charmdivfe.com.mx</p>
+				<p>ventas@charmlife.com.mx</p>
 			</div>
 			<div class="sliderarticulos-wrapper">
 				<?php function dameurl($tipo)
