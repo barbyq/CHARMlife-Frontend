@@ -14,8 +14,7 @@
 
 		if (isset($_POST['telefono'])) {
 			$body = $body."<p>Telefono: ".$_POST['telefono']."</p>";			
-		}		
-
+		}
 		$correo = new PHPMailer();
 		$correo->Host = "localhost";
 		$correo->From = "no-reply@playersoflife.com";
@@ -29,5 +28,4 @@
 	}else{
 		header('Location: ../index.php#suscribete');
 	}
-
 ?>

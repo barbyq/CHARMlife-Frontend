@@ -931,6 +931,26 @@ body{
         box-shadow: 3px 3px 5px 6px #ccc;
       }
     }
+    .showsections{
+      article{
+        display: inline-block;
+        color: black;
+        width: 210px;
+        padding-left: 70px;
+        padding-right: 40px;
+        padding-top: 30px;
+        .header-seccion{
+          background-image: url(../img/content/index/fondo.png);
+          width: 280px;
+          p{
+            color: white;
+            position: relative;
+            left: 25px;
+            bottom: 1px;
+          }
+        }
+      } 
+    }
   }
   .right{
     float: right;

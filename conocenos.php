@@ -62,14 +62,14 @@
 			<div class="quienesomos">
 				<div class="texto">
 					<h1>¿Quiénes Somos?</h1>
-					<p>CHARM life es el espacio perfecto para apreciar las vivencias de la sociedad lagunera. El lente que te permite ver el estilo de vida de un socialité de la región, modus vivendi de personalidades y la crónica visual de esos momentos que perdurarán. Presentamos un sitio web constantemente actualizado con los eventos más recientes y una revista mensual en la que quedarán grabados los instantes más memorables y únicos que permanecerán por siempre. </p>	
+					<p> <strong>CHARM life</strong> es el espacio perfecto para apreciar las vivencias de la sociedad lagunera. Diseñadas para toda la familia, nuestra revista y página web te comparten el estilo de vida de un socialité de la región, testimonios de personalidades, la crónica visual de los momentos que perdurarán y valiosas colaboraciones de expertos. Como parte de <strong>Grupo PLAYERS</strong> estamos comprometidos a brindarte productos y servicios de la más alta calidad que superen tus expectativas de información y entretenimiento. </p>	
 				</div>
 			</div>
 			<div class="filosofia">
 				<h1>Misión</h1>
-				<p>Ser la revista social de mayor impacto liderando el mercado donde nos ubicamos, siendo un producto de calidad que potencialice su valor. Innovadores y competitivos satisfaciendo plenamente a nuestros lectores e incentivando la practica sana de la lectura. Para alcanzar esta misión, nos basamos en capacitación y desarrollo laboral en un ambiente fortalecido por los valores del Grupo Editorial PLAYERS. </p>
+				<p>Ser el medio social líder de información y entretenimiento para las familias laguneras, fortaleciendo los valores de la comunidad y brindando bienestar a nuestros socios comerciales y asociados.</p>
 				<h1>Visión</h1>
-				<p>Hacer de nuestra revista un negocio que alcance los objetivos sociales y los niveles de rentabilidad que lo hagan atractivo. Seremos un medio acreditado y posicionado a nivel nacional, en un lapso no mayor de cinco años, convirtiéndonos en el medio de mayor importancia dentro del mundo editorial femenino y social.</p>
+				<p>Trascender en el mundo editorial familiar, femenino y social, integrando de la mejor forma la oferta impresa y digital para acompañar a nuestros lectores en su día a día.</p>
 				<br class="clear"/>
 				<div class="imagenes">
 					<img class="derecha" src="assets/img/content/conocenos/charmlogo.png" alt="">

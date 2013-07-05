@@ -99,7 +99,40 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				<div class="showsections">
+					<article>
+						<div class="header-seccion"><p>SPIRIT</p></div>
+						<div class="texto">
+							<img src="assets/img/prueba/1.jpg" alt="">
+							<h1>Prueba</h1>
+							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
+						</div>
+					</article>
+					<article>
+						<div class="header-seccion"><p>SPIRIT</p></div>
+						<div class="texto">
+							<img src="assets/img/prueba/1.jpg" alt="">
+							<h1>Prueba</h1>
+							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
+						</div>
+					</article>
+					<article>
+						<div class="header-seccion"><p>SPIRIT</p></div>
+						<div class="texto">
+							<img src="assets/img/prueba/1.jpg" alt="">
+							<h1>Prueba</h1>
+							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
+						</div>
+					</article>
+					<article>
+						<div class="header-seccion"><p>SPIRIT</p></div>
+						<div class="texto">
+							<img src="assets/img/prueba/1.jpg" alt="">
+							<h1>Prueba</h1>
+							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
+						</div>
+					</article>
 				</div>
 			</div>
 			<div class="right">

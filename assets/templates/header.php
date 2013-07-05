@@ -210,10 +210,10 @@ $(document).ready(function() {
 							</ul>
 					</div>
 					<div class="iconitos">
-						<a href="#"><img src="/frontend/assets/img/facebook.png"></a>
-						<a href="#"><img src="/frontend/assets/img/twitter.png"></a>
-						<a href="#"><img src="/frontend/assets/img/path.png"></a>
-						<a href="#"><img src="/frontend/assets/img/instagram.png"></a>
+						<a href="http://facebook.com/charmlifetorreon"><img src="/frontend/assets/img/facebook.png"></a>
+						<a href="http://twitter.com/charmtorreon"><img src="/frontend/assets/img/twitter.png"></a>
+						<a href="http://pinterest.com/charmtorreon"><img src="/frontend/assets/img/path.png"></a>
+						<a href="http://instragram.com/charmtorreon"><img src="/frontend/assets/img/instagram.png"></a>
 					</div>
 					</div>
 			</div>
