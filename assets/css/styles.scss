@@ -926,28 +926,35 @@ body{
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow:         3px 3px 5px 6px #ccc;
       article{
-        width: 298px;
-        height: 140px;
+        width: 300px;
+        height: 110px;
         border-bottom-style:dashed;
         text-align: center;
         img{
           margin: 0 auto;
+          float: left;
+          padding: 3%;
+          width: 120px;
+          height: 85px;
+          position: relative;
+          left: 5%;
         }
         a{
           color: black;
         }
         .texto{
-          /*width: 142px;
+          width: 108px;
           float: right;
-          padding-top: 3%;
-          padding-right: 5%;
+          padding-top: 5%;
+          position: relative;
+          right: 15%;
           h1{
             font-weight: bold;
             font-size: 160%;
           }
           p{
             font-size: 115%;
-          }*/
+          }
         }
         hr{
             border-top: 1px dotted black;

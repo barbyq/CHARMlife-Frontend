@@ -101,7 +101,6 @@
 									<div class="texto clear">
 										<h1><?= $item->titulo ?></h1>
 										<h2><?= $item->subtitulo ?></h2>
-										<p>Texto adum sirondurum blimbum barbarum haxorum</p>
 									</div>
 								</a>
 							</article>		
