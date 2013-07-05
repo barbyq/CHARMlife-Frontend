@@ -16,7 +16,7 @@
  ?>
 <html lang="es">
 <head>
-	<title>Conocenos</title>
+	<title>CHARMlife Conócenos</title>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/styles.css">
@@ -46,8 +46,7 @@
 				<img src="assets/img/content/conocenos/nosotros.png" alt="">
 				<div class="sliderNosotros-wrapper">
 					<div id="nosotrosimagenes" class="royalSlider rxDefault nosotrosimg">
-						<img src="assets/img/content/conocenos/slideexample.png" alt="" class="rsImg">
-						<img src="assets/img/content/conocenos/slideexample2.png" alt="" class="rsImg">
+						<img src="assets/img/content/conocenos/conocenos_slider.jpg" alt="" class="rsImg">
 					</div>
 				</div>
 				<div class="perfil">
