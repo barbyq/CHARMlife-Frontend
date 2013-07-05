@@ -33,4 +33,24 @@ $(function(){
 			});
     	}
     });
+
+    $('.galeriaSlider').royalSlider({
+		keyboardNavEnabled: true,
+        controlNavigation: 'none',
+        autoHeight: true,
+        imageScaleMode: 'none',
+        imageAlignCenter:false,
+        arrowsNav: true
+	});
+
+	$("#videoSlider").royalSlider({
+		imageScaleMode: 'none',
+		controlNavigation: 'none',
+		imageAlignCenter: false,
+		navigateByClick: false,
+		sliderDrag: false,
+		sliderTouch: false
+	});
+
+
 });

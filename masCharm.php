@@ -165,7 +165,14 @@
 						}
 						?>
 						<article class="box">
-							<a href="articulo.php?id=<?= $item->articulo_id ?>">
+							<?php  if($item->tipo == 0){ ?>
+								<a href="articulo.php?id=<?= $item->articulo_id ?>">
+							<?php }elseif ($item->tipo == 1) { ?>
+								<a href="galeria.php?id=<?= $item->articulo_id ?>">
+							<?php }else{?>
+								<a href="video.php?id=<?= $item->articulo_id ?>">
+							<?php  } ?>
+							
 								<?php if(!empty($imgs)){ ?>
 									<img src="<?= $dir .'charmadmin/MasCharm/'.$item->articulo_id . '/' . $imgs[2] ?>">
 								<?php } ?>

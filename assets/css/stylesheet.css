@@ -454,6 +454,17 @@
 .social .img_vote {
   cursor: pointer; }
 
+.arts .info {
+  font-size: 17px; }
+  .arts .info h1 {
+    font-weight: 700;
+    font-size: 350%; }
+  .arts .info h2 {
+    font-size: 150%; }
+.arts .body {
+  font-weight: 300;
+  font-size: 17px; }
+
 .sliderSociales {
   width: 920px;
   margin: 0 auto;
