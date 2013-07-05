@@ -36,7 +36,7 @@
 			
 			<div id="bigSlider" class="royalSlider rxDefault">
 				<?php 
-					$sociales = $socialesDAO->getLoMasNuevo(12);
+					$sociales = $socialesDAO->getLoMasNuevo(11);
 					foreach ($sociales as $item) { 
 							$thumb = scandir($dir .'charmadmin/SocThumb/'.$item->sociales_id);
 							$main = scandir($dir .'charmadmin/SocPrincipal/'.$item->sociales_id);
@@ -77,7 +77,29 @@
 				</section><!-- body -->
 			</section><!-- mini_features -->
 
+
 			<section class="mini_features">
+				<header>
+					<h1>Eventos anteriores</h1>
+				</header>
+				<section class="body">
+					<?php 
+						$sociales = $socialesDAO->getEventosAnteriores(5);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
+					<br class="clear">
+				</section><!-- body -->
+			</section><!-- mini_features -->
+
+			<!--<section class="mini_features">
 				<header>
 					<h1>Lo + recomendado</h1>
 				</header>
@@ -96,7 +118,7 @@
 					 <?php } ?>
 					<br class="clear">
 				</section><!-- body -->
-			</section><!-- mini_features -->
+			<!--</section><!-- mini_features -->
 
 			<section class="box_feature amigos">
 				<header>

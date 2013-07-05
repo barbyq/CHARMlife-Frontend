@@ -97,6 +97,7 @@
 					</div>
 					<br class="clear">
 				</section>
+				<h1 style="font-weight: 700; font-size: 23px; text-align: center; width: 326px;">Temática Mensual</h1>
 				<section id="tematicamensual" style="width:325px;height:240px;" class="royalSlider rxDefault">
 					<?php $tem = $articulosDAO->getArticulosTematicaMensual(); ?>
 					<?php foreach ($tem as $ti) { ?>
@@ -135,8 +136,8 @@
 			</section><!-- col_small -->
 		</section>
 		<section class="col3">
-			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/mascharm/3.gif" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/mascharm/4.gif" class="ad"></a>
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/home/3.gif" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/home/4.gif" class="ad"></a>
 			<section class="outfit">
 				<header>
 					<h1>Outfit de la Semana</h1>
