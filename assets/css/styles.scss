@@ -910,9 +910,19 @@ body{
     float: left;
     width: 69%;
     .portada{
-      img{
+      .wrap{
+        position: relative;
+        left: 7%;
+       }
+      .arriba{
         position: relative;
         left: 20%;
+        width: 50.7%;
+      }
+      .imagen{
+        position: relative;
+        left: 20%;
+        width: 350px;
         -webkit-box-shadow: 3px 3px 5px 6px #ccc;
         -moz-box-shadow: 3px 3px 5px 6px #ccc;
         box-shadow: 3px 3px 5px 6px #ccc;

@@ -80,10 +80,12 @@
 		<section class="lower">
 			<div class="left">
 				<div class="portada">
-					<img src="assets/img/content/index/portadainteractiva.png" alt="">
-					<div class="port">
-						<?php $portadaultimate = $portadasDAO->getUltimaPortada(); ?>
-						<img style="position:relative;left:20%;width:460px;"src="/charmadmin/upload/portadas/<?php echo $portadaultimate->portadas_id; ?>/<?php echo $portadaultimate->img; ?>" alt="">
+					<div class="wrap">
+						<img class="arriba" src="assets/img/content/index/portadainteractiva.png" alt="">
+						<div class="port">
+							<?php $portadaultimate = $portadasDAO->getUltimaPortada(); ?>
+							<img  class="imagen" src="/charmadmin/upload/portadas/<?php echo $portadaultimate->portadas_id; ?>/<?php echo $portadaultimate->img; ?>" alt="">
+						</div>
 					</div>
 				</div>
 				<div class="showsections">
