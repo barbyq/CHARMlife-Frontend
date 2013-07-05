@@ -79,10 +79,14 @@
 							</div>
 						<? } ?>
 				</section>
+
 				<section class="fotos_feat">
 					<?php $foto = $socialesDAO->getFotoMasCharm(); ?>
-					<div>
+					<div id="clickFotoMasCharm">
 						<img src="assets/img/content/medal_foto.png">
+						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
+					</div>
+					<div style="display:none;" id="fotoMasCharm">
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 					</div>
 					<?php $sociales = $socialesDAO->getLoMasCompartido(1); 
