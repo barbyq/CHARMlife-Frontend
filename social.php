@@ -51,8 +51,8 @@
 							<div class="rsContent">
 								<center>
 									<img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>">
-									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -31px; left: 260px;">
-									<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-11px; left: 110px;">
+									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 260px;">
+									<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">
 								</center>
 								<div class="rsTmb">
 									<img src="<?= $dir ?>charmadmin/<?= $route . '/thumbnail/' . $img  ?>">

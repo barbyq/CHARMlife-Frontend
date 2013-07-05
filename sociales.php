@@ -27,7 +27,7 @@
 
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
-	<!-- <script type="text/javascript" src="assets/js/all.js"></script> -->
+	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript" src="assets/js/assets.js"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@
 			
 			<div id="bigSlider" class="royalSlider rxDefault">
 				<?php 
-					$sociales = $socialesDAO->getLoMasNuevo(8);
+					$sociales = $socialesDAO->getLoMasNuevo(12);
 					foreach ($sociales as $item) { 
 							$thumb = scandir($dir .'charmadmin/SocThumb/'.$item->sociales_id);
 							$main = scandir($dir .'charmadmin/SocPrincipal/'.$item->sociales_id);

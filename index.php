@@ -34,7 +34,18 @@
 	<section class="wrapper contenido index">
 		<section class="col2">
 			<section class="col_big">
-				<h1>hey</h1>
+				<section class="fotos_feat">
+					<?php $foto = $socialesDAO->getFotoMasCharm(); ?>
+					<div>
+						<img src="assets/img/content/medal_foto.png">
+						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
+					</div>
+					<div>
+						<img src="assets/img/content/medal_evento.png">
+					</div>
+					<br class="clear">
+
+				</section>
 			</section>
 			<section class="lomastop">
 				<h1>Lo+ TOP</h1>

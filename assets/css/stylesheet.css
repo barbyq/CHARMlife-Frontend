@@ -431,7 +431,7 @@
     background: none;
     color: black; }
   #socialiteSlider .rsContent {
-    margin-bottom: 40px; }
+    margin-bottom: 50px; }
   #socialiteSlider.rxDefault .rsThumb {
     float: left;
     overflow: hidden;
@@ -494,3 +494,21 @@
     width: 925px;
     position: absolute;
     bottom: -85px; }
+
+.fotos_feat div {
+  width: 320px;
+  text-align: center; }
+  .fotos_feat div img:first-child {
+    width: 150px;
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    position: relative;
+    top: 19px; }
+  .fotos_feat div img {
+    width: 300px;
+    border: 8px solid white;
+    -moz-box-shadow: 1px 1px 1px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc; }
