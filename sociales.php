@@ -157,28 +157,37 @@
 		</section><!-- col2 -->
 		<section class="col3">
 			<br><br>
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/sociales/3.gif" class="ad"></a>
+			<img src="" class="ad">
 			
 			<section class="tabbed_info">
 				<header>
-					<h3 class="selected">Esta Semana</h3>
-					<h3>Este mes</h3>
-					<h3>Anteriores</h3>
+					<h3 class="selected">Este mes</h3>
+					<!--<h3>Este mes</h3>
+					<h3>Anteriores</h3>-->
 					<br class="clear">
 				</header>
 				<section class="body">
+					<?php $articulos = $articulosDAO->getRandomOfTheMonth(); ?>
 					<ul>
-						<li>* Spring Eyes, Natural Beauty</li>
-						<li>* Kitchen Garden</li>
-						<li>* Dress like a hipster</li>
-						<li>* Float like a butterfly, sting like a bee</li>
+						<?php foreach ($articulos as $item) { 
+							if($item->tipo== 0){
+								echo '<li><a href="articulo.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}elseif($item->tipo == 1){
+								echo '<li><a href="galeria.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}else{
+								echo '<li><a href="video.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}
+							?>
+							
+							
+						<?php } ?>
 					</ul>
 				</section>
 
 			</section><!-- tabbed_info-->
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+			<!--<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
+			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">-->
 
 		</section><!-- col3 -->
 		<br class="clear">

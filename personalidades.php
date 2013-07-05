@@ -133,10 +133,10 @@
 				</section><!-- body_ -->
 			<!-- </section> <!-- mini_features -->
 		</section>
-		<section class="col3">
+		<!--<section class="col3">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
 			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
-		</section>
+		</section>-->
 	</section>
 	<br class="clear">
 	<?php include "assets/templates/footer.php" ?>

@@ -392,6 +392,15 @@
 		padding: 10px 15px;
 		height: 340px;
 		text-align: left;
+		li{
+			padding-bottom: 3px;
+			a{
+				color: black;
+			}
+			a:hover{
+				color:gray;
+			}
+		}
 	}
 }
 
@@ -678,6 +687,18 @@
 			-moz-box-shadow:    1px 1px 1px 1px #ccc;
 			-webkit-box-shadow: 1px 1px 1px 1px #ccc;
 			box-shadow:         1px 1px 1px 1px #ccc;
+		}
+		a{
+			border: none;
+			color: white;
+			h2{
+				color: black;
+				background-color: white;
+				position: relative;
+				top: -26px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
 		}
 	}
 }

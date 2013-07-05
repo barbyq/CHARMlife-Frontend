@@ -40,8 +40,15 @@
 						<img src="assets/img/content/medal_foto.png">
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 					</div>
+					<?php $sociales = $socialesDAO->getLoMasCompartido(1); 
+						$item = $sociales[0];
+						$thumb = scandir($dir. 'charmadmin/SocPrincipal/'.$item->sociales_id . '/'); ?>
 					<div>
+						<a href="<?= 'social.php?id=' . $item->sociales_id ?>">
 						<img src="assets/img/content/medal_evento.png">
+						<img src="<?= $dir . '/charmadmin/SocPrincipal/'. $item->sociales_id . '/' . $thumb[2] ?>">
+						<h2><?= $item->titulo ?></h2>
+						</a>
 					</div>
 					<br class="clear">
 
@@ -72,7 +79,8 @@
 				<header>
 					<h1>Outfit de la Semana</h1>
 				</header>
-				<img src="assets/img/prueba/outfit.jpg">
+				<?php $outfit = scandir($dir. 'charmadmin/Outfit/'); ?>
+				<img src="<?= $dir. 'charmadmin/Outfit/' . $outfit[2]  ?>">
 				<div class="texto">
 				</div>
 			</section>
