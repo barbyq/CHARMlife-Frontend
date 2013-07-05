@@ -237,10 +237,10 @@ jQuery(document).ready(function($) {
 	</div>
 
 	<section class="lateral">
-		<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>
+		<!--<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>-->
 		<br/>
 		<br/>
-		<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>
+		<!--<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>-->
 		<br/>
 		<br/>
 		<br/>
@@ -263,9 +263,9 @@ jQuery(document).ready(function($) {
 		</section>
 		<br/>
 		<br/>
-		<a href="#">
+		<!--<a href="#">
 			<img src="assets/img/portadas/banner3example.png" alt="">
-		</a>
+		</a>-->
 		<br/>
 	</section>
 	<br class="clear"/>

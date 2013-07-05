@@ -184,8 +184,8 @@ $(document).ready(function() {
 <div class="main_header" >
 	<header class="wrapper">
 		<div class="banners">
-			<a href="#"><img src="/frontend/assets/img/banner1.jpg"></a>
-			<a href="#"><img src="/frontend/assets/img/banner2.png"></a>		
+			<a href="#suscribebox"><img src="assets/banners/home/1.png"></a>
+			<a href="http://www.capricciosas.com" target="_blank"><img src="assets/banners/home/2.jpg"></a>		
 		</div>
 		<div class="header" style="background-image:url(<? echo "../charmadmin/Banner/".$banner;?>);">
 			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">

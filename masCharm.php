@@ -20,9 +20,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css"> 
+
+	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
+
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
-	<!-- <script type="text/javascript" src="assets/js/all.js"></script> -->
+	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
+	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript">
 	function makeBoxes(objs) {
 		var boxes = [];
@@ -128,9 +134,9 @@
 		        $(this).hide();
 		    });
 
-		 $('.interests').hide();
-		 $('header').click(function(e){
-		 	$('.interests').slideToggle('medium', function() {
+		 $('ul.interests').hide();
+		 $('.header_interests').click(function(e){
+		 	$('ul.interests').slideToggle('medium', function() {
   				});
 		 });
 
@@ -146,7 +152,7 @@
 	<section class="wrapper masCharm contenido">
 		<section class="col2">
 			<nav>
-				<header>
+				<!--<header class="header_interests">
 					<h2>Selecciona tus intereses</h2>
 				</header>
 				<ul class="interests">
@@ -154,7 +160,7 @@
 						foreach ($tags as $tag) { ?>
 							<li data-id="<?= $tag->tag_id ?>"><?= $tag->nombre; ?></li>
 					<?php } ?>
-				</ul>
+				</ul>-->
 			</nav>
 			<section class="grid">
 				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);
@@ -187,22 +193,32 @@
 		</section><!-- left -->
 		<section class="col3">
 			<br><br>
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/mascharm/3.gif" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/mascharm/4.gif" class="ad"></a>
 			
 			<section class="tabbed_info">
 				<header>
-					<h3 class="selected">Esta Semana</h3>
-					<h3>Este mes</h3>
-					<h3>Anteriores</h3>
+					<h3 class="selected">Este mes</h3>
+					<!--<h3 class="selected">Esta Semana</h3>
+					
+					<h3>Anteriores</h3>-->
 					<br class="clear">
 				</header>
 				<section class="body">
+					<?php $articulos = $articulosDAO->getRandomOfTheMonth(); ?>
 					<ul>
-						<li>* Spring Eyes, Natural Beauty</li>
-						<li>* Kitchen Garden</li>
-						<li>* Dress like a hipster</li>
-						<li>* Float like a butterfly, sting like a bee</li>
+						<?php foreach ($articulos as $item) { 
+							if($item->tipo== 0){
+								echo '<li><a href="articulo.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}elseif($item->tipo == 1){
+								echo '<li><a href="galeria.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}else{
+								echo '<li><a href="video.php?id='. $item->articulo_id .'">*' .  $item->titulo . '</a></li>';
+							}
+							?>
+							
+							
+						<?php } ?>
 					</ul>
 				</section>
 
