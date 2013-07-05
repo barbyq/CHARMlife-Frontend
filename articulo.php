@@ -22,6 +22,13 @@
 					<?php if ($articulo->status != '0') { ?>
 						<title>CHARM life - No Encontrado></title>
 					<? }else{ ?>
+						<?php 
+						/*if ($articulo->tipo == "1") {
+						 	header("Location: galeria.php?id=".$articulo->articulo_id);
+						 }else if ($articulo->tipo == "2") {
+						 	header("Location: video.php?id=".$articulo->articulo_id);
+						 }*/ 
+						 ?>
 						<title>CHARM life - <?php echo $articulo->titulo ?></title>
 						<?php if (is_dir("../charmadmin/Imagenes/".$articulo->articulo_id)) { ?>
 							<?php $archivos = scandir("../charmadmin/Imagenes/".$articulo->articulo_id); ?>

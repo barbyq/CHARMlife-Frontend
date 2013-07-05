@@ -29,7 +29,12 @@ $("#sliderSociales").royalSlider({
         imageAlignCenter: true,
         loop: true,
         navigateByCenterClick: false,
-        navigateByClick:false
+        navigateByClick:false,
+        autoPlay: {
+            // autoplay options go gere
+            enabled: true,
+            pauseOnHover: true
+        }
     });
 
     $("#tematicamensual").royalSlider({

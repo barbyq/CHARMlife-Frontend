@@ -6,9 +6,7 @@
 <script type="text/javascript" src="assets/js/router.js"></script>
 <script>	
 function mandarforma () {
-
 	var searma = 1;
-
 	var iiis = $(".formaregala :input");
 	var nombre = iiis[14]["value"];
 	var direccion = iiis[15]["value"];
