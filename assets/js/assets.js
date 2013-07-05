@@ -13,7 +13,24 @@ $(function(){
         autoHeight: true,
         imageScaleMode: 'none',
         imageAlignCenter:false,
-        arrowsNav: true
+        arrowsNav: true,
+        navigateByClick: false
 
+    });
+
+    $('.social .img_vote').click(function(e){
+    	if(!$(this).hasClass('voted')){
+    		id = $(this).data('id');
+    		var context = $(this);
+    		$.ajax({
+				type: "POST",
+				url: "assets/templates/votarMasCharm.php",
+				data: {id: id},
+				success: function(data){
+					console.log(data);
+					context.addClass('voted');
+				}
+			});
+    	}
     });
 });

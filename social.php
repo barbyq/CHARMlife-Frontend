@@ -49,9 +49,14 @@
 							$route = substr($foto->img, 0, $pos); 
 							$img =  substr($foto->img, $pos+1, strlen($foto->img)); ?>	
 							<div class="rsContent">
-								<center><img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>"></center>
-								<!--<section class="rsABlock"><h2><?= $item->titulo ?></h2></section>-->
-								<div class="rsTmb"><img src="<?= $dir ?>charmadmin/<?= $route . '/thumbnail/' . $img  ?>"></div>
+								<center>
+									<img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>">
+									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -31px; left: 260px;">
+									<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-11px; left: 110px;">
+								</center>
+								<div class="rsTmb">
+									<img src="<?= $dir ?>charmadmin/<?= $route . '/thumbnail/' . $img  ?>">
+								</div>
 							</div>
 					<?php } ?>
 				</div><!-- bigSlider  -->

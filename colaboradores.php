@@ -119,7 +119,7 @@
 	</section>
 	<section class="articulos-colaborador">
 		<div class="escritorpor">
-			<h1>Articulos Escritos Por: </h1>
+			<h1>Artículos Escritos Por: </h1>
 			<p id="articulos-nombre"><?php echo $objecto->nombrec; ?></p>
 		</div>
 		<div id="articulos-section">

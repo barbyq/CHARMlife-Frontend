@@ -91,14 +91,14 @@ $(document).ready(function() {
 						<li><a href="masCharm.php">+CHARM</a></li>
 						<li><a href="portadas.php">PORTADAS</a></li>
 						<li><a href="colaboradores.php">COLABORADORES</a></li>
-						<li><a href="conocenos.php">CONÒCENOS</a></li>
+						<li><a href="conocenos.php">CONÓCENOS</a></li>
 					</ul>
 				</div>
 					<div>
 					<div class="secondary-navigation">
 							<ul>
-								<li><a href="#home">Anunciate</a><div class="vertical-line"></div></li>
-								<li><a href="#suscribebox" id="suscribete">Suscribete</a><div class="vertical-line"></div></li>
+								<li><a href="#home">Anúnciate</a><div class="vertical-line"></div></li>
+								<li><a href="#suscribebox" id="suscribete">Suscríbete</a><div class="vertical-line"></div></li>
 								<li><a href="#regalabox" id="regalacharm">Regala Charm</a><div class="vertical-line"></div></li>
 							</ul>
 					</div>

@@ -427,21 +427,23 @@
   width: 100%;
   /* width: 665px;
    height: 374px;*/ }
-  #socialiteSlider.rsDefault, #socialiteSlider.rsDefault .rsOverflow, #socialiteSlider.rsDefault .rsSlide, #socialiteSlider.rsDefault .rsVideoFrameHolder, #socialiteSlider.rsDefault .rsThumbs {
+  #socialiteSlider.rxDefault, #socialiteSlider.rxDefault .rsOverflow, #socialiteSlider.rxDefault .rsSlide, #socialiteSlider.rxDefault .rsVideoFrameHolder, #socialiteSlider.rxDefault .rsThumbs {
     background: none;
     color: black; }
-  #socialiteSlider.rsDefault .rsThumb {
+  #socialiteSlider .rsContent {
+    margin-bottom: 40px; }
+  #socialiteSlider.rxDefault .rsThumb {
     float: left;
     overflow: hidden;
     /*height: 42px;*/
-    background-color: #83003a; }
-    #socialiteSlider.rsDefault .rsThumb img {
-      width: 120px; }
+    background-color: #83003a;
+    width: 100px; }
 
 .social .info {
   width: 700px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 15px; }
   .social .info h1 {
     font-size: 30px;
     font-weight: 700; }
@@ -449,6 +451,8 @@
     font-size: 24px; }
   .social .info p {
     font-size: 18px; }
+.social .img_vote {
+  cursor: pointer; }
 
 .sliderSociales {
   width: 920px;
