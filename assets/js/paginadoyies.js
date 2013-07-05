@@ -12,17 +12,18 @@ $(function() {
  				$conjunto = $("<div class='conjunto-primeravera'></div>");
  			}
                         segundoloop: for (var j = 0; j < 4; j++) {
-                                var $eichtieme = $("<div class='articulin'></div>");
+                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
                                 if (response[contador]["thumbnail"] != "" ) {
                                         $eichtieme.append("<img src='../charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
         	                }else{
 	                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
                                 }
-                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+                                $eichtieme.append("<div class='texto'><h1>"+response[contador]['titulo']+"</h1><p>"+response[contador]['subtitulo']+"</p></div>")
                                $conjunto.append($eichtieme);
-                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
+                               if (contador == response.length-1) { break; }else{ contador++; };
                         };
                         $('#articulos-section').append($conjunto);
+                        if (contador == response.length-1) { break; }else{ contador++; }; 
                 };
                 //Paginado
 		for (var i = 0; i < cantidaddepaginas; i++) {
@@ -55,11 +56,12 @@ $(function() {
 				        	                }else{
 					                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
 				                                }
-				                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+				                                $eichtieme.append("<div class='texto'><h1>"+response[contador]['titulo']+"</h1><p>"+response[contador]['subtitulo']+"</p></div>")
 				                               $conjunto.append($eichtieme);
 				                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
 				                        };
 				                        $('#articulos-section').append($conjunto);
+			                               if (contador == response.length-1) { break; }else{ contador++;};
 				                };
 					},'json');
 				});
@@ -72,7 +74,8 @@ $(function() {
 
 function  ShowColabInfo(colabid) {
 	$.post("../charmadmin/controllers/colaboradores_controller.php",{receiver:"showcolab",showcolab:colabid},function(response) {
-                        $('#nombrecolaborador').html(response['nombre']);
+                       	console.log(response);
+                        $('#nombrecolaborador').html(response['nombrec']);
 	                $('#descripcion').html(response['descripcion']);
                                if (response['imagen'] == "") {
                                   $('#fotocolab').attr("src","assets/img/content/colaboradores/colabunknow.png");
@@ -120,6 +123,7 @@ function ShowColabArticles (colabid) {
                                if (contador == response.length-1) { break segundoloop; }else{ contador++};
                         };
                         $('#articulos-section').append($conjunto);
+                        if (contador == response.length-1) { break; }else{ contador++};
                 };
                 //Paginado
                 $('#anchor-wrapper').empty();
@@ -158,6 +162,7 @@ function ShowColabArticles (colabid) {
 				                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
 				                        };
 				                        $('#articulos-section').append($conjunto);
+	                                               if (contador == response.length-1) { break; }else{ contador++;};
 				                };
 					},'json');
 				});
