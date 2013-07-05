@@ -750,12 +750,15 @@ body {
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow: 3px 3px 5px 6px #ccc; }
   .lower .left .showsections article {
+    position: relative;
     display: inline-block;
     color: black;
     width: 210px;
     padding-left: 70px;
     padding-right: 40px;
     padding-top: 30px; }
+    .lower .left .showsections article a {
+      color: black; }
     .lower .left .showsections article .header-seccion {
       background-image: url(../img/content/index/fondo.png);
       width: 280px; }
@@ -764,6 +767,23 @@ body {
         position: relative;
         left: 25px;
         bottom: 1px; }
+    .lower .left .showsections article .texto {
+      position: absolute;
+      top: 143px;
+      background-color: white;
+      opacity: 0.70;
+      width: 280px;
+      height: 71px; }
+      .lower .left .showsections article .texto .paddingsin {
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 8px; }
+      .lower .left .showsections article .texto h1 {
+        font-weight: bold;
+        font-size: 115%; }
+    .lower .left .showsections article img {
+      height: 166px;
+      width: 280px; }
 .lower .right {
   float: right; }
   .lower .right .lomasnuevo {

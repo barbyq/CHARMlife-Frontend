@@ -31,6 +31,30 @@
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
+	<?php 
+	function dametipo($tipo)
+	 {
+		switch ($tipo) {
+			case '0':
+				return "articulo.php?id=";
+				break;
+			case '1':
+				return "galeria.php?id=";
+				break;
+			case '2':
+				return "video.php?id=";
+				break;
+			default:
+				break;
+		}
+	}	
+	function dameimagen($id)
+	{
+		$escaneo = scandir("../charmadmin/Thumbnails/".$id);
+		$imagen = $escaneo[2];
+		$ruta = "../charmadmin/Thumbnails/".$id."/".$imagen;
+		return $ruta;
+	} ?>
 	<section class="wrapper contenido index">
 		<section class="col2">
 			<section class="col_big">
@@ -109,38 +133,21 @@
 				</div>
 				<br/>
 				<div class="showsections">
-					<article>
-						<div class="header-seccion"><p>SPIRIT</p></div>
-						<div class="texto">
-							<img src="assets/img/prueba/1.jpg" alt="">
-							<h1>Prueba</h1>
-							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
-						</div>
-					</article>
-					<article>
-						<div class="header-seccion"><p>SPIRIT</p></div>
-						<div class="texto">
-							<img src="assets/img/prueba/1.jpg" alt="">
-							<h1>Prueba</h1>
-							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
-						</div>
-					</article>
-					<article>
-						<div class="header-seccion"><p>SPIRIT</p></div>
-						<div class="texto">
-							<img src="assets/img/prueba/1.jpg" alt="">
-							<h1>Prueba</h1>
-							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
-						</div>
-					</article>
-					<article>
-						<div class="header-seccion"><p>SPIRIT</p></div>
-						<div class="texto">
-							<img src="assets/img/prueba/1.jpg" alt="">
-							<h1>Prueba</h1>
-							<h2>Cuando se inicia una relación en pareja es comun que ambos tengan una percepción idealizada del otro</h2>
-						</div>
-					</article>
+					<?php $articleschidis = $articulosDAO->getRandomArticulosAndSections(); ?>
+					<?php foreach ($articleschidis as $article) { ?>
+						<article>
+							<a href="<?php echo dametipo($article->tipo).$article->articulo_id; ?>">
+							<div class="header-seccion"><p><?= $article->seccion; ?></p></div>
+								<img src="<?php echo dameimagen($article->articulo_id); ?>" alt="">
+								<div class="texto">
+									<div class="paddingsin">
+										<h1><?= $article->titulo?></h1>
+										<h2><?php echo $article->subtitulo; ?></h2>
+									</div>
+								</div>
+							</a>
+						</article>
+					<? } ?>
 				</div>
 			</div>
 			<div class="right">
