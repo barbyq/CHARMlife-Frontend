@@ -1,14 +1,19 @@
-<?php
-	include '../charmadmin/dbc/colaboradoresDAO.php';
-	include '../charmadmin/dbc/articulosDAO.php';
-	include '../charmadmin/dbc/dbconnect.php';
-	include '../charmadmin/controllers/utilities.php';
+<?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+	include 'assets/templates/pwd.php';
+	include $dir .'charmadmin/dbc/dbconnect.php';
+	include $dir .'charmadmin/dbc/portadasDAO.php';
+	include $dir .'charmadmin/dbc/articulosDAO.php';
+	include $dir .'charmadmin/dbc/utilities.php';
+	include $dir .'charmadmin/dbc/socialesDAO.php';
 
-	$dbconnect = new dbconnect("charm_charmlifec536978");
-	$dbc = $dbconnect->getConnection();
-	$colaboradoresDAO = new colaboradoresDAO($dbc);
-	$articulosDAO = new articulosDAO($dbc);
-  ?>
+	$dbconnect = new dbconnect('charm_charmlifec536978');
+	$dibo = $dbconnect->getConnection();
+	$portadasDAO = new portadasDAO($dibo);
+ 	$articulosDAO = new articulosDAO($dibo);
+	$socialesDAO = new socialesDAO($dibo);
+ ?>
 <html lang="es">
 <head>
 	<title>Colaboradores</title>

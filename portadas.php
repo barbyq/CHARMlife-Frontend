@@ -9,7 +9,7 @@
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
- 	$articlesDAO = new articulosDAO($dibo);
+ 	$articulosDAO = new articulosDAO($dibo);
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
 		<section class="articulos">
 			<br/>
 			<ul id="article-list">
-				<?php $articulos = $articlesDAO->getRandomOftheSemaine(); ?>
+				<?php $articulos = $articulosDAO->getRandomOftheSemaine(); ?>
 				<?php foreach ($articulos as $articulo) { ?>
 					<li type="disc"><a href="articulo.php?id=<?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
 				<?} ?>

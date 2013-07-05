@@ -27,8 +27,7 @@
 			<section class="main">
 				<?php $personalidades = $articulosDAO->getArticulosByArea('Personalidades', 3); 
 					foreach ($personalidades as $item) { 
-						$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/');
-						?>
+						$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/'); ?>
 					<a href="articulo.php?id=<?= $item->articulo_id ?>">
 						<img src="<?= $dir .'charmadmin/MasCharm/'.$item->articulo_id .'/' . $imgs[2] ?>">
 						<h3><?= $item->titulo ?><br>	
@@ -51,8 +50,7 @@
 							<h3><span><?= $item->titulo ?></span></h3>
 							<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
 						</article> 		
-					 <?php	}
-					 ?>
+					 <?php } ?>
 				
 					<br class="clear">
 				</section><!-- body -->

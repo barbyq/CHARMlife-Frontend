@@ -3,15 +3,15 @@
 	ini_set('display_errors', '1');
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
-	include '../charmadmin/dbc/portadasDAO.php';
-	include '../charmadmin/dbc/articulosDAO.php';
-	include '../charmadmin/dbc/utilities.php';
+	include $dir .'charmadmin/dbc/portadasDAO.php';
+	include $dir .'charmadmin/dbc/articulosDAO.php';
+	include $dir .'charmadmin/dbc/utilities.php';
 	include $dir .'charmadmin/dbc/socialesDAO.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
- 	$articlesDAO = new articulosDAO($dibo);
+ 	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
  ?>
 <!DOCTYPE html>
