@@ -7,12 +7,14 @@
 	include $dir .'charmadmin/dbc/articulosDAO.php';
 	include $dir .'charmadmin/dbc/utilities.php';
 	include $dir .'charmadmin/dbc/socialesDAO.php';
+	include $dir .'charmadmin/dbc/colaboradoresDAO.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
  	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
+	$colaboradoresDAO = new colaboradoresDAO($dibo);
  ?>
 <html lang="es">
 <head>
