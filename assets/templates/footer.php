@@ -18,34 +18,50 @@
 				<p>ventas@charmdivfe.com.mx</p>
 			</div>
 			<div class="sliderarticulos-wrapper">
+				<?php function dameurl($tipo)
+				{
+					switch ($tipo) {
+						case '0':
+							return "articulo.php?id=";
+							break;
+						case '1':
+							return "galeria.php?id=";
+							break;
+						case '2':
+							return "video.php?id=";
+							break;
+						default:
+							break;
+					}
+				} ?>
 				<p>Más de:</p>
  				<div id="sliderarticulos" class="royalSlider rsDefault rsBack">
 					<div class="rsContent">
 						<ul>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
+							<?php $arregloprimero = $articulosDAO->getArticulosByInterval(0); ?>
+							<?php foreach ($arregloprimero as $arti) { ?>
+								<li type="disc"><a href="<?php echo dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
+							<? } ?>
 						</ul>
 						<ul class="padul">
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
+							<?php $arreglosegundo = $articulosDAO->getArticulosByInterval(4); ?>
+							<?php foreach ($arreglosegundo as $arti) { ?>
+								<li type="disc"><a href="<?php echo dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
+							<? } ?>
 						</ul>
 					</div>
 					<div class="rsContent">
 						<ul>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
+							<?php $arreglotercero = $articulosDAO->getArticulosByInterval(8); ?>
+							<?php foreach ($arreglotercero as $arti) { ?>
+								<li type="disc"><a href="<?php echo dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
+							<? } ?>
 						</ul>
 						<ul class="padul">
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
-							<li type="disc"><a href="#">Articulo Chidi</a></li>
+							<?php $arreglocuarto = $articulosDAO->getArticulosByInterval(12); ?>
+							<?php foreach ($arreglocuarto as $arti) { ?>
+								<li type="disc"><a href="<?php echo dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
+							<? } ?>
 						</ul>
 					</div>
 				</div>
@@ -63,15 +79,14 @@
 		<br class="clear"/>
 		<div class="navigacion">
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="sociales.php">Sociales</a></li>
-				<li><a href="#">Personalidades</a></li>
-				<li><a href="#">+ CHARM</a></li>
+				<li><a href="personalidades.php">Personalidades</a></li>
+				<li><a href="masCharm.php">+ CHARM</a></li>
 				<li><a href="conocenos.php">Conócenos</a></li>
 				<li><a href="#">Anunciate</a></li>
-				<li><a href="#">Suscribete</a></li>
-				<li><a href="#">Regala Charm</a></li>
-				<li class="lastli"><a href="#">Revista en Línea</a></li>
+				<li><a href="#suscribebox" id="suscribete">Suscribete</a></li>
+				<li class="lastli"><a href="#regalabox" id="regalacharm">Regala Charm</a></li>
 			</ul>
 		</div>
 	</div>

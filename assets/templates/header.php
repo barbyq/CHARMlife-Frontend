@@ -1,16 +1,113 @@
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
 <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="assets/js/library/underscore.js"></script>
+<script type="text/javascript" src="assets/js/library/json2.js"></script>
+<script type="text/javascript" src="assets/js/library/backbone.js"></script>
+<script type="text/javascript" src="assets/js/router.js"></script>
 <script>	
-function validaSuscribete(forma) {
+function mandarforma () {
+
+	var searma = 1;
+
+	var iiis = $(".formaregala :input");
+	var nombre = iiis[14]["value"];
+	var direccion = iiis[15]["value"];
+	var codigopostal = iiis[16]["value"];
+	var telefono = iiis[17]["value"];
+	var correo = iiis[18]["value"];
+	var colonia = iiis[19]["value"];
+	var ciudad = iiis[20]["value"];
+	var naci = iiis[21]["value"];
+	var nacides = iiis[22]["value"];
+	var nombreregalador = iiis[23]["value"];
+	var correoregalador = iiis[25]["value"];
+	var telefonoregalador = iiis[24]["value"];
+	var mensaje = iiis[26]["value"]
+
+	if (nombre.length == 0) {
+		$('.nominput').attr("id","error");
+		var searma = 0;
+
+	};
+
+	if (direccion.length == 0) {
+		$('.diret').attr("id","error");
+		var searma = 0;
+
+	};
+	var hola = parseInt(codigopostal)/2;
+	var teli = parseInt(telefono)/2;
+
+	if (codigopostal.length == 0 || isNaN(hola)) {
+		$('.cdinput').attr("id","error");
+		var searma = 0;
+	};
+
+	if (telefono.length == 0 || isNaN(teli)) {
+		$('.telinput').attr("id","error");
+		var searma = 0;
+	};
+
+	if (correo.length == 0) {
+		$('.corrinput').attr("id","error");
+		var searma = 0;
+	};
+
+	if (colonia.length == 0) {
+		$('.colinput').attr("id","error");
+		var searma = 0;
+	};
+
+	if (ciudad.length == 0) {
+		$('#colreg').attr("id","error");
+		var searma = 0;
+	};
+
+	if (naci.length == 0) {
+		$('.fechita').attr("id","error");
+		var searma = 0;
+	};
+
+	if (nacides.length == 0) {
+		$('.fechitades').attr("id","error");
+		var searma = 0;
+	};
+
+	if (nombreregalador.length == 0) {
+		$('.abajonominput').attr("id","error");
+		var searma = 0;
+	};
+
+	if (telefonoregalador.length == 0 || isNaN(telefonoregalador) ) {
+		$('.comida').attr("id","error");
+		var searma = 0;
+	};
+
+	if (correoregalador.length == 0) {
+		$('.abajocorrinput').attr("id","error");
+		var searma = 0;
+	};
+		if (searma == 1) {
+			$.post("suscripciones/regala.php",{"nombre":nombre,"direccion":direccion,"colonia":colonia,"ciudad":ciudad,"codigopostal":codigopostal,"telefono":telefono,"correo":correo,"mensaje":mensaje,"fechanacimiento":naci,"fechadeseada":nacides,"nombreregalador":nombreregalador,"telefonoregalador":telefonoregalador,"correoregalador":correoregalador},function  (response) {
+				console.log("make the change");
+				$.fancybox.close();
+				charmRouter.navigate("gracias",{trigger:true});
+		});
+	};
+}
+
+function validaSuscribete() {
 	var estado = true;
-	var nombre = forma["nombre"].value;
-	var calle = forma["calle"].value;
-	var cp = forma["cp"].value;
-	var tel = forma["telefono"].value;
-	var email = forma["correo"].value;
-	var colonia = forma["colonia"].value;
-	var cidi = forma["ciudad"].value;
-	var fechi = forma["fecha"].value;
+
+	var forma = $(".formasuscribete :input");
+	var nombre = forma[9].value;
+	var calle = forma[10].value;
+	var cp = forma[11].value;
+	var tel = forma[12].value;
+	var email = forma[13].value;
+	var colonia = forma[14].value;
+	var cidi = forma[15].value;
+	var fechi = forma[16].value;
 	if (nombre.length == 0) {
 		$('#nombresus').attr("id","error");	
 		estado = false;
@@ -39,12 +136,18 @@ function validaSuscribete(forma) {
 		$('#fechasus').attr("id","error");
 		estado = false;
 	};
-	$('#suscribeboton').trigger("click");
-	return estado;
+	
+	if (estado == true) {
+		$.post("suscripciones/index.php",{"nombre":nombre,"calle":calle,"colonia":colonia,"cp":cp,"telefono":tel,"correo":email,"ciudad":cidi,},function  (response) {
+			console.log("yem");
+			$.fancybox.close();
+			charmRouter.navigate("gracias",{trigger:true});
+		});
+	}
 };
-
 </script>
 <script type="text/javascript">
+var charmRouter = 0;
 $(document).ready(function() {
 	$.getScript("assets/js/jquery.fancybox.js",function  () {
 		$('#suscribete').fancybox({
@@ -69,6 +172,10 @@ $(document).ready(function() {
 			        	this.content = '' + this.content.html();
 					this.width  = 780;
 	    		}});
+
+		charmRouter = new CharmRouter();
+		charmRouter.start();
+		console.log(charmRouter);
 	});
 });
 </script>
@@ -124,7 +231,7 @@ $(document).ready(function() {
 								<p>Llena el formulario y pronto te contactaremos para recoger el pago donde y cuando tú prefieras. </p>
 							</div>
 							<br class="clear"/>
-							<form class="formasuscribete" id="subscribeform" action="/suscripciones/index.php" onSubmit="return validaSuscribete(this);" method="POST">
+							<div class="formasuscribete" id="subscribeform">
 								<div class="izquierda">
 									<p>Nombre*</p>
 									<input type="text" id="nombresus"  class="nominput" name="nombre" >
@@ -148,28 +255,18 @@ $(document).ready(function() {
 									<p>Ciudad*</p>
 									<select id="city" name="ciudad" class="seleinput" >
 										<option value="Torreón">Torreón</option> 
-								                <option value="Monterrey">Monterrey</option> 
-								                <option value="Chihuahua">Chihuahua</option> 
-								                <option value="Leon">Leon</option> 
-								                <option value="Queretaro">Queretaro</option>
-									</select>
+								        </select>
 									<br class="clear"/>	
 									<p>Fecha Nacimiento*</p>
 									<input type="date"id="fechasus" name="fecha" >
 								</div>
 								<br class="clear"/>
-								<button id="suscribeboton" class="boton-forma">Enviar</button>
-							</form>
+								<button id="suscribeboton" class="boton-forma" onClick="validaSuscribete()">Enviar</button>
+							</div>
 						<br/>
 						<img style="padding-left:3.5%"src="assets/img/suscribete/opcion2.png">
 						<br/>
-				<!-- 	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=53XH98JVFUYRQ" class="botonpaypal">Paypi</a> -->
-						<form style="position:relative;padding-left:4%;width:146px;"action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-							<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="hosted_button_id" value="7C4S77S4CASJN">
-							<input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-							<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-						</form>
+							<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=53XH98JVFUYRQ" class="botonpaypal">Paypi</a>
 						<br/>
 						<img style="padding-left:3.5%"src="assets/img/suscribete/opcion3.png">
 						<img style="padding-left:3.5%" src="assets/img/suscribete/com.png">
@@ -206,11 +303,7 @@ $(document).ready(function() {
 							<p>Ciudad</p>
 							<select id="cityred" name="ciudad" class="seleinput">
 								<option value="Torreón">Torreón</option> 
-				                <option value="Monterrey">Monterrey</option> 
-				                <option value="Chihuahua">Chihuahua</option>        
-						        <option value="Leon">Leon</option> 
-				                <option value="Queretaro">Queretaro</option>
-							</select>
+				    			</select>
 							<br class="clear"/>
 							<p>Fecha de Nacimiento</p>
 							<input type="date" id="fechanac" class="fechita" name="fechanacimiento">

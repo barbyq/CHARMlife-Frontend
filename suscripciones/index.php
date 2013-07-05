@@ -21,14 +21,13 @@
 		$correo->From = "no-reply@playersoflife.com";
 		$correo->FromName = "Suscriptor";
 		$correo->Subject =  "Suscriptor Charm";
-		$correo->AddReplyTo('suscripciones@playersoflife.com', 'CHARM Life');
-		$correo->AddAddress('suscripciones@playersoflife.com');
+		$correo->AddReplyTo('jchinojob7@gmail.com', 'CHARM Life');
+		$correo->AddAddress('jchinojob7@gmail.com');
 		$correo->Body = $body;	
 		$correo->IsHTML("true");
 		$correo->Send();
-		header('Location: /#gracias');
 	}else{
-		header('Location: /#suscribete');
+		header('Location: ../index.php#suscribete');
 	}
 
 ?>

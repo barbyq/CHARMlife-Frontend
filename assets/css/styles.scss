@@ -393,7 +393,7 @@ body{
             }
             .padul{
               position: relative;
-              padding-left: 147px;
+              padding-left: 60px;
             }
             a{
               color: white;
@@ -442,9 +442,9 @@ body{
       }
       li{
         display: inline;
-        padding-left: 20px;
+        padding-left: 30px;
         border-right: 2.5px solid #FCF8FB;
-        padding-right: 20px;
+        padding-right: 25px;
       }
       a{
         color: white;
@@ -989,4 +989,15 @@ body{
    text-indent:-9999px; 
    position: relative;
    right: -4%;
+}
+
+.agradecimiento{
+  h2 {
+    font-family: aria;
+    font-size: 150%;
+  }
+  p{
+    font-family: aria;
+    font-size: 135%;
+  }
 }
