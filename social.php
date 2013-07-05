@@ -4,10 +4,12 @@
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
 	include $dir .'charmadmin/dbc/socialesDAO.php';
+	include $dir .'charmadmin/dbc/articulosDAO.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dbc = $dbconnect->getConnection();
 	$socialesDAO = new socialesDAO($dbc);
+	$articulosDAO = new articulosDAO($dbc);
 
 	if (isset($_GET['id'])){
 		$id = $_GET['id'];

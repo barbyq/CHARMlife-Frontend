@@ -11,7 +11,6 @@
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);
 	$tagsDAO = new tagsDAO($dbc);
-
  ?>
 <!DOCTYPE html>
 <html lang="es">

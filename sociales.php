@@ -3,7 +3,7 @@
 	ini_set('display_errors', '1'); 
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
-
+	include $dir .'charmadmin/dbc/articulosDAO.php';
 	include $dir .'charmadmin/dbc/socialesDAO.php';
 	include $dir . 'charmadmin/dbc/chismesDAO.php';
 	
@@ -11,8 +11,7 @@
 	$dbc = $dbconnect->getConnection();
 	$socialesDAO = new socialesDAO($dbc);
 	$chismesDAO = new chismesDAO($dbc);
-
-
+	$articulosDAO = new articulosDAO($dbc);
 ?>
 <!DOCTYPE html>
 <html lang="es">
