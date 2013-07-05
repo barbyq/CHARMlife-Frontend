@@ -51,6 +51,20 @@ $("#sliderSociales").royalSlider({
 
     ShowColabs();
 
+
+    $('#clickFotoMasCharm').click(function(e){
+    console.log("here");
+   
+    var html = $('#fotoMasCharm').html();
+    $.fancybox( html,
+            {   'autoDimensions'    : true,
+                'width'             : 500,
+                'height'            : 'auto',
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none'
+            });
+    });
+
 });
 
 function ShowColabs () {
@@ -60,3 +74,5 @@ function ShowColabs () {
                 ShowColabArticles(id);
 	});
 }
+
+

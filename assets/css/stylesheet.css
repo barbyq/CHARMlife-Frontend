@@ -528,3 +528,6 @@
       top: -26px;
       padding-top: 3px;
       padding-bottom: 3px; }
+
+#clickFotoMasCharm {
+  cursor: pointer; }

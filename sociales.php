@@ -36,7 +36,7 @@
 			
 			<div id="bigSlider" class="royalSlider rxDefault">
 				<?php 
-					$sociales = $socialesDAO->getLoMasNuevo(12);
+					$sociales = $socialesDAO->getLoMasNuevo(11);
 					foreach ($sociales as $item) { 
 							$thumb = scandir($dir .'charmadmin/SocThumb/'.$item->sociales_id);
 							$main = scandir($dir .'charmadmin/SocPrincipal/'.$item->sociales_id);
@@ -77,7 +77,29 @@
 				</section><!-- body -->
 			</section><!-- mini_features -->
 
+
 			<section class="mini_features">
+				<header>
+					<h1>Eventos anteriores</h1>
+				</header>
+				<section class="body">
+					<?php 
+						$sociales = $socialesDAO->getEventosAnteriores(5);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
+					<br class="clear">
+				</section><!-- body -->
+			</section><!-- mini_features -->
+
+			<!--<section class="mini_features">
 				<header>
 					<h1>Lo + recomendado</h1>
 				</header>
@@ -96,7 +118,7 @@
 					 <?php } ?>
 					<br class="clear">
 				</section><!-- body -->
-			</section><!-- mini_features -->
+			<!--</section><!-- mini_features -->
 
 			<section class="box_feature amigos">
 				<header>
@@ -151,14 +173,15 @@
 				</section>
 			</section><!-- box_feature -->
 			<div style="text-align:right;">
-				<a href="#" class="comparte_noticia"><img src="assets/img/content/sociales/correo.png"><img src="assets/img/content/sociales/flecha_correo.png"><span>Compártenos tus noticias</span></a>
+				<a href="mailto:mariel.delbosque@charmlife.com.mx" class="comparte_noticia"><img src="assets/img/content/sociales/correo.png"><img src="assets/img/content/sociales/flecha_correo.png"><span>Compártenos tus noticias</span></a>
 			</div>
 
 		</section><!-- col2 -->
 		<section class="col3">
 			<br><br>
-			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/sociales/3.gif" class="ad"></a>
-			<img src="" class="ad">
+			<a href="https://www.facebook.com/anakarina.fotografia?ref=tn_tnmn" target="_blank"><img src="assets/banners/sociales/3.jpg" class="ad"></a>
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/sociales/4.gif" class="ad"></a>
+			
 			
 			<section class="tabbed_info">
 				<header>

@@ -18,7 +18,7 @@
  ?>
 <html lang="es">
 <head>
-	<title>Colaboradores</title>
+	<title>CHARMlife Colaboradores</title>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/styles.css">

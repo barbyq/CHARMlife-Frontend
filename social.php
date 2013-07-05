@@ -30,10 +30,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
-	<!--<script type="text/javascript" src="assets/js/all.js"></script>-->
+	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript" src="assets/js/assets.js"></script>
 </head>
 <body>
@@ -115,8 +116,8 @@
 
 		</section><!-- col2 -->
 		<section class="col3">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/home/3.gif" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/home/4.gif" class="ad"></a>
 		</section>
 		<br class="clear">
 	</section>

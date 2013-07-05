@@ -47,8 +47,10 @@
 					 		$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
 					 	?>
 						<article>
-							<h3><span><?= $item->titulo ?></span></h3>
-							<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
+							<a href="video.php?id=<?= $item->articulo_id ?>">
+								<h3><span><?= $item->titulo ?></span></h3>
+								<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
+							</a>
 						</article> 		
 					 <?php } ?>
 				

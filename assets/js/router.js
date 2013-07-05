@@ -13,7 +13,7 @@ var CharmRouter = Backbone.Router.extend({
 				'transitionOut'		: 'none'
 			});
 	},agradecimiento:function() {
-		  $.fancybox('<div class="agradecimiento"><h2>Gracias!!</h2><p>El equipo se pondra en contacto contigo!!!</p></div>',
+		  $.fancybox('<div class="agradecimiento"><h2>Gracias!!</h2><p>El equipo se pondra en contacto contigo</p></div>',
 			{      	'autoDimensions'	: true,
 				'width'         		: 500,
 				'height'        		: 'auto',

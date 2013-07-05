@@ -84,8 +84,8 @@
 				<li><a href="personalidades.php">Personalidades</a></li>
 				<li><a href="masCharm.php">+ CHARM</a></li>
 				<li><a href="conocenos.php">Conócenos</a></li>
-				<li><a href="#">Anunciate</a></li>
-				<li><a href="#suscribebox" id="suscribete">Suscribete</a></li>
+				<li><a href="#">Anúnciate</a></li>
+				<li><a href="#suscribebox" id="suscribete">Suscríbete</a></li>
 				<li class="lastli"><a href="#regalabox" id="regalacharm">Regala Charm</a></li>
 			</ul>
 		</div>

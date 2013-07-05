@@ -185,10 +185,11 @@
 				<? } ?>
 		</section>
 		<section class="lateral">
-			<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/home/3.gif" class="ad"></a>
+			
 			<br/>
 			<br/>
-			<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/home/4.gif" class="ad"></a>
 			<br/>
 			<br/>
 			<br/>
@@ -211,9 +212,6 @@
 			</section>
 			<br/>
 			<br/>
-			<a href="#">
-				<img src="assets/img/portadas/banner3example.png" alt="">
-			</a>
 			<br/>
 		</section>
 		<br class="clear"/>
