@@ -600,6 +600,7 @@ body {
     .articulos-colaborador #articulos-section .conjunto-primeravera {
       padding-top: 13%; }
       .articulos-colaborador #articulos-section .conjunto-primeravera .articulin {
+        color: black;
         cursor: pointer;
         height: 90px;
         width: 170px;
@@ -614,10 +615,12 @@ body {
           font-weight: bold; }
         .articulos-colaborador #articulos-section .conjunto-primeravera .articulin .texto {
           position: relative;
-          left: 4%; }
+          left: 4%;
+          color: black; }
     .articulos-colaborador #articulos-section .conjunto {
       padding-top: 5%; }
       .articulos-colaborador #articulos-section .conjunto .articulin {
+        color: black;
         height: 90px;
         width: 170px;
         float: left;

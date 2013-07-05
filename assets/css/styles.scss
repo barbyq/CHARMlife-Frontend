@@ -729,6 +729,7 @@ body{
       .conjunto-primeravera{
         padding-top: 13%;
        .articulin {
+            color: black;
             cursor: pointer;
             height: 90px;
             width: 170px;
@@ -746,12 +747,14 @@ body{
             .texto{
               position: relative;
               left: 4%;
+              color: black;
             }
           }
       }
       .conjunto{
           padding-top: 5%;
          .articulin {
+          color: black;
             height: 90px;
             width: 170px;
             float: left;
