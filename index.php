@@ -135,8 +135,8 @@
 			</section><!-- col_small -->
 		</section>
 		<section class="col3">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/mascharm/3.gif" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/mascharm/4.gif" class="ad"></a>
 			<section class="outfit">
 				<header>
 					<h1>Outfit de la Semana</h1>
@@ -149,14 +149,14 @@
 		</section>
 		<br class="clear"/>
 		<br/>
-		<section class="banners">
+		<!--<section class="banners">
 			<a href="#">
 				<img src="assets/img/banner1.jpg" alt="">
 			</a>
 			<a href="#">
 				<img src="assets/img/banner2.png" alt="">
 			</a>
-		</section>
+		</section>-->
 		<br class="clear"/>
 		<section class="lower">
 			<div class="left">
@@ -171,7 +171,7 @@
 				</div>
 				<br/>
 				<div class="showsections">
-					<?php $articleschidis = $articulosDAO->getRandomArticulosAndSections(); ?>
+					<?php $articleschidis = $articulosDAO->getMasCharm(0, 4); ?>
 					<?php foreach ($articleschidis as $article) { ?>
 						<article>
 							<a href="<?php echo dametipo($article->tipo).$article->articulo_id; ?>">
@@ -207,9 +207,9 @@
 				</div>
 				<br>
 				<br>
-				<a href="#">
+				<!--<a href="#">
 					<img src="assets/img/portadas/banner2example.png" alt="">
-				</a>
+				</a>-->
 			</div>
 		</section>
 	</section>
