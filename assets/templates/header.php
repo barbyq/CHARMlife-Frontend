@@ -4,6 +4,19 @@
 <script type="text/javascript" src="assets/js/library/json2.js"></script>
 <script type="text/javascript" src="assets/js/library/backbone.js"></script>
 <script type="text/javascript" src="assets/js/router.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27512832-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <script>	
 function mandarforma () {
 
@@ -179,7 +192,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<?php $scaneo = scandir("../charmadmin/Banner/"); ?>
+<?php $scaneo = scandir("charmadmin/Banner/"); ?>
 <?php $banner = $scaneo[2]; ?>
 <div class="main_header" >
 	<header class="wrapper">
@@ -187,12 +200,12 @@ $(document).ready(function() {
 			<a href="#suscribebox"><img src="assets/banners/home/1.png"></a>
 			<a href="http://www.capricciosas.com" target="_blank"><img src="assets/banners/home/2.jpg"></a>		
 		</div>
-		<div class="header" style="background-image:url(<? echo "../charmadmin/Banner/".$banner;?>);">
-			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">
+		<div class="header" style="background-image:url(<? echo "charmadmin/Banner/".$banner;?>);">
+			<img id="logo" src="assets/img/charmlifelogo.png">
 			<div class="navigation">
 				<div class="principal">
 					<ul>
-						<li><a href="index.php">HOME</a></li>
+						<li><a href="/">HOME</a></li>
 						<li><a href="sociales.php">SOCIALES</a></li>
 						<li><a href="personalidades.php">PERSONALIDADES</a></li>
 						<li><a href="masCharm.php">+CHARM</a></li>
@@ -210,10 +223,10 @@ $(document).ready(function() {
 							</ul>
 					</div>
 					<div class="iconitos">
-						<a href="http://facebook.com/charmlifetorreon"><img src="/frontend/assets/img/facebook.png"></a>
-						<a href="http://twitter.com/charmtorreon"><img src="/frontend/assets/img/twitter.png"></a>
-						<a href="http://pinterest.com/charmtorreon"><img src="/frontend/assets/img/path.png"></a>
-						<a href="http://instragram.com/charmtorreon"><img src="/frontend/assets/img/instagram.png"></a>
+						<a href="http://facebook.com/charmlifetorreon"><img src="assets/img/facebook.png"></a>
+						<a href="http://twitter.com/charmtorreon"><img src="assets/img/twitter.png"></a>
+						<a href="http://pinterest.com/charmtorreon"><img src="assets/img/path.png"></a>
+						<a href="http://instagram.com/charmtorreon"><img src="assets/img/instagram.png"></a>
 					</div>
 					</div>
 			</div>

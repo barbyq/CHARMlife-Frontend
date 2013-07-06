@@ -50,16 +50,16 @@
 	}	
 	function dameimagen($id)
 	{
-		$escaneo = scandir("../charmadmin/Imagenes/".$id);
+		$escaneo = scandir("charmadmin/Imagenes/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "../charmadmin/Imagenes/".$id."/".$imagen;
+		$ruta = "charmadmin/Imagenes/".$id."/".$imagen;
 		return $ruta;
 	} 
 	function dameimagensocial($id)
 	{
-		$escaneo = scandir("../charmadmin/SocPrincipal/".$id);
+		$escaneo = scandir("charmadmin/SocPrincipal/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "../charmadmin/SocPrincipal/".$id."/".$imagen;
+		$ruta = "charmadmin/SocPrincipal/".$id."/".$imagen;
 		return $ruta;
 	}
 	?>
@@ -154,14 +154,14 @@
 		</section>
 		<br class="clear"/>
 		<br/>
-		<!--<section class="banners">
-			<a href="#">
-				<img src="assets/img/banner1.jpg" alt="">
+		<section class="banners">
+			<a href="mailto:contacto@charmlife.com.mx" target="_blank">
+				<img src="assets/banners/home/5.gif" alt="">
 			</a>
-			<a href="#">
-				<img src="assets/img/banner2.png" alt="">
+			<a href="http://www.instagram.com/charmtorreon" target="_blank">
+				<img src="assets/banners/home/6.jpg" alt="">
 			</a>
-		</section>-->
+		</section>
 		<br class="clear"/>
 		<section class="lower">
 			<div class="left">
@@ -212,9 +212,7 @@
 				</div>
 				<br>
 				<br>
-				<!--<a href="#">
-					<img src="assets/img/portadas/banner2example.png" alt="">
-				</a>-->
+				<a href="http://www.playersoflife.com/losases" target="_blank"><img src="assets/banners/home/7.gif" class="ad"></a>
 			</div>
 		</section>
 	</section>

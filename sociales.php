@@ -209,8 +209,9 @@
 				</section>
 
 			</section><!-- tabbed_info-->
-			<!--<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">-->
+			
+			<a href="mailto:contacto@charmlife.com.mx" target="_blank"><img src="assets/banners/sociales/5.gif" class="ad"></a>
+			<a href="http://www.charmlife.com.mx/mediakit" target="_blank"><img src="assets/banners/sociales/6.gif" class="ad"></a>
 
 		</section><!-- col3 -->
 		<br class="clear">

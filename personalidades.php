@@ -1,6 +1,6 @@
 <?php
 	error_reporting(E_ALL);
-	ini_set('display_errors', '1'); 
+	//ini_set('display_errors', '1'); 
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
 	include $dir .'charmadmin/dbc/articulosDAO.php';
@@ -15,9 +15,14 @@
 	<title>CHARMlife Personalidades</title>
 	<meta charset="utf-8">
   	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
+	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+
+	
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
+	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
 </head>
 <body>
@@ -135,12 +140,12 @@
 				</section><!-- body_ -->
 			<!-- </section> <!-- mini_features -->
 		</section>
-		<!--<section class="col3">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/3/3_1.gif?1371660475" class="ad">
-			<img src="http://www.playersoflife.com/proyectoDigital/upload/banners/nacional/home/4/4_1.gif?1371660475" class="ad">
-		</section>-->
+		<section class="col3">
+			<a href="http://www.twitter.com/charmtorreon" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
+		</section>
 	</section>
 	<br class="clear">
-	<?php include "assets/templates/footer.php" ?>
+	<?php //include "assets/templates/footer.php" ?>
 </body>
 </html>
