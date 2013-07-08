@@ -68,7 +68,7 @@ body {
     width: 1000px;
     margin: 0 auto; }
     .main_header .wrapper .header {
-      background-image: url("/frontend/assets/img/background.png");
+      background-image: url("assets/img/background.png");
       background-repeat: no-repeat;
       width: 100%;
       position: relative;
@@ -285,7 +285,7 @@ body {
     height: 219px; }
 
 .footer {
-  background: url("/frontend/assets/img/footer/footerbackground2.png");
+  background: url(../img/footer/footerbackground2.png);
   background-repeat: repeat-x;
   background-position: left;
   background-origin: content-box;
@@ -342,7 +342,7 @@ body {
             top: 15px; }
           .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos .padul {
             position: relative;
-            padding-left: 60px; }
+            padding-left: 15px; }
           .footer .wrapper .upthings .sliderarticulos-wrapper #sliderarticulos a {
             color: white; }
         .footer .wrapper .upthings .sliderarticulos-wrapper p {
@@ -824,7 +824,7 @@ body {
         width: 50%; }
 
 .botonpaypal {
-  background-image: url(/frontend/assets/img/regalacharm/paypal.png);
+  background-image: url(assets/img/regalacharm/paypal.png);
   height: 38px;
   width: 300px;
   display: block;

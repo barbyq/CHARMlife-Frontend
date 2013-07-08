@@ -3,7 +3,7 @@
 		<div class="upthings">
 			<div class="imagenrevista">
 			<a href="#">
-				<img src="/frontend/assets/img/footer/revista.png" alt="">
+				<img src="assets/img/footer/revista.png" alt="">
 			</a>
 			</div>
 			<div class="suscribete">
@@ -69,12 +69,12 @@
 		</div>
 		<br class="clear"/>
 		<div class="sociales">
-			<a href="#"><img src="/frontend/assets/img/facebook.png"/><p>/charmlifetorreon</p></a>
-			<a href="#"><img src="/frontend/assets/img/twitter.png"/><p>@charmtorreon</p></a>
-			<a href="#"><img src="/frontend/assets/img/path.png"/><p>@charmtorreon</p></a>
-			<a href="#"><img src="/frontend/assets/img/instagram.png"/><p>@charmtorreon</p></a>
-			<a href="#" class="logoup"><img src="/frontend/assets/img/footer/charm.png" alt=""></a>
-			<a href="#" class="logoright"><img src="/frontend/assets/img/footer/grupoplayers.png" alt=""></a>
+			<a href="#"><img src="assets/img/facebook.png"/><p>/charmlifetorreon</p></a>
+			<a href="#"><img src="assets/img/twitter.png"/><p>@charmtorreon</p></a>
+			<a href="#"><img src="assets/img/path.png"/><p>@charmtorreon</p></a>
+			<a href="#"><img src="assets/img/instagram.png"/><p>@charmtorreon</p></a>
+			<a href="#" class="logoup"><img src="assets/img/footer/charm.png" alt=""></a>
+			<a href="#" class="logoright"><img src="assets/img/footer/grupoplayers.png" alt=""></a>
 		</div>
 		<br class="clear"/>
 		<div class="navigacion">

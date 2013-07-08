@@ -50,16 +50,16 @@
 	}	
 	function dameimagen($id)
 	{
-		$escaneo = scandir("../charmadmin/Imagenes/".$id);
+		$escaneo = scandir("charmadmin/Imagenes/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "../charmadmin/Imagenes/".$id."/".$imagen;
+		$ruta = "charmadmin/Imagenes/".$id."/".$imagen;
 		return $ruta;
 	} 
 	function dameimagensocial($id)
 	{
-		$escaneo = scandir("../charmadmin/SocPrincipal/".$id);
+		$escaneo = scandir("charmadmin/SocPrincipal/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "../charmadmin/SocPrincipal/".$id."/".$imagen;
+		$ruta = "charmadmin/SocPrincipal/".$id."/".$imagen;
 		return $ruta;
 	}
 	?>

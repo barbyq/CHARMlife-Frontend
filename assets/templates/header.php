@@ -177,7 +177,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<?php $scaneo = scandir("../charmadmin/Banner/"); ?>
+<?php $scaneo = scandir("charmadmin/Banner/"); ?>
 <?php $banner = $scaneo[2]; ?>
 <div class="main_header" >
 	<header class="wrapper">
@@ -185,8 +185,8 @@ $(document).ready(function() {
 			<a href="#suscribebox"><img src="assets/banners/home/1.png"></a>
 			<a href="http://www.capricciosas.com" target="_blank"><img src="assets/banners/home/2.jpg"></a>		
 		</div>
-		<div class="header" style="background-image:url(<? echo "../charmadmin/Banner/".$banner;?>);">
-			<img id="logo" src="/frontend/assets/img/charmlifelogo.png">
+		<div class="header" style="background-image:url(<? echo "/charmadmin/Banner/".$banner;?>);">
+			<img id="logo" src="assets/img/charmlifelogo.png">
 			<div class="navigation">
 				<div class="principal">
 					<ul>
@@ -208,10 +208,10 @@ $(document).ready(function() {
 							</ul>
 					</div>
 					<div class="iconitos">
-						<a href="http://facebook.com/charmlifetorreon"><img src="/frontend/assets/img/facebook.png"></a>
-						<a href="http://twitter.com/charmtorreon"><img src="/frontend/assets/img/twitter.png"></a>
-						<a href="http://pinterest.com/charmtorreon"><img src="/frontend/assets/img/path.png"></a>
-						<a href="http://instragram.com/charmtorreon"><img src="/frontend/assets/img/instagram.png"></a>
+						<a href="http://facebook.com/charmlifetorreon"><img src="assets/img/facebook.png"></a>
+						<a href="http://twitter.com/charmtorreon"><img src="assets/img/twitter.png"></a>
+						<a href="http://pinterest.com/charmtorreon"><img src="assets/img/path.png"></a>
+						<a href="http://instragram.com/charmtorreon"><img src="assets/img/instagram.png"></a>
 					</div>
 					</div>
 			</div>

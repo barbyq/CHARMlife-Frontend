@@ -1,10 +1,10 @@
 <?php 
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-	include '../charmadmin/dbc/articulosDAO.php';
-	include '../charmadmin/dbc/colaboradoresDAO.php';
-	include '../charmadmin/dbc/dbconnect.php';
-	include '../charmadmin/controllers/utilities.php';
+	include 'charmadmin/dbc/articulosDAO.php';
+	include 'charmadmin/dbc/colaboradoresDAO.php';
+	include 'charmadmin/dbc/dbconnect.php';
+	include 'charmadmin/controllers/utilities.php';
 	$dbconnect = new dbconnect("charm_charmlifec536978");
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);
@@ -30,10 +30,10 @@
 						 }*/ 
 						 ?>
 						<title>CHARM life - <?php echo $articulo->titulo ?></title>
-						<?php if (is_dir("../charmadmin/Imagenes/".$articulo->articulo_id)) { ?>
-							<?php $archivos = scandir("../charmadmin/Imagenes/".$articulo->articulo_id); ?>
-								<link rel="image_src" type="image/jpeg" href="../charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
-								<meta property="og:image" content="../charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
+						<?php if (is_dir("charmadmin/Imagenes/".$articulo->articulo_id)) { ?>
+							<?php $archivos = scandir("charmadmin/Imagenes/".$articulo->articulo_id); ?>
+								<link rel="image_src" type="image/jpeg" href="charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
+								<meta property="og:image" content="charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>"/>
 						<? } ?>
 					<? } ?>
 				<? } ?>
@@ -58,7 +58,7 @@
 			$('.active').attr("class","selector");
 			$(this).attr("class","selector active");
 				if (cosa == "mes") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelmes"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelmes"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -73,7 +73,7 @@
 				}
 
 				if (cosa == "semana") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelasemana"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelasemana"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -88,7 +88,7 @@
 				}
 
 				if (cosa == "anterior") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelaprevios"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelaprevios"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -139,10 +139,10 @@
 									<?php $colaborador = $colaboradoresDAO->getColaborador($articulo->colaborador_id); ?>
 									<h3>Redacción: <a href="colaboradores.php?id=<?php echo $articulo->colaborador_id;?>"><?php echo $colaborador->nombrec;?></a>, <?php echo $articulo->dia." de ".getMes($articulo->mes)." del ".$articulo->year; ?></h3>
 									<br/>
-									<?php if (is_dir("../charmadmin/Imagenes/".$articulo->articulo_id)) {
+									<?php if (is_dir("charmadmin/Imagenes/".$articulo->articulo_id)) {
 										?>
-										<?php $archivos = scandir("../charmadmin/Imagenes/".$articulo->articulo_id); ?>
-										<img src="../charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>" alt="">
+										<?php $archivos = scandir("charmadmin/Imagenes/".$articulo->articulo_id); ?>
+										<img src="charmadmin/Imagenes/<?php echo $articulo->articulo_id."/".$archivos[2]; ?>" alt="">
 										<?
 									} ?>
 									<br class="clear"/>

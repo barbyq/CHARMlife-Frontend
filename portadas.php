@@ -1,10 +1,10 @@
 <?php 
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-	include '../charmadmin/dbc/dbconnect.php';
-	include '../charmadmin/dbc/portadasDAO.php';
-	include '../charmadmin/dbc/articulosDAO.php';
-	include '../charmadmin/dbc/utilities.php';
+	include 'charmadmin/dbc/dbconnect.php';
+	include 'charmadmin/dbc/portadasDAO.php';
+	include 'charmadmin/dbc/articulosDAO.php';
+	include 'charmadmin/dbc/utilities.php';
 
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dibo = $dbconnect->getConnection();
@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
 			$('.active').attr("class","selector");
 			$(this).attr("class","selector active");
 				if (cosa == "mes") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelmes"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelmes"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
 				}
 
 				if (cosa == "semana") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelasemana"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelasemana"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
 				}
 
 				if (cosa == "anterior") {
-					$.post("../charmadmin/controllers/articulos_controller.php",{receiver:"damedelaprevios"},function(response) {
+					$.post("charmadmin/controllers/articulos_controller.php",{receiver:"damedelaprevios"},function(response) {
 						console.log(response);
 						$('#article-list').html("");
 						for (var i = 0; i < response.length; i++) {
@@ -198,10 +198,10 @@ jQuery(document).ready(function($) {
 						<?php foreach ($portadas as $portada) {?>
 							<div class="rsContent">
 								<a href="#">
-									<img src="../charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img; ?>" height="500px" alt="">
+									<img src="charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img; ?>" height="500px" alt="">
 								</a>
 								<div class="rsTmb">
-									<img src="../charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img_thumb; ?>" alt="">
+									<img src="charmadmin/upload/portadas/<?php echo $portada->id."/".$portada->img_thumb; ?>" alt="">
 									<h3>Portada <?php echo $portada->meso ?></h3>
 								</div>
 							</div>
@@ -222,10 +222,10 @@ jQuery(document).ready(function($) {
 						<?php foreach ($portadasotras as $portadaotra) {?>
 							<div class="rsContent">
 								<a href="#">
-									<img src="../charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img; ?>" height="500px" alt="">
+									<img src="charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img; ?>" height="500px" alt="">
 								</a>
 								<div class="rsTmb">
-									<img src="../charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img_thumb; ?>" alt="">
+									<img src="charmadmin/upload/portadas/<?php echo $portadaotra->id."/".$portadaotra->img_thumb; ?>" alt="">
 									<h3>Portada <?php echo $portadaotra->meso ?></h3>
 								</div>
 							</div>
