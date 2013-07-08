@@ -199,7 +199,7 @@ $(document).ready(function() {
 			<a href="http://www.capricciosas.com" target="_blank"><img src="assets/banners/home/2.jpg"></a>		
 		</div>
 		<div class="header" style="background-image:url(<? echo "charmadmin/Banner/".$banner;?>);">
-			<img id="logo" src="assets/img/charmlifelogo.png">
+			<a href="/"><img id="logo" src="assets/img/charmlifelogo.png"></a>
 			<div class="navigation">
 				<div class="principal">
 					<ul>

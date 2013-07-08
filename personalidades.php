@@ -141,7 +141,7 @@
 			<!-- </section> <!-- mini_features -->
 		</section>
 		<section class="col3">
-			<a href="http://www.twitter.com/charmtorreon" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
+			<a href="https://es-es.facebook.com/VivaDanceAcademy" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
 			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
 		</section>
 	</section>
