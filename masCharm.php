@@ -223,7 +223,9 @@
 				</section>
 
 			</section><!-- tabbed_info-->
-
+			
+			<a href="http://www.instagram.com/charmtorreon" target="_blank"><img src="assets/banners/mascharm/5.jpg" class="ad"></a>
+			<a href="#" target="_blank"><img src="assets/banners/mascharm/6.jpg" class="ad"></a>
 
 		</section><!-- col3 -->
 	</section><!-- wrapper masCharm -->

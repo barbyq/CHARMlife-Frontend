@@ -2,10 +2,10 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
 	include 'assets/templates/pwd.php';
-	include $dir . '/charmadmin/dbc/articulosDAO.php';
-	include $dir . '/charmadmin/dbc/colaboradoresDAO.php';
-	include $dir . '/charmadmin/dbc/dbconnect.php';
-	include $dir . '/charmadmin/controllers/utilities.php';
+	include $dir . 'charmadmin/dbc/articulosDAO.php';
+	include $dir . 'charmadmin/dbc/colaboradoresDAO.php';
+	include $dir . 'charmadmin/dbc/dbconnect.php';
+	include $dir . 'charmadmin/controllers/utilities.php';
 	$dbconnect = new dbconnect("charm_charmlifec536978");
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);

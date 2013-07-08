@@ -237,10 +237,10 @@ jQuery(document).ready(function($) {
 	</div>
 
 	<section class="lateral">
-		<!--<a href="#"><img src="assets/img/portadas/banner1example.png" alt=""></a>-->
+		<a href="mailto:contacto@charmlife.com.mx" ><img src="assets/banners/portadas/3.gif" alt=""></a>
 		<br/>
 		<br/>
-		<!--<a href="#"><img src="assets/img/portadas/banner2example.png" alt=""></a>-->
+		<a href="http://www.facebook.com/charmlifetorreon" target="_blank"><img src="assets/banners/portadas/4.jpg" alt=""></a>
 		<br/>
 		<br/>
 		<br/>
@@ -263,9 +263,9 @@ jQuery(document).ready(function($) {
 		</section>
 		<br/>
 		<br/>
-		<!--<a href="#">
-			<img src="assets/img/portadas/banner3example.png" alt="">
-		</a>-->
+		<a href="http://www.playersoflife.com/losases" target="_blank">
+			<img src="assets/banners/portadas/5.gif" alt="">
+		</a>
 		<br/>
 	</section>
 	<br class="clear"/>
