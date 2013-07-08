@@ -847,12 +847,16 @@ body {
     width: 100%;
     top: 150px; }
 
-#tematicamensual .rsABlock {
-  background-color: white;
-  opacity: 0.70;
-  padding: 10px;
-  width: 100%;
-  top: 120px; }
+#tematicamensual {
+  -moz-box-shadow: 3px 3px 5px 2px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+  box-shadow: 3px 3px 5px 2px #ccc; }
+  #tematicamensual .rsABlock {
+    background-color: white;
+    opacity: 0.70;
+    padding: 10px;
+    width: 100%;
+    top: 120px; }
 
 .agradecimiento h2 {
   font-family: aria;

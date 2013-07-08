@@ -1055,6 +1055,9 @@ body{
 }
 
 #tematicamensual{
+ -moz-box-shadow:    3px 3px 5px 2px #ccc;
+ -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+ box-shadow:         3px 3px 5px 2px #ccc;
  .rsABlock{
     background-color: white;
     opacity: 0.70;

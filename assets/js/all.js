@@ -40,7 +40,7 @@ $("#sliderSociales").royalSlider({
     $("#tematicamensual").royalSlider({
         // options go here
         // as an example, enable keyboard arrows nav
-        imageScaleMode: 'fill',
+        imageScaleMode: 'none',
         controlNavigation: 'thumbnails',
         imageAlignCenter: true,
         loop: true,
