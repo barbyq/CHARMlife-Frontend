@@ -19,9 +19,7 @@
 </script>
 <script>	
 function mandarforma () {
-
 	var searma = 1;
-
 	var iiis = $(".formaregala :input");
 	var nombre = iiis[14]["value"];
 	var direccion = iiis[15]["value"];
@@ -226,7 +224,7 @@ $(document).ready(function() {
 						<a href="http://facebook.com/charmlifetorreon"><img src="assets/img/facebook.png"></a>
 						<a href="http://twitter.com/charmtorreon"><img src="assets/img/twitter.png"></a>
 						<a href="http://pinterest.com/charmtorreon"><img src="assets/img/path.png"></a>
-						<a href="http://instagram.com/charmtorreon"><img src="assets/img/instagram.png"></a>
+						<a href="http://instragram.com/charmtorreon"><img src="assets/img/instagram.png"></a>
 					</div>
 					</div>
 			</div>

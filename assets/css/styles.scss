@@ -75,7 +75,7 @@ body{
       width: 1000px;
       margin: 0 auto;
       .header{
-        background-image: url("/frontend/assets/img/background.png");
+        background-image: url("assets/img/background.png");
         background-repeat: no-repeat;
           width: 100%;
           position: relative;
@@ -325,7 +325,7 @@ body{
 }
 
 .footer{
-  background: url("/frontend/assets/img/footer/footerbackground2.png");
+  background: url(../img/footer/footerbackground2.png);
   background-repeat: repeat-x;
   background-position:left;
   background-origin:content-box;
@@ -393,7 +393,7 @@ body{
             }
             .padul{
               position: relative;
-              padding-left: 60px;
+              padding-left: 15px;
             }
             a{
               color: white;
@@ -949,7 +949,7 @@ body{
           p{
             color: white;
             position: relative;
-            left: 25px;
+            left: 16px;
             bottom: 1px;
           }
         }
@@ -1027,7 +1027,7 @@ body{
 }
 
 .botonpaypal{
-   background-image:url(/frontend/assets/img/regalacharm/paypal.png);
+   background-image:url(assets/img/regalacharm/paypal.png);
    height:38px;
    width:300px;
    display:block;

@@ -220,4 +220,3 @@
 <?php include "assets/templates/footer.php" ?>	
 </body>
 </html>
-
