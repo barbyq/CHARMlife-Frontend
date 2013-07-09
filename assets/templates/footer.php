@@ -72,10 +72,10 @@
 		</div>
 		<br class="clear"/>
 		<div class="sociales">
-			<a href="#"><img src="assets/img/facebook.png"/><p>/charmlifetorreon</p></a>
-			<a href="#"><img src="assets/img/twitter.png"/><p>@charmtorreon</p></a>
-			<a href="#"><img src="assets/img/path.png"/><p>@charmtorreon</p></a>
-			<a href="#"><img src="assets/img/instagram.png"/><p>@charmtorreon</p></a>
+			<a href="http://facebook.com/charmlifetorreon"><img src="assets/img/facebook.png"/><p>/charmlifetorreon</p></a>
+			<a href="http://twitter.com/charmtorrreon"><img src="assets/img/twitter.png"/><p>@charmtorreon</p></a>
+			<a href="http://pinterest.com/charmtorreon"><img src="assets/img/path.png"/><p>@charmtorreon</p></a>
+			<a href="http://instagram.com/charmtorreon"><img src="assets/img/instagram.png"/><p>@charmtorreon</p></a>
 			<a href="#" class="logoup"><img src="assets/img/footer/charm.png" alt=""></a>
 			<a href="#" class="logoright"><img src="assets/img/footer/grupoplayers.png" alt=""></a>
 		</div>
