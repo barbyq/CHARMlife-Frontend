@@ -787,9 +787,9 @@ body {
 .lower .right {
   float: right; }
   .lower .right .lomasnuevo {
-    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow: 3px 3px 5px 6px #ccc; }
+    -moz-box-shadow: 3px 3px 5px 2px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+    box-shadow: 3px 3px 5px 2px #ccc; }
     .lower .right .lomasnuevo article {
       width: 300px;
       height: 110px;
@@ -822,6 +822,34 @@ body {
         background-color: #fff;
         height: 1px;
         width: 50%; }
+
+.showtematicas {
+  text-align: center; }
+  .showtematicas a {
+    color: black; }
+  .showtematicas article {
+    -moz-box-shadow: 3px 3px 5px 2px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    background-color: #f1f1f1;
+    position: relative;
+    display: inline-block;
+    color: black;
+    width: 210px;
+    margin: 10px;
+    padding-top: 10px; }
+    .showtematicas article img {
+      width: 85%;
+      height: 135px; }
+    .showtematicas article h1 {
+      font-size: 110%;
+      color: black; }
+    .showtematicas article p {
+      color: black; }
+
+.imegi {
+  width: 85%;
+  height: 135px; }
 
 .botonpaypal {
   background-image: url(assets/img/regalacharm/paypal.png);

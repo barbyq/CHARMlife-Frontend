@@ -44,6 +44,9 @@
 			case '2':
 				return "video.php?id=";
 				break;
+			case '3':
+				return "tematica.php?id=";
+				break;
 			default:
 				break;
 		}
