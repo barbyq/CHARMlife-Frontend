@@ -12,7 +12,7 @@ $(function(){
         controlNavigation: 'thumbnails',
         autoHeight: true,
         imageScaleMode: 'none',
-        imageAlignCenter:false,
+        imageAlignCenter:true,
         arrowsNav: true,
         navigateByClick: false
     });

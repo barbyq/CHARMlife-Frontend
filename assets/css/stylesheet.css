@@ -444,6 +444,8 @@
     /*height: 42px;*/
     background-color: #83003a;
     width: 100px; }
+  #socialiteSlider .rsOverflow {
+    min-height: 405px; }
 
 .social .info {
   width: 700px;

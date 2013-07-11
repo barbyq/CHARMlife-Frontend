@@ -140,13 +140,29 @@
   				});
 		 });
 
-		 /*$('.interests li').click(function(e){
+		 var interests;
+		 $('ul.interests li').click(function(e){
+		 	interests = new Array();
 		 	$(this).toggleClass( 'selected' );
-		 	$.ajax({
-		 		type: "POST",
+		 	
+		 	$('ul.interests li.selected').each(function(){
+		 		interests.push($(this).data("id"));
 		 	});
 
-		 });*/
+		 	var limit = $('#mas_charm').data('val');
+
+		 	//$container.masonry('reloadItems')
+
+		 	$.ajax({
+		 		type: "POST",
+		 		url: "prueba2.php",
+		 		data: { tags: interests, limit: limit },
+		 		success: function(data){
+		 			console.log(data);
+		 		}
+		 	});
+
+		 });
 
 	});
 	</script>
@@ -156,7 +172,7 @@
 	<section class="wrapper masCharm contenido">
 		<section class="col2">
 			<nav>
-				<!--<header class="header_interests">
+				<header class="header_interests">
 					<h2>Selecciona tus intereses</h2>
 				</header>
 				<ul class="interests">
@@ -164,7 +180,7 @@
 						foreach ($tags as $tag) { ?>
 							<li data-id="<?= $tag->tag_id ?>"><?= $tag->nombre; ?></li>
 					<?php } ?>
-				</ul>-->
+				</ul>
 			</nav>
 			<section class="grid">
 				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);
