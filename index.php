@@ -90,6 +90,7 @@
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 					</div>
 					<div style="display:none;" id="fotoMasCharm">
+						<img src="assets/img/content/medal_foto.png" style="position:absolute; bottom:0px; left:20px;">
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 					</div>
 					<?php $sociales = $socialesDAO->getLoMasCompartido(1); 
