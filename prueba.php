@@ -40,7 +40,7 @@
 
 		    var img = document.createElement('img');
 		    if(objs[article].imagen){
-		    	img.setAttribute("src", "<?= $dir ?>charmadmin/Thumbnails/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
+		    	img.setAttribute("src", "<?= $dir ?>charmadmin/MasCharm/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
 		    }
 		    
 		    box.appendChild(img);
@@ -120,10 +120,8 @@
 					}
 					
 				}
-			});
-
-				
-		});
+			});//ajax
+		});//click
 
 		$('#loadingDiv')
 		    .hide()  // hide it initially
@@ -142,6 +140,9 @@
 
 		 var interests;
 		 $('ul.interests li').click(function(e){
+		 	var dataVal = $('#mas_charm').data('val');
+			var objs;
+
 		 	interests = new Array();
 		 	$(this).toggleClass( 'selected' );
 		 	
@@ -155,14 +156,34 @@
 
 		 	$.ajax({
 		 		type: "POST",
-		 		url: "prueba2.php",
+		 		url: "assets/templates/getMasCharm.php",
 		 		data: { tags: interests, limit: limit },
 		 		success: function(data){
-		 			console.log(data);
-		 		}
-		 	});
+		 			objs = $.parseJSON(data);
+	 				console.log(objs);
 
-		 });
+		 			$('.grid .box').each(function(i){
+		 				$container.masonry('remove',$(this));
+		 			});
+
+		 			var $boxes = $(makeBoxes(objs));
+	      			$container.append( $boxes ).masonry( 'appended', $boxes );
+					$container.imagesLoaded(function(){
+						$container.masonry('reloadItems');
+		 				$container.masonry('reload');	
+					});
+					
+		 			/*console.log($container);
+		 			
+						
+	      			dataVal++;
+	      			$('#mas_charm').data('val', dataVal);
+	      			
+    				*/
+		 		}
+		 	});//ajax
+
+		 });//click
 
 	});
 	</script>

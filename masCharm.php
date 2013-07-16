@@ -40,7 +40,7 @@
 
 		    var img = document.createElement('img');
 		    if(objs[article].imagen){
-		    	img.setAttribute("src", "<?= $dir ?>charmadmin/Thumbnails/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
+		    	img.setAttribute("src", "<?= $dir ?>charmadmin/MasCharm/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
 		    }
 		    
 		    box.appendChild(img);
@@ -120,10 +120,8 @@
 					}
 					
 				}
-			});
-
-				
-		});
+			});//ajax
+		});//click
 
 		$('#loadingDiv')
 		    .hide()  // hide it initially
@@ -140,13 +138,52 @@
   				});
 		 });
 
-		 /*$('.interests li').click(function(e){
+		 var interests;
+		 $('ul.interests li').click(function(e){
+		 	var dataVal = $('#mas_charm').data('val');
+			var objs;
+
+		 	interests = new Array();
 		 	$(this).toggleClass( 'selected' );
-		 	$.ajax({
-		 		type: "POST",
+		 	
+		 	$('ul.interests li.selected').each(function(){
+		 		interests.push($(this).data("id"));
 		 	});
 
-		 });*/
+		 	var limit = $('#mas_charm').data('val');
+
+		 	//$container.masonry('reloadItems')
+
+		 	$.ajax({
+		 		type: "POST",
+		 		url: "assets/templates/getMasCharm.php",
+		 		data: { tags: interests, limit: limit },
+		 		success: function(data){
+		 			objs = $.parseJSON(data);
+	 				console.log(objs);
+
+		 			$('.grid .box').each(function(i){
+		 				$container.masonry('remove',$(this));
+		 			});
+
+		 			var $boxes = $(makeBoxes(objs));
+	      			$container.append( $boxes ).masonry( 'appended', $boxes );
+					$container.imagesLoaded(function(){
+						$container.masonry('reloadItems');
+		 				$container.masonry('reload');	
+					});
+					
+		 			/*console.log($container);
+		 			
+						
+	      			dataVal++;
+	      			$('#mas_charm').data('val', dataVal);
+	      			
+    				*/
+		 		}
+		 	});//ajax
+
+		 });//click
 
 	});
 	</script>
@@ -156,7 +193,7 @@
 	<section class="wrapper masCharm contenido">
 		<section class="col2">
 			<nav>
-				<!--<header class="header_interests">
+				<header class="header_interests">
 					<h2>Selecciona tus intereses</h2>
 				</header>
 				<ul class="interests">
@@ -164,7 +201,7 @@
 						foreach ($tags as $tag) { ?>
 							<li data-id="<?= $tag->tag_id ?>"><?= $tag->nombre; ?></li>
 					<?php } ?>
-				</ul>-->
+				</ul>
 			</nav>
 			<section class="grid">
 				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);

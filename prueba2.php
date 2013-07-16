@@ -19,6 +19,12 @@ $tags = $_POST['tags'];
 if(!empty($tags)){
 	$limit = $limit -1;
 	$query = $articulosDAO->getMasCharmIntereses($tags, $limit, $perPage);
+	foreach ($query as $item) {
+		if (is_dir($dir . 'charmadmin/MasCharm/'.$item->articulo_id . '/')){
+			$thumb = scandir($dir . 'charmadmin/MasCharm/'.$item->articulo_id . '/');
+			$item->imagen = $thumb[2];	
+		}
+	}
 	echo json_encode($query);
 }
 

@@ -51,5 +51,31 @@ $(function(){
 		sliderTouch: false
 	});
 
+	$('#share_fb').click(function(e){
+		id = $(this).data('id');
+		var context = $(this);
+		$.ajax({
+			type: "POST",
+			url: "assets/templates/votarMasCompartido.php",
+			data: {id: id},
+			success: function(data){
+			}
+		});
+
+	});
+
+	$('#share_tweet').click(function(e){
+		id = $(this).data('id');
+		var context = $(this);
+		$.ajax({
+			type: "POST",
+			url: "assets/templates/votarMasCompartido.php",
+			data: {id: id},
+			success: function(data){
+			}
+		});
+
+	});
+
 
 });
