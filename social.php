@@ -60,7 +60,8 @@
 								<center>
 									<img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>">
 									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 260px;">
-									<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">
+									<div style="height:62px; width:164px; background-image:url('assets/img/content/medal_foto_sel.png'); position: absolute; bottom:-33px; left: 110px;" data-id="<?= $foto->foto_id ?>" class="img_vote" ></div>
+									<!--<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">-->
 								</center>
 								<div class="rsTmb">
 									<img src="<?= $dir ?>charmadmin/<?= $route . '/thumbnail/' . $img  ?>">

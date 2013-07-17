@@ -99,11 +99,12 @@
 			width: 200px;
 			float: left;
 			background-image: url('../img/content/index/splatter_lomastop.png');
+			height: 961px;
 			h1{
-				font-size: 35px;
+				font-size: 57px;
 				font-weight: 700;
 				text-align: center;
-				margin-bottom: 10px;
+				margin-bottom: -16px;
 			}
 
 			article{
@@ -609,6 +610,10 @@
 
 	.img_vote{
 		cursor: pointer;
+		background-position: bottom;
+		&.voted{
+			background-position: top;
+		}
 	}
 
 }
