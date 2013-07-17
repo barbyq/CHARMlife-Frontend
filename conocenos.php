@@ -51,8 +51,8 @@
 				</div>
 				<div class="perfil">
 					<div class="texto">
-						<h1>Perfil</h1>
-						<p>Mujeres amantes de la vanguardia, los espacios sociales y el estilo de vida. Nuestros visitantes al sitio web pertenecen a un nivel socioeconómico alto y medio-alto, además del amplio mercado aspiracional. En nuestro sitio web atrapamos a los apasionados al extenso mundo del socialité, la moda, la joyería, alta cocina, nutrición y todo lo relacionado con el estilo de vida.  </p>
+						<h1>¿Quiénes Somos?</h1>
+						<p> <strong>CHARM life</strong> es el espacio perfecto para apreciar las vivencias de la sociedad lagunera. Diseñadas para toda la familia, nuestra revista y página web te comparten el estilo de vida de un socialité de la región, testimonios de personalidades, la crónica visual de los momentos que perdurarán y valiosas colaboraciones de expertos. Como parte de <strong>Grupo PLAYERS</strong> estamos comprometidos a brindarte productos y servicios de la más alta calidad que superen tus expectativas de información y entretenimiento. </p>	
 					</div>
 				</div>
 			</section>
@@ -60,16 +60,20 @@
 		<section class="middle">
 			<div class="quienesomos">
 				<div class="texto">
-					<h1>¿Quiénes Somos?</h1>
-					<p> <strong>CHARM life</strong> es el espacio perfecto para apreciar las vivencias de la sociedad lagunera. Diseñadas para toda la familia, nuestra revista y página web te comparten el estilo de vida de un socialité de la región, testimonios de personalidades, la crónica visual de los momentos que perdurarán y valiosas colaboraciones de expertos. Como parte de <strong>Grupo PLAYERS</strong> estamos comprometidos a brindarte productos y servicios de la más alta calidad que superen tus expectativas de información y entretenimiento. </p>	
+					<h1>Misión</h1>
+					<p>Ser el medio social líder de información y entretenimiento para las familias laguneras, fortaleciendo los valores de la comunidad y brindando bienestar a nuestros socios comerciales y asociados.</p>
+					<br>
+					<h1>Visión</h1>
+					<p>Trascender en el mundo editorial familiar, femenino y social, integrando de la mejor forma la oferta impresa y digital para acompañar a nuestros lectores en su día a día.</p>
 				</div>
 			</div>
 			<div class="filosofia">
-				<h1>Misión</h1>
-				<p>Ser el medio social líder de información y entretenimiento para las familias laguneras, fortaleciendo los valores de la comunidad y brindando bienestar a nuestros socios comerciales y asociados.</p>
-				<h1>Visión</h1>
-				<p>Trascender en el mundo editorial familiar, femenino y social, integrando de la mejor forma la oferta impresa y digital para acompañar a nuestros lectores en su día a día.</p>
 				<br class="clear"/>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 				<div class="imagenes">
 					<img class="derecha" src="assets/img/content/conocenos/charmlogo.png" alt="">
 					<img class="izquierda" src="assets/img/footer/grupoplayers.png" alt="">
