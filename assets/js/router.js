@@ -1,7 +1,8 @@
 var CharmRouter = Backbone.Router.extend({
 	routes:{
 		"suscribete":"suscripcion",
-		"gracias":"agradecimiento"
+		"gracias":"agradecimiento", 
+		"masCharm": "masCharm"
 	},suscripcion:function  () {
 		var cosha = $('#suscribebox').html();
 		  $.fancybox(''+cosha,
@@ -20,7 +21,17 @@ var CharmRouter = Backbone.Router.extend({
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-	},start:function () {
+	},masCharm:function(){
+		var html = $('#fotoMasCharm').html();
+    	$.fancybox( html,
+            {   'autoDimensions'    : true,
+                'width'             : 500,
+                'height'            : 'auto',
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none'
+            });
+	},
+	start:function () {
 		Backbone.history.start();  
 	}
 });

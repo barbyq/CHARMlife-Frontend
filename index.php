@@ -90,7 +90,14 @@
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 					</div>
 					<div style="display:none;" id="fotoMasCharm">
+						<img src="assets/img/content/medal_foto.png" style="position:absolute; bottom:0px; left:20px;">
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
+
+						<a href="http://www.facebook.com/sharer.php?s=100
+						&p[url]=http://www.charmlife.com.mx/charmadmin/<?= $foto->img ?>
+						&p[images][0]=http://www.charmlife.com.mx<?= '/charmadmin/' . $foto->img ?>
+						&p[title]=La foto mas CHARM" target="_blank" style="position:absolute; top: 5px; right: 6px; "><img src="http://www.playersoflife.com/assets/img/content/articulos/fb.png"></a>
+
 					</div>
 					<?php $sociales = $socialesDAO->getLoMasCompartido(1); 
 						$item = $sociales[0];

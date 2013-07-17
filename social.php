@@ -14,6 +14,7 @@
 	if (isset($_GET['id'])){
 		$id = $_GET['id'];
 		$social = $socialesDAO->getSocialById($id);
+		$socialesDAO->votarMasVisto($id);
 		//print_r($social);
 		$fotos = $socialesDAO->getImagenesbySocialId($id);
 		//print_r($fotos);
@@ -26,6 +27,9 @@
 		echo $social->titulo . ' - ';
 	} ?> CHARMlife</title>
 	<meta charset="utf-8">
+	<?php $thumb = scandir($dir. 'charmadmin/SocPrincipal/'.$social->sociales_id . '/'); ?>
+	<meta property="og:image" content="http://www.charmlife.com.mx/charmadmin/SocPrincipal/<?= $social->sociales_id . '/' . $thumb[2] ?>"/>
+  	<link rel="image_src" type="image/jpeg" href="http://www.charmlife.com.mx/charmadmin/SocPrincipal/<?php echo $social->sociales_id."/".$thumb[2]; ?>"/>
   	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
@@ -38,13 +42,14 @@
 	<script type="text/javascript" src="assets/js/assets.js"></script>
 </head>
 <body>
+	<!-- <img src="http://www.charmlife.com.mx/charmadmin/SocPrincipal/<?= $social->sociales_id . '/' . $thumb[2] ?>">  -->
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper social contenido">
 		<?php  if(isset($social->sociales_id)){ ?>
 
 		
 		<section class="top_social">
-			<div style="width:700px; margin:0 auto;">
+			<div style="width:700px; margin:0 auto; min-height:475px;">
 				<div id="socialiteSlider" class="royalSlider rxDefault">
 					<?php 
 						foreach ($fotos as $foto) { 
@@ -55,7 +60,8 @@
 								<center>
 									<img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>">
 									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 260px;">
-									<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">
+									<div style="height:62px; width:164px; background-image:url('assets/img/content/medal_foto_sel.png'); position: absolute; bottom:-33px; left: 110px;" data-id="<?= $foto->foto_id ?>" class="img_vote" ></div>
+									<!--<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">-->
 								</center>
 								<div class="rsTmb">
 									<img src="<?= $dir ?>charmadmin/<?= $route . '/thumbnail/' . $img  ?>">
@@ -69,7 +75,29 @@
 			<h1><?= $social->titulo ?></h1>
 			<h2><?= $social->subtitulo ?></h2>
 			<p><?= $social->descripcion ?></p>
-		</section>
+
+
+
+			<div class="shares" align="right">
+				<p>Comparte en:</p>
+				<a href="http://www.facebook.com/sharer.php?s=100
+&p[url]=http://www.charmlife.com.mx/social.php?id=<?php echo $social->sociales_id; ?>
+&p[images][0]=http://www.charmlife.com.mx/charmadmin/SocPrincipal/<?= $social->sociales_id . '/' . $thumb[2] ?>
+&p[title]=<?php echo $social->titulo;  ?>
+&p[summary]=<?php echo $social->subtitulo;  ?>" target="_blank" id="share_fb" data-id="<?= $social->sociales_id ?>"><img src="http://www.playersoflife.com/assets/img/content/articulos/fb.png"></a>
+				
+				<a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $social->titulo; ?>&amp;url=http://www.charmlife.com.mx/social.php?id=<?php echo $social->sociales_id; ?>&amp;via=charmtorreon" id="share_tweet" data-id="<?= $social->sociales_id ?>"><img src="http://www.playersoflife.com/assets/img/content/articulos/tweet.png"></a>
+
+			</div>
+<!--
+			<div class="shares" align="right">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				
+
+				<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436'); return false;">Compartir en Facebook</a>
+			</div>
+		</section>-->
 
 		</section><!-- top_social -->
 		<?php } ?>

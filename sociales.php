@@ -84,7 +84,7 @@
 				</header>
 				<section class="body">
 					<?php 
-						$sociales = $socialesDAO->getEventosAnteriores(5);
+						$sociales = $socialesDAO->getEventosAnteriores(6);
 						foreach ($sociales as $item) { 
 							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
 					 ?>

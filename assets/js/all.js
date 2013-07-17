@@ -53,7 +53,7 @@ $("#sliderSociales").royalSlider({
 
 
     $('#clickFotoMasCharm').click(function(e){
-    console.log("here");
+    //console.log("here");
    
     var html = $('#fotoMasCharm').html();
     $.fancybox( html,

@@ -81,12 +81,13 @@
     .wrapper .col2 .lomastop {
       width: 200px;
       float: left;
-      background-image: url("../img/content/index/splatter_lomastop.png"); }
+      background-image: url("../img/content/index/splatter_lomastop.png");
+      height: 961px; }
       .wrapper .col2 .lomastop h1 {
-        font-size: 35px;
+        font-size: 57px;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 10px; }
+        margin-bottom: -16px; }
       .wrapper .col2 .lomastop article {
         margin-top: 17px;
         margin-bottom: 17px; }
@@ -444,6 +445,8 @@
     /*height: 42px;*/
     background-color: #83003a;
     width: 100px; }
+  #socialiteSlider .rsOverflow {
+    min-height: 405px; }
 
 .social .info {
   width: 700px;
@@ -458,7 +461,10 @@
   .social .info p {
     font-size: 18px; }
 .social .img_vote {
-  cursor: pointer; }
+  cursor: pointer;
+  background-position: bottom; }
+  .social .img_vote.voted {
+    background-position: top; }
 
 .arts .info {
   font-size: 17px; }
