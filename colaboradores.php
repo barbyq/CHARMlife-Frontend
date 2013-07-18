@@ -64,7 +64,7 @@
 											<img src="<?php if ($objecto->imagen == "") {echo "assets/img/content/colaboradores/colabunknow.png";}else{echo "../charmadmin/".$objecto->imagen; } ?>" alt="">
 											<div class="texto">
 												<h1><?php echo $objecto->nombrec; ?></h1>
-												<p><?php echo $objecto->descripcion; ?></p>
+												<p><?php echo $objecto->giro; ?></p>
 											</div>
 											<?php  if ($contador == $tamano-1) {break 3; } else { $contador++; }?>	
 										</div>
@@ -101,6 +101,7 @@
 					<hr width="95%" align="left">
 				</div>
 				<div class="descripcolab">
+					<p id="giro"><?= $objecto->giro; ?></p>
 					<p id="descripcion"><?php echo $objecto->descripcion; ?></p>
 				</div>
 			</div>
@@ -111,8 +112,9 @@
 					<br class="clear"/>
 					<h2>contacto@charmlife.com.mx</h2>
 				</div>
-				<hr width="95%" align="right"/>
+				<!--<hr width="95%" align="right"/>-->
 			</div>
+			<!--
 			<div class="tipocolaborador">
 				<div class="texto-tipocolaborador">
 					<h1>Tipo de Colaborador</h1>
@@ -121,7 +123,7 @@
 						<p>Digital</p>
 					<? } ?>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</section>
 	<section class="articulos-colaborador">
