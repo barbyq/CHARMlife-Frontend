@@ -12,7 +12,7 @@ $(function() {
  				$conjunto = $("<div class='conjunto-primeravera'></div>");
  			}
                         segundoloop: for (var j = 0; j < 4; j++) {
-                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
+                                var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
                                 if (response[contador]["thumbnail"] != "" ) {
                                         $eichtieme.append("<img src='charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
         	                }else{
@@ -50,7 +50,7 @@ $(function() {
 				 				$conjunto = $("<div class='conjunto-primeravera'></div>");
 				 			}
 				                        segundoloop: for (var j = 0; j < 4; j++) {
-				                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
+				                                var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
 				                                if (response[contador]["thumbnail"] != "" ) {
 				                                        $eichtieme.append("<img src='charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
 				        	                }else{
@@ -112,13 +112,13 @@ function ShowColabArticles (colabid) {
  				$conjunto = $("<div class='conjunto-primeravera'></div>");
  			}
                         segundoloop: for (var j = 0; j < 4; j++) {
-                                var $eichtieme = $("<a href='articulo.php?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
+                                var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
                                 if (response[contador]["thumbnail"] != "" ) {
                                         $eichtieme.append("<img src='charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
         	                }else{
 	                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
                                 }
-                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
+                                $eichtieme.append("<div class='texto'><a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
                                $conjunto.append($eichtieme);
                                if (contador == response.length-1) { break segundoloop; }else{ contador++};
                         };
@@ -148,13 +148,13 @@ function ShowColabArticles (colabid) {
 				 				$conjunto = $("<div class='conjunto-primeravera'></div>");
 				 			}
 				                        segundoloop: for (var j = 0; j < 4; j++) {
-				                                var $eichtieme = $("<a href='articulo.php?id="+resi[contador]['articulo_id']+"' class='articulin'></a>");
+				                                var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+resi[contador]['articulo_id']+"' class='articulin'></a>");
 				                                if (resi[contador]["thumbnail"] != "" ) {
 				                                        $eichtieme.append("<img src='charmadmin/Thumbnails/"+resi[contador]['articulo_id']+"/"+resi[contador]["thumbnail"]+"' alt=''>");
 				        	                }else{
 					                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
 				                                }
-				                                $eichtieme.append("<div class='texto'><a href='articulo.php?id="+resi[contador]['articulo_id']+"'><h1>"+resi[contador]['titulo']+"</h1></a><p>"+resi[contador]['subtitulo']+"</p></div>")
+				                                $eichtieme.append("<div class='texto'><a href='"+GetType(response[contador]['tipo'])+"?id="+resi[contador]['articulo_id']+"'><h1>"+resi[contador]['titulo']+"</h1></a><p>"+resi[contador]['subtitulo']+"</p></div>")
 				                               $conjunto.append($eichtieme);
 				                               if (contador == resi.length-1) { break segundoloop; }else{ contador++};
 				                        };
@@ -168,4 +168,26 @@ function ShowColabArticles (colabid) {
 	},'json').fail(function  (e) {
 		console.warn(e);
 	});
+}
+
+function GetType (blipo) {
+	var comparador = parseInt(blipo);
+	console.log(blipo);
+	console.log(comparador);
+	switch(comparador){
+		case 0:
+			return "articulo.php";
+			break;
+		case 1:
+			return "galeria.php";
+			break;
+		case 2:
+			return "video.php";
+			break;
+		case 4:
+			return "tematica.php";
+			break;
+		default:
+			break;
+	}
 }
