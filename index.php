@@ -222,7 +222,7 @@
 				</div>
 				<br>
 				<br>
-				<a href="http://www.playersoflife.com/losases" target="_blank"><img src="assets/banners/home/7.gif" class="ad"></a>
+				<a href="http://www.facebook.com/charmlifetorreon" target="_blank"><img src="assets/banners/home/7.jpg" class="ad"></a>
 			</div>
 		</section>
 	</section>
