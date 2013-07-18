@@ -668,8 +668,17 @@ body{
             float: right;
              width: 190px;
              .texto-padd{
-                 width: 155px;
+                 width: 195px;
                  padding-left: 10px;
+                 a{
+                 	color: black;
+                 	span{
+                 		position: relative;
+						top: 4px;
+						left: 5px;
+						font-size: 17px;
+                 	}
+                 }
                  h1{
                   font-size: 200%;
                   font-weight: bold;

@@ -6,7 +6,8 @@ function  ShowColabInfo(colabid) {
 	$.post("charmadmin/controllers/colaboradores_controller.php",{receiver:"showcolab",showcolab:colabid},function(response) {
                        	console.log(response);
                         $('#nombrecolaborador').html(response['nombrec']);
-	                $('#descripcion').html(response['descripcion']);
+	                	$('#descripcion').html(response['descripcion']);
+	                	$('#giro').html(response['giro']);
                                if (response['imagen'] == "") {
                                   $('#fotocolab').attr("src","assets/img/content/colaboradores/colabunknow.png");
                                 }else{

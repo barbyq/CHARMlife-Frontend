@@ -553,8 +553,15 @@ body {
       float: right;
       width: 190px; }
       .colaborador-contenido .paddit .contacto .texto-padd {
-        width: 155px;
+        width: 195px;
         padding-left: 10px; }
+        .colaborador-contenido .paddit .contacto .texto-padd a {
+          color: black; }
+          .colaborador-contenido .paddit .contacto .texto-padd a span {
+            position: relative;
+            top: 4px;
+            left: 5px;
+            font-size: 17px; }
         .colaborador-contenido .paddit .contacto .texto-padd h1 {
           font-size: 200%;
           font-weight: bold; }
