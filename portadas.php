@@ -73,7 +73,25 @@
 </head>
 <body>
 <?php include "assets/templates/header.php" ?>
-
+<?php function dametipo($tipo)
+	 {
+		switch ($tipo) {
+			case '0':
+				return "articulo.php?id=";
+				break;
+			case '1':
+				return "galeria.php?id=";
+				break;
+			case '2':
+				return "video.php?id=";
+				break;
+			case '3':
+				return "tematica.php?id=";
+				break;
+			default:
+				break;
+		}
+	} ?>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
 		$('#portadasoflife').royalSlider({
@@ -146,7 +164,8 @@ jQuery(document).ready(function($) {
 						for (var i = 0; i < response.length; i++) {
 							var id = response[i]['articulo_id'];
 							var nombrearti = response[i]['titulo'];
-							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							var tipo = response[i]['tipo'];
+							var contenido = $("<li type='disc'><a href='"+GetType(tipo)+"?id="+id+"'>"+nombrearti+"</a></li>");
 							$('#article-list').append(contenido);
 						};
 					},'json').fail(function  (e) {
@@ -161,7 +180,8 @@ jQuery(document).ready(function($) {
 						for (var i = 0; i < response.length; i++) {
 							var id = response[i]['articulo_id'];
 							var nombrearti = response[i]['titulo'];
-							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							var tipo = response[i]['tipo'];
+							var contenido = $("<li type='disc'><a href='"+GetType(tipo)+"?id="+id+"'>"+nombrearti+"</a></li>");
 							$('#article-list').append(contenido);
 						};
 					},'json').fail(function  (e) {
@@ -176,7 +196,8 @@ jQuery(document).ready(function($) {
 						for (var i = 0; i < response.length; i++) {
 							var id = response[i]['articulo_id'];
 							var nombrearti = response[i]['titulo'];
-							var contenido = $("<li type='disc'><a href='articulo.php?id="+id+"'>"+nombrearti+"</a></li>");
+							var tipo = response[i]['tipo'];
+							var contenido = $("<li type='disc'><a href='"+GetType(tipo)+"?id="+id+"'>"+nombrearti+"</a></li>");
 							$('#article-list').append(contenido);
 						};
 					},'json').fail(function  (e) {
@@ -185,6 +206,27 @@ jQuery(document).ready(function($) {
 				};
 		});
 });
+	function GetType (blipo) {
+			var comparador = parseInt(blipo);
+			console.log(blipo);
+			console.log(comparador);
+			switch(comparador){
+				case 0:
+					return "articulo.php";
+					break;
+				case 1:
+					return "galeria.php";
+					break;
+				case 2:
+					return "video.php";
+					break;
+				case 4:
+					return "tematica.php";
+					break;
+				default:
+					break;
+			}
+		}
 </script>
 <div class="contenido">
 							
@@ -257,7 +299,7 @@ jQuery(document).ready(function($) {
 			<ul id="article-list">
 				<?php $articulos = $articulosDAO->getRandomOftheSemaine(); ?>
 				<?php foreach ($articulos as $articulo) { ?>
-					<li type="disc"><a href="articulo.php?id=<?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
+					<li type="disc"><a href="<?php echo dametipo($articulo->tipo); ?><?php echo $articulo->articulo_id; ?>"><?php echo $articulo->titulo; ?></a></li>	
 				<?} ?>
 			</ul>
 		</section>
