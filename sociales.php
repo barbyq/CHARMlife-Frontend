@@ -3,6 +3,7 @@
 	ini_set('display_errors', '1'); 
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
+	include $dir .'charmadmin/dbc/utilities.php';
 	include $dir .'charmadmin/dbc/articulosDAO.php';
 	include $dir .'charmadmin/dbc/socialesDAO.php';
 	include $dir . 'charmadmin/dbc/chismesDAO.php';
@@ -12,6 +13,7 @@
 	$socialesDAO = new socialesDAO($dbc);
 	$chismesDAO = new chismesDAO($dbc);
 	$articulosDAO = new articulosDAO($dbc);
+	$current = 'sociales';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,6 +30,12 @@
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript" src="assets/js/assets.js"></script>
+	<script type="text/javascript" src="assets/js/pagination.js"></script>
+	<style type="text/css">
+		.hidden{
+			display: none;
+		}
+	</style>
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
@@ -45,7 +53,7 @@
 						
 						<div class="rsContent">
 							<a href="social.php?id=<?= $item->sociales_id ?>"><img src="<?= $dir ?>charmadmin/SocPrincipal/<?= $item->sociales_id . '/' . $main[2] ?>">
-							<section class="rsABlock"><h2><?= $item->titulo ?></h2></section></a>
+							<section class="rsABlock"><h2><?= $item->titulo ?> <span style="font-weight:300; font-size: 21px; position: relative; top: -2px;"><?= $item->subtitulo ?></span></h2></section></a>
 							<div class="rsTmb"><img src="<?= $dir ?>charmadmin/SocThumb/<?= $item->sociales_id . '/' .  $thumb[2] ?>"></div>
 						</div>
 				<?php } ?>
@@ -155,13 +163,25 @@
 			</div>
 
 
-			<section class="mini_features">
+			<section class="mini_features anteriores">
 				<header>
-					<h1>Eventos anteriores</h1>
+					<?php $m = date('n');
+						$y = date('Y');
+					 ?>
+					<h1 style="left: 45px;" data-month="<?= $m ?>" data-year="<?= $y ?>">
+						<img src="assets/img/content/sociales/left_arrow.png" class="arrow" id="prev_date">&nbsp;
+						<span class="date"><?= getMes($m) . ' ' . $y ?></span>
+						&nbsp;<img src="assets/img/content/sociales/right_arrow.png" class="arrow hidden" id="next_date">
+					</h1>
 				</header>
-				<section class="body">
+				<div id="loadingDiv" style="position: absolute; z-index: 3; left: 300px; top: 200px;"><img src="assets/img/loader.gif"></div>
+				<section class="body" style="height:420px;">
+					<!--<img src="assets/img/content/sociales/left_arrow_black.png" class="arrow_" style="left: -10px;" id="prev_soc">-->
+					<div id="pos_prev_soc" class="arrow_" style="left: -10px;">
+
+					</div>
 					<?php 
-						$sociales = $socialesDAO->getEventosAnteriores(6);
+						$sociales = $socialesDAO->getEventosByMes($m, $y, 0, 9);
 						foreach ($sociales as $item) { 
 							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
 					 ?>
@@ -173,6 +193,9 @@
 						</article>
 					 <?php } ?>
 					<br class="clear">
+					<div id="pos_next_soc" class="arrow_" style="right: -5px;">
+						<img src="assets/img/content/sociales/right_arrow_black.png" id="next_soc" data-num="1">
+					</div>
 				</section><!-- body -->
 			</section><!-- mini_features -->
 

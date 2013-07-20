@@ -15,6 +15,7 @@
  	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
 	$colaboradoresDAO = new colaboradoresDAO($dibo);
+	$current = 'colaboradores';
  ?>
 <html lang="es">
 <head>

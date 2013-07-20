@@ -11,6 +11,7 @@
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);
 	$tagsDAO = new tagsDAO($dbc);
+	$current = 'masCharm';
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -115,6 +116,10 @@
 						objs = $.parseJSON(data);
 						var $boxes = $(makeBoxes(objs));
 		      			$container.append( $boxes ).masonry( 'appended', $boxes );	
+		      			$container.imagesLoaded(function(){
+							$container.masonry('reloadItems');
+			 				$container.masonry('reload');	
+						});
 		      			dataVal++;
 		      			$('#mas_charm').data('val', dataVal);	
 					}
@@ -204,7 +209,7 @@
 				</ul>
 			</nav>
 			<section class="grid">
-				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);
+				<?php  $articulos = $articulosDAO->getMasCharm(0, 20);
 						foreach ($articulos as $item) { 
 						if(is_dir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/')){
 							$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/');	

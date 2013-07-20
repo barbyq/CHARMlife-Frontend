@@ -33,7 +33,8 @@ $("#sliderSociales").royalSlider({
         autoPlay: {
             // autoplay options go gere
             enabled: true,
-            pauseOnHover: true
+            pauseOnHover: true,
+            delay: 10000
         }
     });
 

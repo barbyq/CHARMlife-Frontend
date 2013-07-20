@@ -8,6 +8,7 @@
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dbc = $dbconnect->getConnection();
 	$articulosDAO = new articulosDAO($dbc);
+	$current = 'personalidades';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +31,7 @@
 	<section class="wrapper contenido personalidades">
 		<section class="col2">
 			<section class="main">
-				<?php $personalidades = $articulosDAO->getArticulosByArea('Personalidades', 3); 
+				<?php $personalidades = $articulosDAO->getArticulosByArea('Personalidades', 0, 3); 
 					foreach ($personalidades as $item) { 
 						$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/'); ?>
 					<a href="articulo.php?id=<?= $item->articulo_id ?>">
@@ -42,7 +43,13 @@
 				<?php } ?>
 			</section>
 			<br class="clear">
-			<section class="mini_features expanded">
+		</section>
+		<section class="col3">
+			<a href="https://es-es.facebook.com/VivaDanceAcademy" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
+			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
+		</section>
+		<br class="clear">
+		<section class="mini_features expanded">
 				<header>
 					<h1>Videos</h1>
 				</header>
@@ -64,88 +71,32 @@
 			</section><!-- mini_features -->
 
 
-			<!--<section class="mini_features expanded">
+			<section class="mini_features expanded">
 				<header style="width:944px;">
 					<h1 style="left:15px; font-size:31px;">Personalidades Anteriores</h1>
 				</header>
 				<section class="body_">
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
-					<article>
-						<img src="assets/img/prueba/personalidades_thumb.jpg">
-						<section class="info">
-							<p class="section">PROFILE</p>
-
-							<h3>Maricarmen Lugo</h3>
-							<p class="fecha">17/7/2013</p>
-							<h4>Subtitulo</h4>
-						</section>
-					</article> 
-
+					<?php  $articulos = $articulosDAO->getArticulosByArea('Personalidades', 3, 6);  
+						foreach ($articulos as $item) {
+							$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
+						 ?>
+							<article>
+								<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
+								<section class="info">
+									<!--<p class="section">PROFILE</p>-->
+									<h3><?= $item->titulo  ?></h3>
+									<p class="fecha"><?= $item->fecha  ?></p>
+									<h4><?= $item->subtitulo  ?></h4>
+								</section>
+							</article> 
+					<?php	}
+					?>
 
 					<br class="clear">
 				</section><!-- body_ -->
-			<!-- </section> <!-- mini_features -->
-		</section>
-		<section class="col3">
-			<a href="https://es-es.facebook.com/VivaDanceAcademy" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
-		</section>
+			</section> <!-- mini_features -->
 	</section>
-	<br class="clear">
+	
 	<?php //include "assets/templates/footer.php" ?>
 </body>
 </html>

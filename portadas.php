@@ -10,6 +10,7 @@
 	$dibo = $dbconnect->getConnection();
 	$portadasDAO = new portadasDAO($dibo);
  	$articulosDAO = new articulosDAO($dibo);
+ 	$current = 'portadas';
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -68,6 +69,9 @@
 		.portadasoflife .rsThumb.rsNavSelected {
 		  
 		  border-bottom:-color #02874A;
+		}
+		.rxDefault .rsThumb img {
+			height: 129px;
 		}
 	</style>
 </head>
