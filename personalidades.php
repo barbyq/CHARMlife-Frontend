@@ -73,7 +73,7 @@
 
 			<section class="mini_features expanded">
 				<header style="width:944px;">
-					<h1 style="left:15px; font-size:31px;">Personalidades Anteriores</h1>
+					<h1 style="left:15px; font-size:31px;">+ Personalidades</h1>
 				</header>
 				<section class="body_">
 					<?php  $articulos = $articulosDAO->getArticulosByArea('Personalidades', 3, 6);  
@@ -81,13 +81,15 @@
 							$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
 						 ?>
 							<article>
-								<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
-								<section class="info">
-									<!--<p class="section">PROFILE</p>-->
-									<h3><?= $item->titulo  ?></h3>
-									<p class="fecha"><?= $item->fecha  ?></p>
-									<h4><?= $item->subtitulo  ?></h4>
-								</section>
+								<a href="articulo.php?id=<?= $item->articulo_id ?>" style="color:black;">
+									<img src="<?= $dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/' . $imgs[2] ?>">
+									<section class="info">
+										<!--<p class="section">PROFILE</p>-->
+										<h3><?= $item->titulo  ?></h3>
+										<p class="fecha"><?= $item->fecha  ?></p>
+										<h4><?= $item->subtitulo  ?></h4>
+									</section>
+								</a>
 							</article> 
 					<?php	}
 					?>
