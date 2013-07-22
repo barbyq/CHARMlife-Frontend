@@ -13,6 +13,7 @@
 	$portadasDAO = new portadasDAO($dibo);
  	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
+	$current = 'conocenos';
  ?>
 <html lang="es">
 <head>

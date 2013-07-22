@@ -368,6 +368,9 @@
       position: relative;
       left: 52px;
       border-bottom: 6px solid black; }
+    .mini_features header .arrow {
+      height: 23px;
+      cursor: pointer; }
   .mini_features .body {
     border-left: 1px solid #bdb6bf;
     border-right: 1px solid #bdb6bf;
@@ -377,6 +380,10 @@
     box-shadow: 1px 1px 1px 1px #ccc;
     padding: 14px;
     position: relative; }
+    .mini_features .body .arrow_ {
+      position: absolute;
+      top: 200px;
+      cursor: pointer; }
     .mini_features .body article {
       background-image: url("../img/content/mini_img_bg.png");
       background-repeat: no-repeat;
@@ -475,7 +482,12 @@
     font-size: 150%; }
 .arts .body {
   font-weight: 300;
-  font-size: 17px; }
+  font-family: Arial;
+  font-size: 16px; }
+  .arts .body strong {
+    font-weight: bold; }
+  .arts .body i {
+    font-style: italic; }
 
 .sliderSociales {
   width: 920px;

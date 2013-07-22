@@ -203,13 +203,14 @@ $(document).ready(function() {
 			<div class="navigation">
 				<div class="principal">
 					<ul>
-						<li><a href="/">HOME</a></li>
-						<li><a href="sociales.php">SOCIALES</a></li>
-						<li><a href="personalidades.php">PERSONALIDADES</a></li>
-						<li><a href="masCharm.php">+CHARM</a></li>
-						<li><a href="portadas.php">PORTADAS</a></li>
-						<li><a href="colaboradores.php">COLABORADORES</a></li>
-						<li><a href="conocenos.php">CONÓCENOS</a></li>
+						<?php if(!isset($current)){$current = '';} ?>
+						<li><a href="/" <?php if($current == 'index'){ echo 'class="selected"'; } ?>>HOME</a></li>
+						<li><a href="sociales.php" <?php if($current == 'sociales'){ echo 'class="selected"'; } ?>>SOCIALES</a></li>
+						<li><a href="personalidades.php" <?php if($current == 'personalidades'){ echo 'class="selected"'; } ?>>PERSONALIDADES</a></li>
+						<li><a href="masCharm.php" <?php if($current == 'masCharm'){ echo 'class="selected"'; } ?>>+CHARM</a></li>
+						<li><a href="portadas.php" <?php if($current == 'portadas'){ echo 'class="selected"'; } ?>>PORTADAS</a></li>
+						<li><a href="colaboradores.php" <?php if($current == 'colaboradores'){ echo 'class="selected"'; } ?>>COLABORADORES</a></li>
+						<li><a href="conocenos.php" <?php if($current == 'conocenos'){ echo 'class="selected"'; } ?>>CONÓCENOS</a></li>
 					</ul>
 				</div>
 					<div>

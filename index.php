@@ -13,6 +13,7 @@
 	$portadasDAO = new portadasDAO($dibo);
  	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
+	$current = 'index';
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,6 +29,7 @@
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
 	<script type="text/javascript" src="assets/js/assets.js"></script>
+	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
@@ -160,6 +162,9 @@
 				<img src="<?= $dir. 'charmadmin/Outfit/' . $outfit[2]  ?>">
 				<div class="texto">
 				</div>
+
+				<a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.charmlife.com.mx&media=http%3A%2F%2Fwww.charmlife.com.mx%2Fcharmadmin%2FOutfit%2F<?= $outfit[2] ?>&description=Outfit%20de%20la%20semana" data-pin-do="buttonPin" data-pin-config="above" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" style="width:inherit;" /></a>
+
 			</section>
 		</section>
 		<br class="clear"/>

@@ -477,6 +477,10 @@
 			left: 52px;	
 			border-bottom: 6px solid black;
 		}
+		.arrow{
+			height: 23px;
+			cursor: pointer;
+		}
 
 	}//header
 	.body{
@@ -488,6 +492,12 @@
 		box-shadow:         1px 1px 1px 1px #ccc;
 		padding: 14px;
 		position: relative;
+
+		.arrow_{
+			position: absolute;
+			top: 200px;
+			cursor: pointer;
+		}
 
 		article{
 			background-image: url('../img/content/mini_img_bg.png');
@@ -631,7 +641,14 @@
 	}
 	.body{
 		font-weight: 300;
-		font-size:17px;
+		font-family: Arial;
+		font-size: 16px;
+		strong{
+		font-weight: bold;
+		}
+		i{
+		font-style: italic;
+		}
 	}
 
 }

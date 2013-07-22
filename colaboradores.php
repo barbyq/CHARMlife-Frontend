@@ -15,6 +15,7 @@
  	$articulosDAO = new articulosDAO($dibo);
 	$socialesDAO = new socialesDAO($dibo);
 	$colaboradoresDAO = new colaboradoresDAO($dibo);
+	$current = 'colaboradores';
  ?>
 <html lang="es">
 <head>
@@ -108,9 +109,9 @@
 			<div class="contacto">
 				<div class="texto-padd">
 					<h1>Contacto</h1>
-					<a href="mailto:contacto@charmlife.com.mx"><img class="img" src="assets/img/content/colaboradores/correotodohaxor.png" alt=""></a>
-					<br class="clear"/>
-					<h2>contacto@charmlife.com.mx</h2>
+					<a href="mailto:contacto@charmlife.com.mx"><img class="img" src="assets/img/content/colaboradores/correotodohaxor.png" alt=""><span>contacto@charmlife.com.mx</span></a>
+					<!--<br class="clear"/>-->
+					
 				</div>
 				<!--<hr width="95%" align="right"/>-->
 			</div>

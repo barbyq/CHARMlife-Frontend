@@ -1,247 +1,214 @@
 <?php 
 	error_reporting(E_ALL);
-	ini_set('display_errors', '1');
+	ini_set('display_errors', '1'); 
 	include 'assets/templates/pwd.php';
-	include $dir . 'charmadmin/dbc/dbconnect.php';
-	include $dir . 'charmadmin/dbc/articulosDAO.php';
-	include $dir . 'charmadmin/dbc/tagsDAO.php';
-
+	include $dir .'charmadmin/dbc/dbconnect.php';
+	include $dir .'charmadmin/dbc/utilities.php';
+	include $dir .'charmadmin/dbc/articulosDAO.php';
+	include $dir .'charmadmin/dbc/socialesDAO.php';
+	include $dir . 'charmadmin/dbc/chismesDAO.php';
 	
 	$dbconnect = new dbconnect('charm_charmlifec536978');
 	$dbc = $dbconnect->getConnection();
+	$socialesDAO = new socialesDAO($dbc);
+	$chismesDAO = new chismesDAO($dbc);
 	$articulosDAO = new articulosDAO($dbc);
-	$tagsDAO = new tagsDAO($dbc);
- ?>
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>CHARMlife +CHARM</title>
+	<title>CHARMlife Sociales</title>
 	<meta charset="utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css"> 
-
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/royalslider/royalslider.css">
-	<link rel="stylesheet" href="assets/royalslider/skins/default/rs-default.css"> 
 	<link rel="stylesheet" href="assets/royalslider/skins/default/rx-default.css"> 
 
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
-	<script type="text/javascript">
-	function makeBoxes(objs) {
-		var boxes = [];
-		console.log(objs);
-		for(article in objs){
-			console.log(objs[article]);
-			var box = document.createElement('article');
-		    box.className = 'box';
-
-		    var img = document.createElement('img');
-		    if(objs[article].imagen){
-		    	img.setAttribute("src", "<?= $dir ?>charmadmin/MasCharm/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
-		    }
-		    
-		    box.appendChild(img);
-
-		    var h2 = document.createElement('h2');
-		    t_h2 = document.createTextNode(objs[article].titulo);
-		    h2.appendChild(t_h2);
-		    box.appendChild(h2);
-
-		    var p = document.createElement('p');
-		    t_p = document.createTextNode(objs[article].subtitulo);
-		    p.appendChild(t_p);
-		    box.appendChild(p);
-		    boxes.push( box );
+	<script type="text/javascript" src="assets/js/assets.js"></script>
+	<script type="text/javascript" src="assets/js/pagination.js"></script>
+	<style type="text/css">
+		.hidden{
+			display: none;
 		}
-		
-
-		/*for (var i=0; i < 20; i++ ) {
-	    var box = document.createElement('article'),
-	        text = document.createTextNode( "Hola");
-	    
-		    box.className = 'box';
-		    box.appendChild( text );
-		    // add box DOM node to array of new elements
-		    boxes.push( box );*/
-
-		    
-		    /*
-				<article class="box">
-					<img src="">
-					<h2>Tom Ford</h2>
-					<p></p>
-				</article>
-		    
-		    
-
-
-  		}*/
-  		return boxes;
-	};
-
-	$(function(){
-		
-		var $container = $('.grid');
-		$container.imagesLoaded( function(){
-		  $container.masonry({
-		    itemSelector : '.box',
-		    columnWidth: 320,
-		    gutter: 10
-		  });
-		});
-
-		$('#mas_charm').click(function(e){
-			var dataVal = $('#mas_charm').data('val');
-			console.log(dataVal);
-			var objs;
-
-			if(e.preventDefault){
-				e.preventDefault();
-			}else{
-				e.returnValue = false;
-			}
-
-			$.ajax({
-				type: "POST",
-				url: "assets/templates/getMasCharm.php",
-				data: {limit: dataVal},
-				success: function(data){
-					if(data == 'NO MORE'){
-						$('#mas_charm p').text("No más resultados");
-					}else{
-						objs = $.parseJSON(data);
-						var $boxes = $(makeBoxes(objs));
-		      			$container.append( $boxes ).masonry( 'appended', $boxes );	
-		      			dataVal++;
-		      			$('#mas_charm').data('val', dataVal);	
-					}
-					
-				}
-			});//ajax
-		});//click
-
-		$('#loadingDiv')
-		    .hide()  // hide it initially
-		    .ajaxStart(function() {
-		        $(this).show();
-		    })
-		    .ajaxStop(function() {
-		        $(this).hide();
-		    });
-
-		 $('ul.interests').hide();
-		 $('.header_interests').click(function(e){
-		 	$('ul.interests').slideToggle('medium', function() {
-  				});
-		 });
-
-		 var interests;
-		 $('ul.interests li').click(function(e){
-		 	var dataVal = $('#mas_charm').data('val');
-			var objs;
-
-		 	interests = new Array();
-		 	$(this).toggleClass( 'selected' );
-		 	
-		 	$('ul.interests li.selected').each(function(){
-		 		interests.push($(this).data("id"));
-		 	});
-
-		 	var limit = $('#mas_charm').data('val');
-
-		 	//$container.masonry('reloadItems')
-
-		 	$.ajax({
-		 		type: "POST",
-		 		url: "assets/templates/getMasCharm.php",
-		 		data: { tags: interests, limit: limit },
-		 		success: function(data){
-		 			objs = $.parseJSON(data);
-	 				console.log(objs);
-
-		 			$('.grid .box').each(function(i){
-		 				$container.masonry('remove',$(this));
-		 			});
-
-		 			var $boxes = $(makeBoxes(objs));
-	      			$container.append( $boxes ).masonry( 'appended', $boxes );
-					$container.imagesLoaded(function(){
-						$container.masonry('reloadItems');
-		 				$container.masonry('reload');	
-					});
-					
-		 			/*console.log($container);
-		 			
-						
-	      			dataVal++;
-	      			$('#mas_charm').data('val', dataVal);
-	      			
-    				*/
-		 		}
-		 	});//ajax
-
-		 });//click
-
-	});
-	</script>
+	</style>
 </head>
 <body>
 	<?php include "assets/templates/header.php" ?>
-	<section class="wrapper masCharm contenido">
+	<section class="wrapper sociales contenido">
+		<div class="sliderSociales">
+			
+			<div id="bigSlider" class="royalSlider rxDefault">
+				<?php 
+					$sociales = $socialesDAO->getLoMasNuevo(11);
+					foreach ($sociales as $item) { 
+							$thumb = scandir($dir .'charmadmin/SocThumb/'.$item->sociales_id);
+							$main = scandir($dir .'charmadmin/SocPrincipal/'.$item->sociales_id);
+
+						?>	
+						
+						<div class="rsContent">
+							<a href="social.php?id=<?= $item->sociales_id ?>"><img src="<?= $dir ?>charmadmin/SocPrincipal/<?= $item->sociales_id . '/' . $main[2] ?>">
+							<section class="rsABlock"><h2><?= $item->titulo ?> <span style="font-weight:300; font-size: 21px; position: relative; top: -2px;"><?= $item->subtitulo ?></span></h2></section></a>
+							<div class="rsTmb"><img src="<?= $dir ?>charmadmin/SocThumb/<?= $item->sociales_id . '/' .  $thumb[2] ?>"></div>
+						</div>
+				<?php } ?>
+			</div>
+			<div class="mancha_slider"></div>
+		</div><!-- margin -->
+
+
 		<section class="col2">
-			<nav>
-				<header class="header_interests">
-					<h2>Selecciona tus intereses</h2>
+			<section class="mini_features">
+				<header>
+					<h1>+ Visto este mes</h1>
 				</header>
-				<ul class="interests">
-					<?php $tags = $tagsDAO->getTags();
-						foreach ($tags as $tag) { ?>
-							<li data-id="<?= $tag->tag_id ?>"><?= $tag->nombre; ?></li>
-					<?php } ?>
-				</ul>
-			</nav>
-			<section class="grid">
-				<?php  $articulos = $articulosDAO->getMasCharm(0, 10);
-						foreach ($articulos as $item) { 
-						if(is_dir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/')){
-							$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/');	
-						}
-						?>
-						<article class="box">
-							<?php  if($item->tipo == 0){ ?>
-								<a href="articulo.php?id=<?= $item->articulo_id ?>">
-							<?php }elseif ($item->tipo == 1) { ?>
-								<a href="galeria.php?id=<?= $item->articulo_id ?>">
-							<?php }else{?>
-								<a href="video.php?id=<?= $item->articulo_id ?>">
-							<?php  } ?>
-							
-								<?php if(!empty($imgs)){ ?>
-									<img src="<?= $dir .'charmadmin/MasCharm/'.$item->articulo_id . '/' . $imgs[2] ?>">
-								<?php } ?>
-								<h2><?= $item->titulo ?></h2>
-								<p><?= $item->subtitulo ?></p>
+				<section class="body">
+					<?php 
+						$sociales = $socialesDAO->getLoMasVistoEsteMes(6);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
 							</a>
 						</article>
-				<?php }
-				 ?>
-			</section><!-- grid -->
-			<a href="#" id="mas_charm" data-val="1"><p>MÁS</p></a>
-			<div id="loadingDiv"><img src="assets/img/loader.gif"></div>
-		</section><!-- left -->
+					 <?php } ?>
+					
+					<br class="clear">
+				</section><!-- body -->
+			</section><!-- mini_features -->
+
+			<!--<section class="mini_features">
+				<header>
+					<h1>Lo + recomendado</h1>
+				</header>
+				<section class="body">
+					<?php 
+						$sociales = $socialesDAO->getLoMasRecomendado(6);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
+					<br class="clear">
+				</section><!-- body -->
+			<!--</section><!-- mini_features -->
+
+			<section class="box_feature amigos">
+				<header>
+					<h1>Amigos en las Redes</h1>
+				</header>
+				<table>
+					<tr>
+						<th><img src="assets/img/content/sociales/fb.png"></th>
+						<th><img src="assets/img/content/sociales/insta.png"></th>
+					</tr>
+					<?php 
+					$index = 2;
+					$imgs = scandir($dir. 'charmadmin/Amigos/'); 
+					for($i = 0; $i < 3; $i++){ ?>
+						<tr>
+							<td><img src="<?= $dir. 'charmadmin/Amigos/' .$imgs[$index] . '?' .strtotime("now") ?>"></td>
+							<?php  $index++;  ?>
+							<td><img src="<?= $dir. 'charmadmin/Amigos/' .$imgs[$index] . '?' .strtotime("now") ?>"></td>
+							<?php  $index++;  ?>
+						</tr>
+					<?php } ?>
+				</table>
+			</section><!-- box_feature -->
+
+			<section class="box_feature pasando">
+				<header>
+					<h1>¿Qué está pasando?</h1>
+				</header>
+				<section class="content">
+					<?php  $chismes = $chismesDAO->getQueEstaPasando();
+							foreach ($chismes as $item) { ?>
+								<article>
+									<h1 class="header"><?=  $item->titulo ?></h1>
+									
+									<h2 class="fecha"><?=  $item->fecha ?></h2>
+									<?php if(!empty($item->texto)){ ?>
+										<h1 class="texto"><?= $item->texto ?></h1>
+									<?php } ?>
+
+									<?php if(!empty($item->foto)){
+											$imgs = scandir($dir. 'charmadmin/Chismes/' . $item->id . '/'); ?>
+									 		<img class="thumb" src="<?=  $dir. 'charmadmin/Chismes/' .  $item->id .'/'. $imgs[2] ?>">
+									<?php } ?>
+									
+									
+									<?php if(!empty($item->link)){ ?>
+										<br><a href="<?= $item->link ?>" class="link"><img src="assets/img/content/sociales/camara.png">&nbsp;&nbsp;VER + FOTOS</a>
+									<?php }  ?>
+									<br class="clear">
+								</article>
+					<?php	} ?>
+				</section>
+			</section><!-- box_feature -->
+			<div style="text-align:right;">
+				<a href="mailto:mariel.delbosque@charmlife.com.mx" class="comparte_noticia"><img src="assets/img/content/sociales/correo.png"><img src="assets/img/content/sociales/flecha_correo.png"><span>Compártenos tus noticias</span></a>
+			</div>
+
+
+			<section class="mini_features anteriores">
+				<header>
+					<?php $m = date('n');
+						$y = date('Y');
+					 ?>
+					<h1 style="left: 45px;" data-month="<?= $m ?>" data-year="<?= $y ?>">
+						<img src="assets/img/content/sociales/left_arrow.png" class="arrow" id="prev_date">&nbsp;
+						<span class="date"><?= getMes($m) . ' ' . $y ?></span>
+						&nbsp;<img src="assets/img/content/sociales/right_arrow.png" class="arrow hidden" id="next_date">
+					</h1>
+				</header>
+				<div id="loadingDiv" style="position: absolute; z-index: 3; left: 300px; top: 200px;"><img src="assets/img/loader.gif"></div>
+				<section class="body" style="height:420px;">
+					<!--<img src="assets/img/content/sociales/left_arrow_black.png" class="arrow_" style="left: -10px;" id="prev_soc">-->
+					<div id="pos_prev_soc" class="arrow_" style="left: -10px;">
+
+					</div>
+					<?php 
+						$sociales = $socialesDAO->getEventosByMes($m, $y, 0, 9);
+						foreach ($sociales as $item) { 
+							$thumb = scandir($dir. 'charmadmin/SocThumb/'.$item->sociales_id);
+					 ?>
+					 	<article>
+							<a href="social.php?id=<?= $item->sociales_id ?>">
+							<h3><span><?= $item->titulo ?></span></h3>
+							<img src="<?= $dir. 'charmadmin/SocThumb/'.$item->sociales_id . '/' . $thumb[2]  ?>">
+							</a>
+						</article>
+					 <?php } ?>
+					<br class="clear">
+					<div id="pos_next_soc" class="arrow_" style="right: -5px;">
+						<img src="assets/img/content/sociales/right_arrow_black.png" id="next_soc" data-num="1">
+					</div>
+				</section><!-- body -->
+			</section><!-- mini_features -->
+
+		</section><!-- col2 -->
 		<section class="col3">
 			<br><br>
-			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/mascharm/3.gif" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/mascharm/4.gif" class="ad"></a>
+			<a href="https://www.facebook.com/anakarina.fotografia?ref=tn_tnmn" target="_blank"><img src="assets/banners/sociales/3.jpg" class="ad"></a>
+			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/sociales/4.gif" class="ad"></a>
+			
 			
 			<section class="tabbed_info">
 				<header>
 					<h3 class="selected">Este mes</h3>
-					<!--<h3 class="selected">Esta Semana</h3>
-					
+					<!--<h3>Este mes</h3>
 					<h3>Anteriores</h3>-->
 					<br class="clear">
 				</header>
@@ -265,12 +232,12 @@
 
 			</section><!-- tabbed_info-->
 			
-			<a href="http://www.instagram.com/charmtorreon" target="_blank"><img src="assets/banners/mascharm/5.jpg" class="ad"></a>
-			<a href="#" target="_blank"><img src="assets/banners/mascharm/6.jpg" class="ad"></a>
+			<a href="mailto:contacto@charmlife.com.mx" target="_blank"><img src="assets/banners/sociales/5.gif" class="ad"></a>
+			<a href="http://www.charmlife.com.mx/mediakit" target="_blank"><img src="assets/banners/sociales/6.gif" class="ad"></a>
 
 		</section><!-- col3 -->
-	</section><!-- wrapper masCharm -->
-	<br class="clear">
-	<?php include 'assets/templates/footer.php'; ?>
+		<br class="clear">
+	</section>
+	<?php include "assets/templates/footer.php" ?>
 </body>
 </html>
