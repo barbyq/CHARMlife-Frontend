@@ -9,7 +9,8 @@
 			<div class="suscribete">
 				<h2>Suscríbete</h2>
 				<h1>HOY</h1>
-				<p>Ejemplares desde la comodidad de tu hogar</p>
+				<p>Y recibe tu ejemplar mensual</p>
+				<p> en la comodidad de tu hogar</p>
 			</div>
 			<div class="contacto">
 				<h1>Contacto</h1>

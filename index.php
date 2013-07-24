@@ -55,9 +55,9 @@
 	}	
 	function dameimagen($id)
 	{
-		$escaneo = scandir("charmadmin/Imagenes/".$id);
+		$escaneo = scandir("charmadmin/Thumbnails/".$id);
 		$imagen = $escaneo[2];
-		$ruta = "charmadmin/Imagenes/".$id."/".$imagen;
+		$ruta = "charmadmin/Thumbnails/".$id."/".$imagen;
 		return $ruta;
 	} 
 	function dameimagensocial($id)
