@@ -17,8 +17,8 @@ $(function(){
         navigateByClick: false
     });
 
-    $('.social .img_vote').click(function(e){
-    	if(!$(this).hasClass('voted')){
+	$('.social').on('click', '.img_vote', function(e){
+		if(!$(this).hasClass('voted')){
     		id = $(this).data('id');
     		var context = $(this);
     		$.ajax({
@@ -31,7 +31,7 @@ $(function(){
 				}
 			});
     	}
-    });
+	});
 
     $('.galeriaSlider').royalSlider({
 		keyboardNavEnabled: true,

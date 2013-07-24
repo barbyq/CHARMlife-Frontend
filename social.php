@@ -59,8 +59,12 @@
 							<div class="rsContent">
 								<center>
 									<img src="<?= $dir ?>charmadmin/<?= $foto->img  ?>">
-									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 260px;">
-									<div style="height:62px; width:164px; background-image:url('assets/img/content/medal_foto_sel.png'); position: absolute; bottom:-33px; left: 110px;" data-id="<?= $foto->foto_id ?>" class="img_vote" ></div>
+									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 173px;">
+									<div style="height:62px; width:164px; background-image:url('assets/img/content/medal_foto_sel.png'); position: absolute; bottom:-33px; left: 21px;" data-id="<?= $foto->foto_id ?>" class="img_vote" ></div>
+									<?php if(!empty($foto->descripcion)){ ?>
+										<div style="padding: 5px; width: 307px; position: absolute; right: 2px; font-size: 24px; -moz-box-shadow:1px 1px 1px 1px #ccc; -webkit-box-shadow: 1px 1px 1px 1px #ccc; box-shadow:1px 1px 1px 1px #ccc; border: 1px solid #bdb6bf;"><p><?= $foto->descripcion ?></p></div>
+									<?php } ?>
+									
 									<!--<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">-->
 								</center>
 								<div class="rsTmb">
