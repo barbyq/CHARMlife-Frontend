@@ -88,11 +88,14 @@
 				<section class="fotos_feat">
 					<?php $foto = $socialesDAO->getFotoMasCharm(); ?>
 					<div id="clickFotoMasCharm">
+						<?php  list($width, $height) = getimagesize('http://www.charmlife.com.mx/charmadmin/' . $foto->img);?>
 						<img src="assets/img/content/medal_foto.png">
-						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
+						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>" <?php if($height > 500){ echo 'style="width:250px;"';} ?>>
 					</div>
 					<div style="display:none;" id="fotoMasCharm">
+
 						<img src="assets/img/content/medal_foto.png" style="position:absolute; bottom:0px; left:20px;">
+						
 						<img src="<?= $dir . '/charmadmin/' . $foto->img ?>">
 
 						<a href="http://www.facebook.com/sharer.php?s=100
