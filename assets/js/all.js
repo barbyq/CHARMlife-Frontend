@@ -31,10 +31,9 @@ $("#sliderSociales").royalSlider({
         navigateByCenterClick: false,
         navigateByClick:false,
         autoPlay: {
-            // autoplay options go gere
             enabled: true,
             pauseOnHover: true,
-            delay: 10000
+            delay:10000
         }
     });
 
@@ -50,8 +49,11 @@ $("#sliderSociales").royalSlider({
     });
 	
 
-    ShowColabs();
-
+    $('.colaborador').click(function(e) {
+        var id = e.currentTarget.id;
+                ShowColabInfo(id);
+                ShowColabArticles(id);
+    });
 
     $('#clickFotoMasCharm').click(function(e){
     //console.log("here");
@@ -67,13 +69,3 @@ $("#sliderSociales").royalSlider({
     });
 
 });
-
-function ShowColabs () {
-	$('.colaborador').click(function(e) {
-		var id = e.currentTarget.id;
-                ShowColabInfo(id);
-                ShowColabArticles(id);
-	});
-}
-
-
