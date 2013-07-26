@@ -209,7 +209,7 @@
 				</ul>
 			</nav>
 			<section class="grid">
-				<?php  $articulos = $articulosDAO->getMasCharm(0, 20);
+				<?php  $articulos = $articulosDAO->getMasCharm(0, 30);
 						foreach ($articulos as $item) { 
 						if(is_dir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/')){
 							$imgs = scandir($dir .'charmadmin/MasCharm/'.$item->articulo_id . '/');	
