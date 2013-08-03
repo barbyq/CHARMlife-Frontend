@@ -68,6 +68,11 @@
 	<script src='assets/royalslider/jquery-1.8.3.min.js'></script>
 	<script src="assets/js/all.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
+	<script>
+		$(function() {
+			$('.articulo-contenido').html(unescape(<?php echo '"' . html_entity_decode($articulo->contenido) . '"'; ?>));
+		});
+	</script>
 </head>
 <body>
 	<script text="text/javascript">
@@ -193,11 +198,7 @@
 									<br class="clear"/>
 									<br/>
 									<br/>
-									<script>
-										$(function() {
-											$('.articulo-contenido').html(unescape(<?php echo '"' . html_entity_decode($articulo->contenido) . '"'; ?>));
-										});
-									</script>
+									
 									<div class="articulo-contenido">
 									</div>
 									<br class="clear">

@@ -33,28 +33,43 @@
 	<script type="text/javascript">
 	function makeBoxes(objs) {
 		var boxes = [];
-		console.log(objs);
+		
 		for(article in objs){
-			console.log(objs[article]);
+			
 			var box = document.createElement('article');
 		    box.className = 'box';
+
+		    var a = document.createElement('a');
+		    var href = "";
+		    if(objs[article].tipo == 0){
+		    	href = "articulo.php?id=";
+		    }else if(objs[article].tipo == 1){
+		    	href ="galeria.php?id=";
+		    }else{
+		    	href ="video.php?id=";
+		    }
+		    
+		    href = href + objs[article].articulo_id;
+		    
+		    a.setAttribute("href", href);
+		    box.appendChild(a);
 
 		    var img = document.createElement('img');
 		    if(objs[article].imagen){
 		    	img.setAttribute("src", "<?= $dir ?>charmadmin/MasCharm/"+ objs[article].articulo_id + '/' + objs[article].imagen);	
 		    }
 		    
-		    box.appendChild(img);
+		    a.appendChild(img);
 
 		    var h2 = document.createElement('h2');
 		    t_h2 = document.createTextNode(objs[article].titulo);
 		    h2.appendChild(t_h2);
-		    box.appendChild(h2);
+		    a.appendChild(h2);
 
 		    var p = document.createElement('p');
 		    t_p = document.createTextNode(objs[article].subtitulo);
 		    p.appendChild(t_p);
-		    box.appendChild(p);
+		    a.appendChild(p);
 		    boxes.push( box );
 		}
 		
