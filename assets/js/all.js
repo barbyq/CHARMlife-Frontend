@@ -45,7 +45,12 @@ $("#sliderSociales").royalSlider({
         imageAlignCenter: true,
         loop: true,
         navigateByCenterClick: false,
-        navigateByClick:false
+        navigateByClick:false,
+        autoPlay: {
+            enabled: true,
+            pauseOnHover: true,
+            delay:10000
+        }
     });
 	
 
