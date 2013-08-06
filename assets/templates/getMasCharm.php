@@ -11,7 +11,7 @@ $articulosDAO = new articulosDAO($dbc);
 
  
 $limit = $_POST['limit'];
-$perPage = 20;
+$perPage = 30;
 
 if(isset($_POST['tags'])){
 	if(!empty($tags)){

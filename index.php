@@ -1,6 +1,6 @@
 <?php 
-	error_reporting(E_ALL);
-	ini_set('display_errors', '1');
+	//error_reporting(E_ALL);
+	//ini_set('display_errors', '1');
 	include 'assets/templates/pwd.php';
 	include $dir .'charmadmin/dbc/dbconnect.php';
 	include $dir .'charmadmin/dbc/portadasDAO.php';
@@ -116,7 +116,7 @@
 					</div>
 					<br class="clear">
 				</section>
-				<h1 style="font-weight: 700; font-size: 23px; text-align: center; width: 326px;">Temática Mensual</h1>
+				<h1 style="font-weight: 700; font-size: 23px; text-align: center; width: 326px;"> - Especial - Party with Style</h1>
 				<section id="tematicamensual" style="width:325px;height:240px;" class="royalSlider rxDefault">
 					<?php $tem = $articulosDAO->getArticulosTematicaMensual(); ?>
 					<?php foreach ($tem as $ti) { ?>
@@ -230,7 +230,9 @@
 				</div>
 				<br>
 				<br>
-				<a href="http://www.facebook.com/charmlifetorreon" target="_blank"><img src="assets/banners/home/7.jpg" class="ad"></a>
+				<a href="https://www.facebook.com/CajaMagicaTorreon" target="_blank" onClick="_gaq.push(['_trackEvent', 'Banners', 'Click', 'CajaMagicaTorreon']);"><img src="assets/banners/home/7.jpg?2312" class="ad"></a>
+				<br>
+				<a href="http://www.facebook.com/charmlifetorreon" target="_blank"><img src="assets/banners/home/8.jpg" class="ad"></a>
 			</div>
 		</section>
 	</section>
