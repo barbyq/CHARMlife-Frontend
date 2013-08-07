@@ -20,8 +20,8 @@
 		$correo->From = "no-reply@playersoflife.com";
 		$correo->FromName = "Suscriptor";
 		$correo->Subject =  "Suscriptor Charm";
-		$correo->AddReplyTo('jchinojob7@gmail.com', 'CHARM Life');
-		$correo->AddAddress('jchinojob7@gmail.com');
+		$correo->AddReplyTo('suscripciones@charmlife.com.mx', 'CHARM Life');
+		$correo->AddAddress('suscripciones@charmlife.com.mx');
 		$correo->Body = $body;	
 		$correo->IsHTML("true");
 		$correo->Send();

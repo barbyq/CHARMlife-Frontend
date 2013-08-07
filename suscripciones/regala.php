@@ -18,8 +18,8 @@
 		$correo->From = "no-reply@playersoflife.com";
 		$correo->FromName = "Suscripcion";
 		$correo->Subject = "Regala Players Datos";
-		$correo->AddReplyTo('jchinojob7@gmail.com','PLAYERS of life');
-		$correo->AddAddress('jchinojob7@gmail.com');
+		$correo->AddReplyTo('suscripciones@charmlife.com.mx','PLAYERS of life');
+		$correo->AddAddress('suscripciones@charmlife.com.mx');
 		$correo->Body = $cuerpo;
 		$correo->IsHTML("true");
 		$correo->Send();
