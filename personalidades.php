@@ -45,7 +45,7 @@
 			<br class="clear">
 		</section>
 		<section class="col3">
-			<a href="mailto:contacto@charmlife.com.mx" target="_blank"><img src="assets/banners/personalidades/3.gif" class="ad"></a>
+			<a href="http://lagunayotequiero.org/" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
 			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
 		</section>
 		<br class="clear">

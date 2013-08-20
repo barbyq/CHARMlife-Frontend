@@ -255,7 +255,7 @@
 		<section class="col3">
 			<br><br>
 			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/mascharm/3.gif" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/mascharm/4.gif" class="ad"></a>
+			<a href="http://lagunayotequiero.org/" target="_blank"><img src="assets/banners/mascharm/4.jpg" class="ad"></a>
 			
 			<section class="tabbed_info">
 				<header>

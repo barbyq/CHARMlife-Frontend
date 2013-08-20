@@ -213,7 +213,7 @@ $(document).ready(function() {
 						<li><a href="conocenos.php" <?php if($current == 'conocenos'){ echo 'class="selected"'; } ?>>CONÓCENOS</a></li>
 					</ul>
 				</div>
-					<div>
+					<div style="position:relative;">
 					<div class="secondary-navigation">
 							<ul>
 								<li><a href="/mediakit" target="_blank">Anúnciate</a><div class="vertical-line"></div></li>
@@ -227,8 +227,27 @@ $(document).ready(function() {
 						<a href="http://pinterest.com/charmtorreon"><img src="assets/img/path.png"></a>
 						<a href="http://instagram.com/charmtorreon"><img src="assets/img/instagram.png"></a>
 					</div>
-					</div>
-			</div>
+					
+						<script>
+						  (function() {
+						    var cx = '011477930763838840617:tzz96y75w7g';
+						    var gcse = document.createElement('script');
+						    gcse.type = 'text/javascript';
+						    gcse.async = true;
+						    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						        '//www.google.com/cse/cse.js?cx=' + cx;
+						    var s = document.getElementsByTagName('script')[0];
+						    s.parentNode.insertBefore(gcse, s);
+						  })();
+						</script>
+						<div style="width:276px; z-index:5; position: absolute;">
+							<gcse:searchbox-only resultsUrl="http://www.charmlife.com.mx/search.php" newWindow="false" queryParameterName="q"></gcse:searchbox-only>
+						</div>
+								
+						
+
+
+						</div>
 		</div>
 	</header>
 </div>
