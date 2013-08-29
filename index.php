@@ -229,7 +229,7 @@
 				</div>
 				<br>
 				<br>
-				<a href="https://www.facebook.com/CajaMagicaTorreon" target="_blank" onClick="_gaq.push(['_trackEvent', 'Banners', 'Click', 'CajaMagicaTorreon']);"><img src="assets/banners/home/7.jpg?2312" class="ad"></a>
+				<a href="#" target="_blank"><img src="assets/banners/home/7.jpg?2423" class="ad"></a>
 				<br>
 				<a href="http://www.facebook.com/charmlifetorreon" target="_blank"><img src="assets/banners/home/8.jpg" class="ad"></a>
 			</div>

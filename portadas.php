@@ -309,8 +309,8 @@ jQuery(document).ready(function($) {
 		</section>
 		<br/>
 		<br/>
-		<a href="http://www.playersoflife.com/losases" target="_blank">
-			<img src="assets/banners/portadas/5.gif" alt="">
+		<a href="http://www.playersoflife.com/mediakit" target="_blank">
+			<img src="assets/banners/portadas/5.gif?1235" alt="">
 		</a>
 		<br/>
 	</section>

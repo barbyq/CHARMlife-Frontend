@@ -240,7 +240,7 @@ $(document).ready(function() {
 						    s.parentNode.insertBefore(gcse, s);
 						  })();
 						</script>
-						<div style="width:276px; z-index:5; position: absolute;">
+						<div style="width:276px; z-index:5; position: absolute; left: 577px; top: 14px;">
 							<gcse:searchbox-only resultsUrl="http://www.charmlife.com.mx/search.php" newWindow="false" queryParameterName="q"></gcse:searchbox-only>
 						</div>
 								
