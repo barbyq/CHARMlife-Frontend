@@ -107,6 +107,7 @@
 		<?php } ?>
 		<section class="col2">
 			<?php  if(isset($social->sociales_id)){ ?>
+			<br>
 
 												<div id="fb-root"></div>
 									<script>(function(d, s, id) {

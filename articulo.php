@@ -202,6 +202,14 @@
 									<div class="articulo-contenido">
 									</div>
 									<br class="clear">
+									<div class="shares" align="right">
+										<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
+										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+										<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436'); return false;">
+											<img style="width:36px;height:36px;" src="http://www.playersoflife.com/assets/img/content/articulos/fb.png" alt="">
+										</a>
+									</div>
+									<br>
 									<div id="fb-root"></div>
 									<script>(function(d, s, id) {
 									  var js, fjs = d.getElementsByTagName(s)[0];
@@ -227,12 +235,6 @@
 								    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 								    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 									
-
-									<div class="shares" align="right">
-										<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
-										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-										<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
-									</div>
 								</div>
 							<?}?>
 						<? } ?>
