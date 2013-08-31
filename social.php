@@ -108,7 +108,16 @@
 		<section class="col2">
 			<?php  if(isset($social->sociales_id)){ ?>
 
-			
+												<div id="fb-root"></div>
+									<script>(function(d, s, id) {
+									  var js, fjs = d.getElementsByTagName(s)[0];
+									  if (d.getElementById(id)) return;
+									  js = d.createElement(s); js.id = id;
+									  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=536562106387184";
+									  fjs.parentNode.insertBefore(js, fjs);
+									}(document, 'script', 'facebook-jssdk'));</script>
+									<div class="fb-like" data-href="http://charmlife.com.mx/social.php?id=<?php echo $social->sociales_id; ?>" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+			<br>
 			<div id="disqus_thread"></div>
 		    <script type="text/javascript">
 		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
