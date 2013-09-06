@@ -62,6 +62,24 @@
 			 		</div>
 				</div>
 				<br>
+				<div class="shares" align="right">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436'); return false;">
+						<img style="width:36px;height:36px;" src="http://www.playersoflife.com/assets/img/content/articulos/fb.png" alt="">
+					</a>
+				</div>
+				<br>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=536562106387184";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://charmlife.com.mx/video.php?id=<?php echo $articulo->articulo_id; ?>" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+				<br>
 				<div id="disqus_thread"></div>
 		    	<script type="text/javascript">
 		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
