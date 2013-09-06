@@ -46,7 +46,7 @@
 		</section>
 		<section class="col3">
 			<a href="http://lagunayotequiero.org/" target="_blank"><img src="assets/banners/personalidades/3.jpg" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/personalidades/4.gif" class="ad"></a>
+			<a href="#" target="_blank"><img src="assets/banners/personalidades/4.jpg" class="ad"></a>
 		</section>
 		<br class="clear">
 		<section class="mini_features expanded">
