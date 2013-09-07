@@ -155,7 +155,7 @@
 		</section>
 		<section class="col3">
 			<a href="http://www.facebook.com/OpticaDelRosario" target="_blank"><img src="assets/banners/home/3.gif" class="ad"></a>
-			<a href="http://itzel.lag.uia.mx/publico/index.php" target="_blank"><img src="assets/banners/home/4.gif" class="ad"></a>
+			<a href="http://www.armedica.com.mx/armedica/" target="_blank"><img src="assets/banners/home/4.gif?4512" class="ad"></a>
 			<section class="outfit">
 				<header>
 					<h1>Outfit de la Semana</h1>
@@ -172,8 +172,8 @@
 		<br class="clear"/>
 		<br/>
 		<section class="banners">
-			<a href="mailto:contacto@charmlife.com.mx" target="_blank">
-				<img src="assets/banners/home/5.gif" alt="">
+			<a href="http://www.playersoflife.com/prct" target="_blank">
+				<img src="assets/banners/home/5.gif?8128" alt="">
 			</a>
 			<a href="http://www.instagram.com/charmtorreon" target="_blank">
 				<img src="assets/banners/home/6.jpg" alt="">

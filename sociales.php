@@ -204,7 +204,7 @@
 			<br><br>
 			<a href="https://www.facebook.com/anakarina.fotografia?ref=tn_tnmn" target="_blank"><img src="assets/banners/sociales/3.jpg" class="ad"></a>
 			<!--<a href="https://www.facebook.com/CajaMagicaTorreon" target="_blank" onClick="_gaq.push(['_trackEvent', 'Banners', 'Click', 'CajaMagicaTorreon']);"><img src="assets/banners/sociales/4.jpg" class="ad"></a>-->
-			<a href="#" target="_blank" ><img src="assets/banners/sociales/4.jpg?1231" class="ad"></a>
+			<a href="http://www.playersoflife.com/prct" target="_blank" ><img src="assets/banners/sociales/4.gif?1231" class="ad"></a>
 			
 			<section class="tabbed_info">
 				<header>
@@ -233,7 +233,7 @@
 
 			</section><!-- tabbed_info-->
 			
-			<a href="mailto:contacto@charmlife.com.mx" target="_blank"><img src="assets/banners/sociales/5.gif" class="ad"></a>
+			<a href="http://renovatiohomedesign.com/" target="_blank"><img src="assets/banners/sociales/5.gif?1235" class="ad"></a>
 			<a href="http://www.charmlife.com.mx/mediakit" target="_blank"><img src="assets/banners/sociales/6.gif?4562" class="ad"></a>
 
 		</section><!-- col3 -->

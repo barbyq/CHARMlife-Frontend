@@ -3,7 +3,7 @@
 		<div class="upthings">
 			<div class="imagenrevista">
 			<a href="#">
-				<img src="assets/img/footer/revista.png" alt="">
+				<img src="assets/img/footer/revista.png?1235" alt="">
 			</a>
 			</div>
 			<div class="suscribete">
