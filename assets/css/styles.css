@@ -907,3 +907,27 @@ body {
 .agradecimiento p {
   font-family: aria;
   font-size: 135%; }
+
+.selectors {
+  position: absolute;
+  bottom: 50%; }
+
+.loadersvi {
+  position: absolute;
+  right: 0px;
+  cursor: pointer; }
+
+.loadersvd {
+  position: absolute;
+  left: 960px;
+  cursor: pointer; }
+
+.loadersi {
+  position: absolute;
+  right: 0px;
+  cursor: pointer; }
+
+.loadersd {
+  position: absolute;
+  left: 960px;
+  cursor: pointer; }
