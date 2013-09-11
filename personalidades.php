@@ -81,7 +81,7 @@
 				<header>
 					<h1>Videos</h1>
 				</header>
-				<section class="body">
+				<section class="body" id="videosbody">
 					<?php  $videos = $articulosDAO->getVideosByArea( 'Personalidades', 0,4);
 					 	foreach ($videos as $item) { 
 					 		$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
@@ -100,7 +100,6 @@
  					<img class="loadersd" id="vd" src="assets/img/content/sociales/right_arrow_black.png" alt="">
 				</div>
 			</section><!-- mini_features -->
-
 
 			<section class="mini_features expanded">
 				<header style="width:944px;">
@@ -126,8 +125,8 @@
 					<br class="clear">
 				</section><!-- body_ -->
 				<div class="selectors">
-					<img class="loadersi" src="assets/img/content/sociales/left_arrow_black.png" alt="">
- 					<img class="loadersd" src="assets/img/content/sociales/right_arrow_black.png" alt="">
+					<img class="loadersi" id="personalidadesi" src="assets/img/content/sociales/left_arrow_black.png" alt="">
+ 					<img class="loadersd" id="personalidadesd" src="assets/img/content/sociales/right_arrow_black.png" alt="">
 				</div>	
 			</section> <!-- mini_features -->
 	</section>
