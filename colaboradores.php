@@ -29,6 +29,7 @@
 	<script src='assets/royalslider/jquery-1.8.3.min.js'></script>
 	<script src="assets/js/all.js"></script>
 	<script src="assets/js/paginadoyies.js"></script>
+	<script src="../charmadmin/js/library/handlebars-1.0.rc.1.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
 </head>
 <body>
@@ -42,8 +43,22 @@
 	}; ?>
 	<script>
 		var colaboreitor = <?php echo $hola->id; ?>;
+		var intervalo = 0;
 	</script>
 <?php include "assets/templates/header.php" ?>
+
+<script id="templatearti" type="text/texto-handlebario">
+	<a class="article" href="articulo.php?id={{articulo_id}}">
+		<article>
+			<img src="../charmadmin/Thumbnails/{{articulo_id}}/{{thumbnail}}" alt="">
+			<div class="texto">
+				<h1>{{titulo}}</h1>
+				<p>{{subtitulo}}</p>
+			</div>
+		</article>
+	</a>
+</script>
+
 <div class="contenido">
 	<section class="colaboradores">
 		<div class="colaboradores-wrapper">

@@ -62,9 +62,8 @@
 									<img src="assets/img/content/votaMasCharm.png" style="position:absolute; bottom: -46px; left: 173px;">
 									<div style="height:62px; width:164px; background-image:url('assets/img/content/medal_foto_sel.png'); position: absolute; bottom:-33px; left: 21px;" data-id="<?= $foto->foto_id ?>" class="img_vote" ></div>
 									<?php if(!empty($foto->descripcion)){ ?>
-										<div style="padding: 5px; width: 307px; position: absolute; right: 2px; font-size: 24px; -moz-box-shadow:1px 1px 1px 1px #ccc; -webkit-box-shadow: 1px 1px 1px 1px #ccc; box-shadow:1px 1px 1px 1px #ccc; border: 1px solid #bdb6bf;"><p><?= $foto->descripcion ?></p></div>
-									<?php } ?>
-									
+										<div style="padding: 5px; width: 307px; position: absolute; right: 10px; font-size: 21px; -moz-box-shadow:1px 1px 1px 1px #ccc; -webkit-box-shadow: 1px 1px 1px 1px #ccc; box-shadow:1px 1px 1px 1px #ccc; border: 1px solid #bdb6bf;background:white;top: 410px;"><p><?= $foto->descripcion ?></p></div>
+									<?php } ?>		
 									<!--<img class="img_vote" src="assets/img/content/medal_foto.png" data-id="<?= $foto->foto_id ?>" style="position: absolute; bottom:-33px; left: 110px;">-->
 								</center>
 								<div class="rsTmb">
@@ -109,15 +108,15 @@
 			<?php  if(isset($social->sociales_id)){ ?>
 			<br>
 
-												<div id="fb-root"></div>
-									<script>(function(d, s, id) {
-									  var js, fjs = d.getElementsByTagName(s)[0];
-									  if (d.getElementById(id)) return;
-									  js = d.createElement(s); js.id = id;
-									  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=536562106387184";
-									  fjs.parentNode.insertBefore(js, fjs);
-									}(document, 'script', 'facebook-jssdk'));</script>
-									<div class="fb-like" data-href="http://charmlife.com.mx/social.php?id=<?php echo $social->sociales_id; ?>" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=536562106387184";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-href="http://charmlife.com.mx/social.php?id=<?php echo $social->sociales_id; ?>" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
 			<br>
 			<div id="disqus_thread"></div>
 		    <script type="text/javascript">

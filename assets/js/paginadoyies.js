@@ -1,5 +1,5 @@
 $(function() {
-	ShowColabArticles(colaboreitor);
+	ShowColabArticles(colaboreitor,intervalo);
 });
 
 function  ShowColabInfo(colabid) {
@@ -27,79 +27,41 @@ function  ShowColabInfo(colabid) {
         },'json');
 }
 
-
-function ShowColabArticles (colabid) {
-		$.post("charmadmin/controllers/colaboradores_controller.php",{receiver:"showarticles",showcolab:colabid},function  (response) {
-		console.log(response);
-		var cantidaddepaginas = Math.ceil(response.length/8);
-		var sais = response.length/4;
-		var contador = 0;
-		$('#articulos-section').empty();
- 		for (var i = 0; i < 2; i++) {
- 			var $conjunto = $("");
- 			if (i == 0) {
- 				$conjunto = $("<div class='conjunto'></div>");
- 			}else{
- 				$conjunto = $("<div class='conjunto-primeravera'></div>");
- 			}
-                        segundoloop: for (var j = 0; j < 6; j++) {
-                                console.log(response[contador]);
-                                var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
-                                if (response[contador]["thumbnail"] != "" ) {
-                                        $eichtieme.append("<img src='charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");
-        	                }else{
-	                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
-                                }
-                                $eichtieme.append("<div class='texto'><a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"'><h1>"+response[contador]['titulo']+"</h1></a><p>"+response[contador]['subtitulo']+"</p></div>")
-                               $conjunto.append($eichtieme);
-                               if (contador == response.length-1) { break segundoloop; }else{ contador++};
-                        };
-                        $('#articulos-section').append($conjunto);
-                        if (contador == response.length-1) { break; }else{ contador++};
-                };
+function ShowColabArticles (colabid,interva) {
+	$.post("charmadmin/controllers/colaboradores_controller.php",{receiver:"showarticles",showcolab:colabid,interval:interva},function  (response) {
+			console.log(response);
+			var sais = response.length/4;
+			var contador = 0;
+			$('#articulos-section').empty();
+			for (var i = 0; i < response.length; i++) {
+				var mono = response[i];
+				console.log(mono);
+				var yes = $('#templatearti').html();
+				var temp = Handlebars.compile(yes);
+				$('#articulos-section').append(temp(mono));
+			};
                 //Paginado
-                $('#anchor-wrapper').empty();
-		for (var i = 0; i < cantidaddepaginas; i++) {
-			var pagina = i+1;
-			$('#anchor-wrapper').append("<a id='"+i+"' style='padding-left:1.5%;'class='paginado' href='#'>"+pagina+"</a>");
-			setTimeout(function  () {
-				$('.paginado').click(function  (e) {
-					e.preventDefault();
-					console.log("que rollo");
-					var primier = e.target.id;
-					var eighti = parseInt(primier)*8;
-					$.post("charmadmin/controllers/colaboradores_controller.php",{receiver:"giveyouinterval",colab:colabid,interval:eighti},function  (resi) {
-						console.log(resi);
-						var contador = 0;
-						$('#articulos-section').empty();
-				 		for (var i = 0; i < 2; i++) {
-				 			var $conjunto = $("");
-				 			if (i == 0) {
-				 				$conjunto = $("<div class='conjunto'></div>");
-				 			}else{
-				 				$conjunto = $("<div class='conjunto-primeravera'></div>");
-				 			}
-				                        segundoloop: for (var j = 0; j < 4; j++) {
-				                                var $eichtieme = $("<a href='"+GetType(resi[contador]['tipo'])+"?id="+resi[contador]['articulo_id']+"' class='articulin'></a>");
-				                                if (resi[contador]["thumbnail"] != "" ) {
-				                                        $eichtieme.append("<img src='charmadmin/Thumbnails/"+resi[contador]['articulo_id']+"/"+resi[contador]["thumbnail"]+"' alt=''>");
-				        	                }else{
-					                                $eichtieme.append('<img src="assets/img/content/colaboradores/colabunknow.png" alt="">');  
-				                                }
-				                                $eichtieme.append("<div class='texto'><a href='"+GetType(resi[contador]['tipo'])+"?id="+resi[contador]['articulo_id']+"'><h1>"+resi[contador]['titulo']+"</h1></a><p>"+resi[contador]['subtitulo']+"</p></div>")
-				                               $conjunto.append($eichtieme);
-				                               if (contador == resi.length-1) { break segundoloop; }else{ contador++};
-				                        };
-				                        $('#articulos-section').append($conjunto);
-				                        if (contador == resi.length-1) { break; }else{ contador++};
-				                };
-					},'json');
-				});
-			}, 200);
-		}
 	},'json').fail(function  (e) {
 		console.warn(e);
 	});
+	$.post('charmadmin/controllers/colaboradores_controller.php',{receiver:"size",colab:colabid}, function(data, textStatus, xhr) {
+		console.log(data);
+		var cantidaddepaginas = Math.ceil(data.length/8);
+		$('#anchor-wrapper').empty();
+		var pagini = 0;
+		for (var i = 0; i < cantidaddepaginas; i++) {
+			var pagina = i+1;
+			$('#anchor-wrapper').append("<a id="+pagini+" style='padding-left:1.5%;'class='paginado' href='#'>"+pagina+"</a>");
+			pagini = pagini + 8;
+		}   
+		$('.paginado').click(function  (e) {
+			e.preventDefault();
+			var primier = e.target.id;
+			var eighti = parseInt(primier);
+			console.log(eighti)
+			ShowColabArticles(colabid,eighti);
+		});             	
+        },'json');
 }
 
 function GetType (blipo) {

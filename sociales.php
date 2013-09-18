@@ -204,7 +204,7 @@
 			<br><br>
 			<a href="https://www.facebook.com/anakarina.fotografia?ref=tn_tnmn" target="_blank"><img src="assets/banners/sociales/3.jpg" class="ad"></a>
 			<!--<a href="https://www.facebook.com/CajaMagicaTorreon" target="_blank" onClick="_gaq.push(['_trackEvent', 'Banners', 'Click', 'CajaMagicaTorreon']);"><img src="assets/banners/sociales/4.jpg" class="ad"></a>-->
-			<a href="http://www.playersoflife.com/prct" target="_blank" ><img src="assets/banners/sociales/4.gif?1231" class="ad"></a>
+			<a href="mailto:contacto@charmlife.com.mx" target="_blank" ><img src="assets/banners/sociales/4.gif?1231" class="ad"></a>
 			
 			<section class="tabbed_info">
 				<header>

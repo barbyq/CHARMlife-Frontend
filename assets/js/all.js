@@ -55,9 +55,10 @@ $("#sliderSociales").royalSlider({
 	
 
     $('.colaborador').click(function(e) {
-        var id = e.currentTarget.id;
+                var id = e.currentTarget.id;
                 ShowColabInfo(id);
-                ShowColabArticles(id);
+                ShowColabArticles(id,intervalo);
+                intervalo = 0;
     });
 
     $('#clickFotoMasCharm').click(function(e){
@@ -71,6 +72,76 @@ $("#sliderSociales").royalSlider({
                 'transitionIn'      : 'none',
                 'transitionOut'     : 'none'
             });
+    });
+
+    $('#personalidadesi').click(function(event) {
+       if (pagina > 3) {
+            pagina = pagina - 6;
+       };
+       $.post('/charmadmin/controllers/articulos_controller.php',{receiver:"personalidades",page:pagina}, function(data, textStatus, xhr) {
+                var template = $('#articletemplate').html();
+                            var parsed = Handlebars.compile(template);
+                            $('.body_').empty();
+                            for (var i = 0; i < data.length; i++) {
+                                var articulo = data[i];
+                                var eichtiemel = parsed(articulo);
+                                $('.body_').append(eichtiemel);
+                            };
+                            $('.body_').append('<br class="clear"/>');
+        },'json');
+    });
+
+    $('#personalidadesd').click(function(event) {
+       pagina = pagina + 6;
+        $.post('/charmadmin/controllers/articulos_controller.php',{receiver:"personalidades",page:pagina}, function(data, textStatus, xhr) {
+            if (data.length != 0) {
+                var template = $('#articletemplate').html();
+                var parsed = Handlebars.compile(template);
+                $('.body_').empty();
+                for (var i = 0; i < data.length; i++) {
+                        var articulo = data[i];
+                        var eichtiemel = parsed(articulo);
+                        $('.body_').append(eichtiemel);
+                };
+                $('.body_').append('<br class="clear"/>');
+            };
+        },'json'); 
+    });
+
+    $('#vi').click(function(event) {
+        if (paginav > 0){
+            paginav = paginav - 4;
+        };
+       $.post('/charmadmin/controllers/articulos_controller.php',{receiver:"videos",page:paginav}, function(data, textStatus, xhr) {
+            console.log(data);
+                var template = $('#videotemplate').html();
+                var parsed = Handlebars.compile(template);
+                $('#videosbody').empty();
+                for (var i = 0; i < data.length; i++) {
+                    var articulo = data[i];
+                    var eichtiemel = parsed(articulo);
+                    $('#videosbody').append(eichtiemel);
+                }; 
+                $('#videosbody').append('<br class="clear"/>');
+        },'json');
+    });
+
+    $('#vd').click(function(event) {
+        paginav = paginav + 4;
+        $.post('/charmadmin/controllers/articulos_controller.php',{receiver:"videos",page:paginav}, function(data, textStatus, xhr) {
+            console.log(data);
+            if (data.length != 0) {
+                var template = $('#videotemplate').html();
+                var parsed = Handlebars.compile(template);
+                $('#videosbody').empty();
+                for (var i = 0; i < data.length; i++) {
+                    var articulo = data[i];
+                    var eichtiemel = parsed(articulo);
+                    $('#videosbody').append(eichtiemel);
+                }; 
+                $('#videosbody').append('<br class="clear"/>');    
+            };
+        },'json');
     });
 
 });

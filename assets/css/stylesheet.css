@@ -333,7 +333,8 @@
       border-bottom: 1px solid #bdb6bf;
       -moz-box-shadow: 1px 1px 1px 1px #ccc;
       -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-      box-shadow: 1px 1px 1px 1px #ccc; }
+      box-shadow: 1px 1px 1px 1px #ccc;
+      position: relative; }
       .mini_features.expanded .body_ article {
         width: 300px;
         float: left;

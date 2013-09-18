@@ -24,9 +24,37 @@
 	
 	<script type="text/javascript" src="assets/royalslider/jquery-1.8.3.min.js"></script>
 	<script src="assets/royalslider/jquery.royalslider.min.js"></script>
+	<script src="../charmadmin/js/library/handlebars-1.0.rc.1.js"></script>
 	<script type="text/javascript" src="assets/js/all.js"></script>
 </head>
 <body>
+
+<script>
+	var paginav = 0;
+	var pagina = 3;
+</script>
+
+<script id="videotemplate" type="text/handlebarstemplate">
+	<article>
+		<a href="video.php?id={{articulo_id}}">
+			<h3><span>{{titulo}}</span></h3>
+			<img src="{{imagen}}">
+		</a>
+	</article> 	
+</script>
+
+<script id="articletemplate" type="text/handlebarstemplate">
+	<article>
+		<a href="articulo.php?id={{articulo_id}}" style="color:black;">
+			<img src="{{imagen}}">
+			<section class="info">
+				<h3>{{titulo}}</h3>
+				<p class="fecha"></p>
+				<h4>{{subtitulo}}</h4>
+			</section>
+		</a>
+	</article> 
+</script>
 	<?php include "assets/templates/header.php" ?>
 	<section class="wrapper contenido personalidades">
 		<section class="col2">
@@ -53,8 +81,8 @@
 				<header>
 					<h1>Videos</h1>
 				</header>
-				<section class="body">
-					<?php  $videos = $articulosDAO->getVideosByArea( 'Personalidades', 4);
+				<section class="body" id="videosbody">
+					<?php  $videos = $articulosDAO->getVideosByArea( 'Personalidades', 0,4);
 					 	foreach ($videos as $item) { 
 					 		$imgs = scandir($dir .'charmadmin/Thumbnails/'.$item->articulo_id . '/');	
 					 	?>
@@ -65,11 +93,13 @@
 							</a>
 						</article> 		
 					 <?php } ?>
-				
 					<br class="clear">
 				</section><!-- body -->
+				<div class="selectors">
+					<img class="loadersi" id="vi" src="assets/img/content/sociales/left_arrow_black.png" alt="">
+ 					<img class="loadersd" id="vd" src="assets/img/content/sociales/right_arrow_black.png" alt="">
+				</div>
 			</section><!-- mini_features -->
-
 
 			<section class="mini_features expanded">
 				<header style="width:944px;">
@@ -91,11 +121,13 @@
 									</section>
 								</a>
 							</article> 
-					<?php	}
-					?>
-
+					<?php	} ?>
 					<br class="clear">
 				</section><!-- body_ -->
+				<div class="selectors">
+					<img class="loadersi" id="personalidadesi" src="assets/img/content/sociales/left_arrow_black.png" alt="">
+ 					<img class="loadersd" id="personalidadesd" src="assets/img/content/sociales/right_arrow_black.png" alt="">
+				</div>	
 			</section> <!-- mini_features -->
 	</section>
 	

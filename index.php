@@ -172,8 +172,8 @@
 		<br class="clear"/>
 		<br/>
 		<section class="banners">
-			<a href="http://www.playersoflife.com/prct" target="_blank">
-				<img src="assets/banners/home/5.gif?8128" alt="">
+			<a href="mailto:contacto@charmlife.com.mx" target="_blank">
+				<img src="assets/banners/home/5.gif?8138" alt="">
 			</a>
 			<a href="http://www.instagram.com/charmtorreon" target="_blank">
 				<img src="assets/banners/home/6.jpg" alt="">
