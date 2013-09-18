@@ -34,6 +34,9 @@ function ShowColabArticles (colabid,interva) {
 			var sais = response.length/4;
 			var contador = 0;
 			$('#articulos-section').empty();
+			Handlebars.registerHelper('ifeq', function (a, b, options) {
+      				if (a == b) { return options.fn(this); }
+    			});
 			for (var i = 0; i < response.length; i++) {
 				var mono = response[i];
 				console.log(mono);
