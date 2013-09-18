@@ -55,9 +55,10 @@ $("#sliderSociales").royalSlider({
 	
 
     $('.colaborador').click(function(e) {
-        var id = e.currentTarget.id;
+                var id = e.currentTarget.id;
                 ShowColabInfo(id);
-                ShowColabArticles(id);
+                ShowColabArticles(id,intervalo);
+                intervalo = 0;
     });
 
     $('#clickFotoMasCharm').click(function(e){

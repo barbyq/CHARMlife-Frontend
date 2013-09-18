@@ -96,7 +96,7 @@ body{
               list-style-type: none;
               margin: 0;
               padding: 0;
-              width: 221%;
+              width: 225%;
               height: 30px;
               border-bottom: 3px groove #cbcbcb; 
               border-top: 3px groove #cbcbcb;
@@ -735,61 +735,37 @@ body{
       height: 185px;
       width: 765px;
       position: relative;
-      .conjunto-primeravera{
-        padding-top: 13%;
-       .articulin {
+      top: 30px;
+      .article{
+        position: relative;
+        display: inline-block;
+        color: black;
+        height: 90px;
+        width: 170px;
+        float: left;
+        padding-left: 2%;
+        padding-top: 2%;
+        img{
+          height: 90px;
+          width: 90px;
+          float: left;
+        }
+        .texto{
+          position: relative;
+          left: 4%;
+          h1{
             color: black;
-            cursor: pointer;
-            height: 90px;
-            width: 170px;
-            float: left;
-            padding-left: 1%;
-            img{
-              height: 90px;
-              width: 90px;
-              float: left;
-            }
-            h1{
-              color: black;
-              font-weight: bold;
-            }
-            .texto{
-              position: relative;
-              left: 4%;
-              color: black;
-            }
+            font-weight: bold;
           }
+        }
       }
-      .conjunto{
-          padding-top: 5%;
-         .articulin {
-          color: black;
-            height: 90px;
-            width: 170px;
-            float: left;
-            padding-left: 1%;
-            img{
-              height: 90px;
-              width: 90px;
-              float: left;
-            }
-            h1{
-              color: black;
-              font-weight: bold;
-            }
-            .texto{
-              position: relative;
-              left: 4%;
-            }
-          }  
-      }
-      .controls{
+    }
+    .controls{
         position: relative;
         a{
           padding-left: 1.5%;
         }
       }
-    }
   }
 
   .Articulo{

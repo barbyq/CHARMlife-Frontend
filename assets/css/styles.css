@@ -87,7 +87,7 @@ body {
           list-style-type: none;
           margin: 0;
           padding: 0;
-          width: 221%;
+          width: 225%;
           height: 30px;
           border-bottom: 3px groove #cbcbcb;
           border-top: 3px groove #cbcbcb;
@@ -603,49 +603,31 @@ body {
     float: right;
     height: 185px;
     width: 765px;
+    position: relative;
+    top: 30px; }
+    .articulos-colaborador #articulos-section .article {
+      position: relative;
+      display: inline-block;
+      color: black;
+      height: 90px;
+      width: 170px;
+      float: left;
+      padding-left: 2%;
+      padding-top: 2%; }
+      .articulos-colaborador #articulos-section .article img {
+        height: 90px;
+        width: 90px;
+        float: left; }
+      .articulos-colaborador #articulos-section .article .texto {
+        position: relative;
+        left: 4%; }
+        .articulos-colaborador #articulos-section .article .texto h1 {
+          color: black;
+          font-weight: bold; }
+  .articulos-colaborador .controls {
     position: relative; }
-    .articulos-colaborador #articulos-section .conjunto-primeravera {
-      padding-top: 13%; }
-      .articulos-colaborador #articulos-section .conjunto-primeravera .articulin {
-        color: black;
-        cursor: pointer;
-        height: 90px;
-        width: 170px;
-        float: left;
-        padding-left: 1%; }
-        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin img {
-          height: 90px;
-          width: 90px;
-          float: left; }
-        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin h1 {
-          color: black;
-          font-weight: bold; }
-        .articulos-colaborador #articulos-section .conjunto-primeravera .articulin .texto {
-          position: relative;
-          left: 4%;
-          color: black; }
-    .articulos-colaborador #articulos-section .conjunto {
-      padding-top: 5%; }
-      .articulos-colaborador #articulos-section .conjunto .articulin {
-        color: black;
-        height: 90px;
-        width: 170px;
-        float: left;
-        padding-left: 1%; }
-        .articulos-colaborador #articulos-section .conjunto .articulin img {
-          height: 90px;
-          width: 90px;
-          float: left; }
-        .articulos-colaborador #articulos-section .conjunto .articulin h1 {
-          color: black;
-          font-weight: bold; }
-        .articulos-colaborador #articulos-section .conjunto .articulin .texto {
-          position: relative;
-          left: 4%; }
-    .articulos-colaborador #articulos-section .controls {
-      position: relative; }
-      .articulos-colaborador #articulos-section .controls a {
-        padding-left: 1.5%; }
+    .articulos-colaborador .controls a {
+      padding-left: 1.5%; }
 
 .Articulo {
   width: 1000px; }
