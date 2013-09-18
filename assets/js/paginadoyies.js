@@ -27,7 +27,6 @@ function  ShowColabInfo(colabid) {
         },'json');
 }
 
-
 function ShowColabArticles (colabid,interva) {
 	$.post("charmadmin/controllers/colaboradores_controller.php",{receiver:"showarticles",showcolab:colabid,interval:interva},function  (response) {
 			var sais = response.length/4;
