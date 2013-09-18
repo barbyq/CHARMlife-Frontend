@@ -42,7 +42,8 @@ function ShowColabArticles (colabid) {
  			}else{
  				$conjunto = $("<div class='conjunto-primeravera'></div>");
  			}
-                        segundoloop: for (var j = 0; j < 4; j++) {
+                        segundoloop: for (var j = 0; j < 6; j++) {
+                                console.log(response[contador]);
                                 var $eichtieme = $("<a href='"+GetType(response[contador]['tipo'])+"?id="+response[contador]['articulo_id']+"' class='articulin'></a>");
                                 if (response[contador]["thumbnail"] != "" ) {
                                         $eichtieme.append("<img src='charmadmin/Thumbnails/"+response[contador]['articulo_id']+"/"+response[contador]["thumbnail"]+"' alt=''>");

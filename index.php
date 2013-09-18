@@ -116,7 +116,7 @@
 					</div>
 					<br class="clear">
 				</section>
-				<h1 style="font-weight: 700; font-size: 23px; text-align: center; width: 326px;"> - Especial - Party with Style</h1>
+				<h1 style="font-weight: 700; font-size: 23px; text-align: center; width: 326px;"> - Especial - Mujeres de Gran Legado</h1>
 				<section id="tematicamensual" style="width:325px;height:240px;" class="royalSlider rxDefault">
 					<?php $tem = $articulosDAO->getArticulosTematicaMensual(); ?>
 					<?php foreach ($tem as $ti) { ?>
