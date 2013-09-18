@@ -48,7 +48,15 @@
 <?php include "assets/templates/header.php" ?>
 
 <script id="templatearti" type="text/texto-handlebario">
-	<a class="article" href="articulo.php?id={{articulo_id}}">
+	{{#ifeq tipo 0}}
+		<a class="article" href="articulo.php?id={{articulo_id}}">	
+	{{/ifeq}}
+	{{#ifeq tipo 1}}
+		<a class="article" href="galeria.php?id={{articulo_id}}">	
+	{{/ifeq}}
+	{{#ifeq tipo 2}}
+		<a class="article" href="video.php?id={{articulo_id}}">	
+	{{/ifeq}}
 		<article>
 			<img src="../charmadmin/Thumbnails/{{articulo_id}}/{{thumbnail}}" alt="">
 			<div class="texto">
