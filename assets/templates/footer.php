@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="upthings">
 			<div class="imagenrevista">
-			<a href="#">
+			<a href="#suscribete">
 				<img src="assets/img/footer/revista.png?1235" alt="">
 			</a>
 			</div>
