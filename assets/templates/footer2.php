@@ -47,23 +47,9 @@
 								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
 							<? } ?>
 						</ul>
-						<ul class="padul">
+						<ul>
 							<? $arreglosegundo = $articulosDAO->getArticulosByInterval(4); ?>
 							<? foreach ($arreglosegundo as $arti) { ?>
-								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
-							<? } ?>
-						</ul>
-					</div>
-					<div class="rsContent">
-						<ul>
-							<? $arreglotercero = $articulosDAO->getArticulosByInterval(8); ?>
-							<? foreach ($arreglotercero as $arti) { ?>
-								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
-							<? } ?>
-						</ul>
-						<ul class="padul">
-							<? $arreglocuarto = $articulosDAO->getArticulosByInterval(12); ?>
-							<? foreach ($arreglocuarto as $arti) { ?>
 								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
 							<? } ?>
 						</ul>

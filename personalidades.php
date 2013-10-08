@@ -131,6 +131,6 @@
 			</section> <!-- mini_features -->
 	</section>
 	
-	<?php //include "assets/templates/footer.php" ?>
+	<?php include "assets/templates/footer2.php" ?>
 </body>
 </html>
