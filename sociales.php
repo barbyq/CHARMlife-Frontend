@@ -233,7 +233,7 @@
 
 			</section><!-- tabbed_info-->
 			
-			<a href="http://renovatiohomedesign.com/" target="_blank"><img src="assets/banners/sociales/5.gif?1235" class="ad"></a>
+			<a href="http://playersoflife.com/suscripciones" target="_blank"><img src="assets/banners/sociales/5.jpg" class="ad"></a>
 			<a href="http://www.charmlife.com.mx/mediakit" target="_blank"><img src="assets/banners/sociales/6.gif?4562" class="ad"></a>
 
 		</section><!-- col3 -->
