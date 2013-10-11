@@ -80,7 +80,7 @@
 	$per->tipo = 3;
 	
 
-
+	
 	
 
 	/*personalidades
@@ -110,25 +110,26 @@
 					<tr><td bgcolor="#8c0096" style="color:white;">
 						<table width="666px" border="0" cellpadding="0" cellspacing="0">
 							<tr>
-								<td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; width:310px; font-size:12px;">&nbsp; 3 de Octubre</td>
+								<td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; width:310px; font-size:12px;">&nbsp; 3 de octubre del 2013</td>
 								<td><a href="http://facebook.com/charmlifetorreon"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/fb.png"></a></td>
 								<td><a href="http://twitter.com/charmtorreon"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/tw.png"></a></td>
 								<td><a href="http://instagram.com/charmtorreon"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/insta.png"></a></td>
 							</tr>
 						</table>
 					</td></tr>
+					<tr><td><a href="http://www.charmlife.com.mx"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/banner.jpg"></a></td></tr>
 
 					<tr>
 						<td><!-- two columns -->
 							<table border="0" cellpadding="0" cellspacing="0">
 							
 							<?php for ($i = 0; $i < count($articulos); $i++) { ?>
-							<?php $thumb = scandir($scanDir[$articulos[$i]->tipo]. $articulos[$i]->id); ?>
+								
 								<tr>
 									<td>
 										<table>
 											<tr>
-												<td width="220px"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>"><img src="http://www.charmlife.com.mx/<?= $scanDir[$articulos[$i]->tipo].$articulos[$i]->id . '/' .  $thumb[2] ?>" width="200px" height="127px"></a></td>
+												<td width="220px"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/temp/<?= $articulos[$i]->id ?>.jpg" width="200px" height="127px"></a></td>
 											</tr>
 											<tr>
 												<td width="220px;" height="48px" style="font-size: 13px; line-height: 15px; text-align: center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>" style="color:#999999;"><?= $articulos[$i]->titulo ?></a></td>
@@ -136,12 +137,10 @@
 										</table>
 									</td>
 									<?php $i++; ?>
-									<?php 
-									$thumb = scandir($scanDir[$articulos[$i]->tipo]. $articulos[$i]->id); ?>
 									<td>
 										<table>
 											<tr>
-												<td width="220px"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>"><img src="http://www.charmlife.com.mx/<?= $scanDir[$articulos[$i]->tipo]. $articulos[$i]->id . '/' .  $thumb[2] ?>" width="200px" height="127px"></a></td>
+												<td width="220px"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/temp/<?= $articulos[$i]->id ?>.jpg" width="200px" height="127px"></a></td>
 											</tr>
 											<tr>
 												<td width="220px;" height="48px" style="font-size: 13px; line-height: 15px; text-align: center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$articulos[$i]->tipo] ?>.php?id=<?= $articulos[$i]->id ?>" style="color:#999999;"><?= $articulos[$i]->titulo ?></a></td>
@@ -155,15 +154,13 @@
 									<td rowspan="4">
 										<table border="0" cellpadding="0" cellspacing="0">
 											<tr>
-												<?php $thumb = scandir($dir .'charmadmin/MasCharm/'. $receta->id); ?>
-												<td width="220px" style="text-align:center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$receta->tipo] ?>.php?id=<?= $receta->id ?>"><img src="http://www.charmlife.com.mx/<?= $dir .'charmadmin/MasCharm/'.$receta->id . '/' .  $thumb[2] ?>" width="200px"></a></td>
+												<td width="220px" style="text-align:center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$receta->tipo] ?>.php?id=<?= $receta->id ?>"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/temp/<?= $receta->id ?>.jpg" width="200px"></a></td>
 											</tr>
 											<tr>
 												<td width="220px;" height="76px" style="font-size: 13px; line-height: 15px; text-align: center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$receta->tipo] ?>.php?id=<?= $receta->id ?>" style="color:#999999;"><?= $receta->titulo ?></a><br>En esta ocasión te presentamos una manera muy original, fácil y sencilla de hacer quesadillas, no dejes de probarlas!!!</td>
 											</tr>
 											<tr>
-												<?php $thumb = scandir($dir .'charmadmin/Thumbnails/'. $per->id); ?>
-												<td width="220px" style="text-align:center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$per->tipo] ?>.php?id=<?= $per->id ?>"><img src="http://www.charmlife.com.mx/<?= $dir .'charmadmin/Thumbnails/'.$per->id . '/' .  $thumb[2] ?>" width="200px" height="127px"></a></td>
+												<td width="220px" style="text-align:center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$per->tipo] ?>.php?id=<?= $per->id ?>"><img src="http://www.charmlife.com.mx/assets/mailing/newsletter/temp/<?= $per->id ?>.jpg" width="200px" height="127px"></a></td>
 											</tr>
 											<tr>
 												<td width="220px;" height="48px" style="font-size: 13px; line-height: 15px; text-align: center;"><a href="http://www.charmlife.com.mx/<?= $tipo[$per->tipo] ?>.php?id=<?= $per->id ?>" style="color:#999999;"><?= $per->titulo ?></a></td>
