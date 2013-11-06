@@ -47,12 +47,6 @@
 								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
 							<? } ?>
 						</ul>
-						<ul>
-							<? $arreglosegundo = $articulosDAO->getArticulosByInterval(4); ?>
-							<? foreach ($arreglosegundo as $arti) { ?>
-								<li type="disc"><a href="<?= dameurl($arti->tipo).$arti->id; ?>"><?= $arti->titulo; ?></a></li>
-							<? } ?>
-						</ul>
 					</div>
 				</div>
 			</div>
